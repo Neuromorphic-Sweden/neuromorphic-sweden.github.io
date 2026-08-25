@@ -1,0 +1,79 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { reportUrl } from '../../../data/site';
+
+const nipsUrl = 'https://www.vinnova.se/en/p/neuromorphic-innovation-platform-sweden-nips/';
+const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorphic-technology-neutec-towards-global-leadership-in-next-generation-intelligent-systems/';
+---
+
+<SiteLayout title="Resources" description="Reports, project records and context for understanding neuromorphic technology and its development in Sweden.">
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">Resources</p>
+			<h1>Evidence, context and shared terminology.</h1>
+			<p class="lead">The ecosystem is evolving quickly. Resources are dated and described by their role so that current facts, study findings and long-term ambitions remain distinct.</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">National reports</p><h2>The shared evidence base.</h2></div>
+				<p>These reports document the completed feasibility studies that preceded the continuing Neuromorphic Sweden ecosystem.</p>
+			</div>
+			<div class="resource-list">
+				<article>
+					<div class="resource-meta"><span>Report</span><time datetime="2025-08">August 2025</time></div>
+					<div>
+						<h3>Neuromorphic Sweden: Status, Needs and Recommendations</h3>
+						<p>A national mapping of research, innovation, infrastructure, international developments and stakeholder needs across materials, circuits, algorithms and systems.</p>
+						<a class="button" href={reportUrl}>Open the report <span aria-hidden="true">↗</span></a>
+					</div>
+				</article>
+				<article>
+					<div class="resource-meta"><span>Final report</span><time datetime="2026-04">April 2026</time></div>
+					<div>
+						<h3>NEUTEC: Vision, innovation potential and strategic plan</h3>
+						<p>The outcome of three open workshops and cross-ecosystem work on a common 2035 vision, five focus areas, enabling factors and example research projects.</p>
+						<a class="button secondary" href={neutecUrl}>View the project record <span aria-hidden="true">↗</span></a>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">Official records</p><h2>Funding and project facts.</h2></div>
+				<p>Vinnova's records provide the authoritative reference numbers, project periods, funding and completion status.</p>
+			</div>
+			<div class="card-grid two">
+				<article class="card"><span class="number">2024-02857</span><h3>NIPS project record</h3><p>Neuromorphic Innovation Platform Sweden, completed July 2025.</p><a href={nipsUrl}>View at Vinnova <span aria-hidden="true">↗</span></a></article>
+				<article class="card"><span class="number">2025-03290</span><h3>NEUTEC project record</h3><p>Shaping the Future with Neuromorphic Technology, completed March 2026.</p><a href={neutecUrl}>View at Vinnova <span aria-hidden="true">↗</span></a></article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container editorial-grid">
+			<div><p class="eyebrow">Editorial approach</p><h2>Careful claims for an emerging field.</h2></div>
+			<div class="prose">
+				<p>Performance depends on the application, hardware, model and comparison method. Public material should distinguish demonstrated results from targets, projections and workshop visions.</p>
+				<div class="notice"><p><strong>Our default language:</strong> “can enable,” “for suitable workloads,” and “the study identified”—with dates and sources wherever the context matters.</p></div>
+				<p>Market forecasts, universal efficiency multipliers and long-range clinical timelines are not used as general facts on this site.</p>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.resource-list { border-top: 1px solid var(--line); }
+	.resource-list article { display: grid; grid-template-columns: minmax(10rem, 0.5fr) minmax(0, 1.5fr); gap: clamp(2rem, 6vw, 6rem); border-bottom: 1px solid var(--line); padding-block: clamp(2rem, 5vw, 4rem); }
+	.resource-meta { display: flex; flex-direction: column; color: var(--blue-700); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+	.resource-meta time { margin-top: 0.35rem; color: var(--muted); font-weight: 600; }
+	.resource-list h3 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 500; }
+	.resource-list p { max-width: 47rem; }
+	.editorial-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); gap: clamp(3rem, 8vw, 8rem); }
+	@media (max-width: 52rem) { .resource-list article, .editorial-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>

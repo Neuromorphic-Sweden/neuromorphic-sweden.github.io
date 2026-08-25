@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+	noindex?: boolean;
+	bodyClass?: string;
+}
+
+const { title, description, noindex = false, bodyClass } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="theme-color" content="#071827" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Neuromorphic Sweden" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<title>{title}</title>
+	</head>
+	<body class={bodyClass}>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<slot />
+	</body>
+</html>

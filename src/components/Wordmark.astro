@@ -1,0 +1,65 @@
+---
+interface Props {
+	href?: string;
+	inverse?: boolean;
+}
+
+const { href, inverse = false } = Astro.props;
+const Wrapper = href ? 'a' : 'div';
+---
+
+<Wrapper class:list={['wordmark', { inverse }]} href={href} aria-label={href ? 'Neuromorphic Sweden home' : undefined}>
+	<svg viewBox="0 0 40 40" aria-hidden="true">
+		<path d="M7 20h6l3-8 6 17 4-9h7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+		<circle cx="7" cy="20" r="2.2" fill="currentColor" />
+		<circle cx="33" cy="20" r="2.2" fill="currentColor" />
+	</svg>
+	<span><strong>Neuromorphic</strong><small>Sweden</small></span>
+</Wrapper>
+
+<style>
+	.wordmark {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.65rem;
+		color: var(--navy-950);
+		text-decoration: none;
+	}
+
+	.wordmark:hover {
+		color: var(--navy-950);
+	}
+
+	.wordmark.inverse {
+		color: var(--white);
+	}
+
+	svg {
+		width: 2.3rem;
+		height: 2.3rem;
+		color: var(--orange-500);
+	}
+
+	span {
+		display: grid;
+		line-height: 1;
+	}
+
+	strong {
+		font-size: 0.93rem;
+		letter-spacing: 0.015em;
+	}
+
+	small {
+		margin-top: 0.28rem;
+		color: var(--blue-700);
+		font-size: 0.68rem;
+		font-weight: 750;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+	}
+
+	.inverse small {
+		color: var(--blue-200);
+	}
+</style>

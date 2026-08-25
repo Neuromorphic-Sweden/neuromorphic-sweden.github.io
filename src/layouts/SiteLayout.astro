@@ -1,0 +1,20 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description} noindex>
+	<SiteHeader />
+	<main id="main-content">
+		<slot />
+	</main>
+	<SiteFooter />
+</BaseLayout>

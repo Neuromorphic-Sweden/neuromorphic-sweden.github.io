@@ -1,0 +1,130 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { focusAreas } from '../../../data/site';
+
+const details = [
+	{
+		capabilities: ['Adaptive radio processing', 'Integrated sensing and communication', 'Near-device intelligence'],
+		context: 'Sweden can connect strengths in telecommunications, embedded systems and signal processing with emerging hardware and cross-layer design.',
+	},
+	{
+		capabilities: ['Event-based perception', 'Local sensor fusion', 'Responsive control'],
+		context: 'Automotive, industrial automation and robotics provide demanding settings for low-latency perception under strict power, privacy and connectivity constraints.',
+	},
+	{
+		capabilities: ['Persistent monitoring', 'Adaptive calibration', 'Resilient autonomy'],
+		context: 'Space, subsea, critical infrastructure, environmental monitoring and dual-use applications require systems that continue to operate after deployment with limited maintenance.',
+	},
+	{
+		capabilities: ['Continuous sensing', 'Biocompatible interfaces', 'Local adaptive response'],
+		context: 'Swedish research in organic electronics, bioelectronics and medical technology creates a long-term foundation for wearable and biointegrated systems.',
+	},
+	{
+		capabilities: ['Multimodal event sensing', 'Local representation', 'Selective data flow'],
+		context: 'A local perceptual layer can filter and structure real-world signals before higher-level planning, reducing unnecessary communication and supporting trustworthy autonomy.',
+	},
+];
+---
+
+<SiteLayout
+	title="Focus areas"
+	description="Five strategic focus areas developed through open national workshops on neuromorphic technology."
+>
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">Focus areas</p>
+			<h1>Shared challenges for a cross-disciplinary field.</h1>
+			<p class="lead">
+				The former NEUTEC project brought participants together around areas where Swedish
+				capabilities could contribute to next-generation intelligent systems. These are directions
+				for collaboration—not claims of finished products.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container focus-list">
+			{focusAreas.map((area, index) => (
+				<article>
+					<div class="focus-index"><span>0{index + 1}</span></div>
+					<div>
+						<h2>{area.title}</h2>
+						<p class="lead">{area.description}</p>
+						<p>{details[index].context}</p>
+						<ul>
+							{details[index].capabilities.map((capability) => <li>{capability}</li>)}
+						</ul>
+					</div>
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">What makes progress possible</p><h2>Enabling factors around every focus area.</h2></div>
+				<p>The final NEUTEC study places shared foundations and ecosystem capacity around the application portfolio.</p>
+			</div>
+			<ul class="feature-list">
+				<li>Co-design and cross-disciplinary collaboration</li>
+				<li>Roadmaps and international partnerships</li>
+				<li>Shared infrastructure, hardware and tools</li>
+				<li>Talent, education and mobility</li>
+				<li>Investment and long-term capacity building</li>
+				<li>Challenge-driven adoption and lab-to-fab pathways</li>
+			</ul>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.focus-list article {
+		display: grid;
+		grid-template-columns: minmax(5rem, 0.35fr) minmax(0, 1.65fr);
+		gap: clamp(2rem, 6vw, 6rem);
+		border-top: 1px solid var(--line);
+		padding-block: clamp(2.5rem, 6vw, 5rem);
+	}
+
+	.focus-index span {
+		color: var(--orange-600);
+		font-size: 0.8rem;
+		font-weight: 850;
+		letter-spacing: 0.12em;
+	}
+
+	article h2 {
+		max-width: 48rem;
+		margin-bottom: 1rem;
+		font-size: clamp(2rem, 4vw, 3.4rem);
+	}
+
+	article p {
+		max-width: 48rem;
+	}
+
+	article ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	article li {
+		border: 1px solid var(--blue-200);
+		border-radius: 999px;
+		padding: 0.35rem 0.75rem;
+		font-size: 0.8rem;
+		font-weight: 700;
+	}
+
+	@media (max-width: 42rem) {
+		.focus-list article {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+	}
+</style>

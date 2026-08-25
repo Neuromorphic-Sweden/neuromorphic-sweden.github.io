@@ -1,46 +1,44 @@
-# Astro Starter Kit: Basics
+# Neuromorphic Sweden
+
+Public website for the neutral Swedish neuromorphic research and innovation ecosystem.
+
+## Routes
+
+- `/` — public under-construction page
+- `/preview/` — unlinked development preview of the full website
+
+Preview routes include `noindex` metadata and are disallowed in `public/robots.txt`. This keeps them out of normal navigation and asks search engines not to index them, but the route is not authentication and should not be used for confidential content.
+
+## Development
+
+The project requires Node.js 22.12 or newer. Node.js 24 is used for GitHub Pages deployment.
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
+npm run dev -- --background
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Manage the background development server with:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```sh
+npm run astro -- dev status
+npm run astro -- dev logs
+npm run astro -- dev stop
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Build the static site with:
 
-## 🧞 Commands
+```sh
+npm run build
+```
 
-All commands are run from the root of the project, from a terminal:
+## Landing-page illustration
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+The public landing page uses `src/components/SpikeMatrixField.astro`. The previous signal
+illustration remains unchanged in `src/components/SignalField.astro`; to restore it, change only
+the `LandingSignalField` import path in `src/pages/index.astro` from `SpikeMatrixField.astro` to
+`SignalField.astro`.
 
-## 👀 Want to learn more?
+## Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushes to `main` are built and deployed to GitHub Pages by `.github/workflows/deploy.yml`.

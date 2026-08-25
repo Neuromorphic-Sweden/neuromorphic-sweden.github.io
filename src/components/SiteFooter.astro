@@ -1,0 +1,100 @@
+---
+import Wordmark from './Wordmark.astro';
+import { contactEmail, navigation, reportUrl } from '../data/site';
+---
+
+<footer class="site-footer">
+	<div class="container footer-main">
+		<div>
+			<Wordmark inverse />
+			<p class="mission">A neutral meeting point for Sweden's neuromorphic research and innovation ecosystem.</p>
+		</div>
+		<div>
+			<h2>Explore</h2>
+			<ul>
+				{navigation.slice(1).map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+			</ul>
+		</div>
+		<div>
+			<h2>Inquiries</h2>
+			<p><a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
+			<p><a href={reportUrl}>Read the 2025 national report <span aria-hidden="true">↗</span></a></p>
+		</div>
+	</div>
+	<div class="container footer-bottom">
+		<p>Neuromorphic Sweden</p>
+		<p>Preview site · English</p>
+	</div>
+</footer>
+
+<style>
+	.site-footer {
+		background: var(--navy-950);
+		padding-block: 4rem 1.5rem;
+	}
+
+	.footer-main {
+		display: grid;
+		grid-template-columns: 1.5fr 0.65fr 1fr;
+		gap: 4rem;
+		padding-bottom: 3rem;
+	}
+
+	.mission {
+		max-width: 25rem;
+		margin-top: 1.5rem;
+	}
+
+	h2 {
+		margin-bottom: 1rem;
+		color: var(--white);
+		font-family: var(--font-sans);
+		font-size: 0.75rem;
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	p,
+	li {
+		color: var(--blue-200);
+		font-size: 0.9rem;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li + li {
+		margin-top: 0.45rem;
+	}
+
+	a {
+		color: var(--blue-200);
+	}
+
+	a:hover {
+		color: var(--white);
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid rgb(200 217 225 / 20%);
+		padding-top: 1.25rem;
+	}
+
+	.footer-bottom p {
+		margin: 0;
+		font-size: 0.75rem;
+	}
+
+	@media (max-width: 48rem) {
+		.footer-main {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+	}
+</style>

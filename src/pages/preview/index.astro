@@ -1,0 +1,199 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import SignalField from '../../components/SignalField.astro';
+import { focusAreas, previewBase, reportUrl } from '../../data/site';
+---
+
+<SiteLayout
+	title="A national ecosystem for neuromorphic technology"
+	description="Neuromorphic Sweden connects research, industry, institutes and public actors across the neuromorphic technology stack."
+>
+	<section class="hero">
+		<div class="container hero-grid">
+			<div>
+				<p class="eyebrow">Neuromorphic Sweden</p>
+				<h1>Intelligence shaped by events, not excess.</h1>
+				<p class="lead">
+					A neutral meeting point for universities, research institutes, industry, startups and
+					public actors advancing neuromorphic technology in Sweden.
+				</p>
+				<div class="button-row">
+					<a class="button" href={`${previewBase}/ecosystem/`}>Explore the ecosystem</a>
+					<a class="button secondary" href={`${previewBase}/technology/`}>Understand the technology</a>
+				</div>
+			</div>
+			<SignalField />
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Why neuromorphic?</p>
+					<h2>Computing closer to the world it senses.</h2>
+				</div>
+				<p>
+					Neuromorphic technology takes inspiration from nervous systems to process information
+					when and where it matters. It complements conventional digital AI with new ways to sense,
+					compute and adapt under tight constraints.
+				</p>
+			</div>
+			<ul class="feature-list">
+				<li><strong>Event-driven</strong><br />Respond to meaningful changes instead of processing every sample.</li>
+				<li><strong>Near-sensor</strong><br />Interpret data close to where it is produced.</li>
+				<li><strong>In and near memory</strong><br />Reduce costly movement between memory and processors.</li>
+				<li><strong>Adaptive by design</strong><br />Use material, circuit and system dynamics as part of computation.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Strategic focus</p>
+					<h2>Five areas for shared progress.</h2>
+				</div>
+				<p>
+					Open workshops held through the former NEUTEC project consolidated opportunities where
+					Swedish capabilities can contribute across research and application.
+				</p>
+			</div>
+			<div class="focus-grid">
+				{focusAreas.map((area, index) => (
+					<article class="focus-card">
+						<span>0{index + 1}</span>
+						<div>
+							<h3>{area.title}</h3>
+							<p>{area.description}</p>
+						</div>
+					</article>
+				))}
+			</div>
+			<div class="button-row">
+				<a class="button secondary" href={`${previewBase}/focus-areas/`}>Explore the focus areas</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section dark">
+		<div class="container history-grid">
+			<div>
+				<p class="eyebrow">A shared foundation</p>
+				<h2>Mapped nationally. Shaped openly.</h2>
+			</div>
+			<div>
+				<p class="lead">
+					Two completed Vinnova-funded feasibility studies mapped capabilities, engaged the
+					ecosystem and developed a shared strategic direction.
+				</p>
+				<p>
+					The 2025 national study identified strong research and industrial potential alongside
+					gaps in coordination, infrastructure, tools and cross-stack integration. NEUTEC then
+					brought around one hundred participants into three open workshops.
+				</p>
+				<div class="button-row">
+					<a class="button report-button" href={reportUrl}>Read the national report <span aria-hidden="true">↗</span></a>
+					<a class="button dark-secondary" href={`${previewBase}/activities/`}>Project history</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.hero {
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 88% 0%, rgb(111 150 170 / 28%), transparent 33rem),
+			linear-gradient(120deg, var(--page), var(--blue-50));
+		padding-block: clamp(4rem, 9vw, 8rem);
+	}
+
+	.hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+		gap: clamp(3rem, 7vw, 7rem);
+		align-items: center;
+	}
+
+	.hero h1 {
+		margin-bottom: 1.5rem;
+	}
+
+	.focus-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1px;
+		border: 1px solid var(--line);
+		background: var(--line);
+	}
+
+	.focus-card {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+		gap: 1rem;
+		background: var(--white);
+		padding: clamp(1.3rem, 3vw, 2rem);
+	}
+
+	.focus-card:last-child {
+		grid-column: 1 / -1;
+	}
+
+	.focus-card > span {
+		color: var(--orange-600);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+	}
+
+	.focus-card h3 {
+		margin-bottom: 0.4rem;
+	}
+
+	.focus-card p {
+		margin-bottom: 0;
+	}
+
+	.history-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
+		gap: clamp(3rem, 8vw, 8rem);
+	}
+
+	.report-button {
+		background: var(--orange-500);
+		border-color: var(--orange-500);
+	}
+
+	.report-button:hover {
+		background: var(--orange-600);
+	}
+
+	.dark-secondary {
+		border-color: rgb(200 217 225 / 35%);
+		background: transparent;
+	}
+
+	.dark-secondary:hover {
+		background: rgb(255 255 255 / 8%);
+	}
+
+	@media (max-width: 52rem) {
+		.hero-grid,
+		.history-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.focus-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.focus-card:last-child {
+			grid-column: auto;
+		}
+	}
+</style>

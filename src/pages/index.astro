@@ -1,11 +1,140 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LandingSignalField from '../components/SpikeMatrixField.astro';
+import Wordmark from '../components/Wordmark.astro';
+import { reportUrl } from '../data/site';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+	title="Neuromorphic Sweden — Under neurogenesis"
+	description="Neuromorphic Sweden is taking shape: a national ecosystem for research and innovation in neuromorphic technology."
+	bodyClass="holding-page"
+>
+	<main id="main-content" class="holding-main">
+		<div class="container holding-grid">
+			<section class="holding-copy">
+				<div class="holding-brand"><Wordmark /></div>
+				<div class="holding-message">
+					<h1>Under<br /><em>neurogenesis…</em></h1>
+					<p class="lead">
+						Connections are forming across Sweden's research and innovation ecosystem. A site
+						will appear soon.
+					</p>
+					<div class="button-row">
+						<a class="button" href={reportUrl}>Read the Neuromorphic Sweden report</a>
+					</div>
+				</div>
+			</section>
+			<div class="visual-wrap">
+				<LandingSignalField />
+				<p><span></span> Signals detected · synapses forming</p>
+			</div>
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	:global(.holding-page) {
+		background:
+			radial-gradient(circle at 85% 10%, rgb(111 150 170 / 22%), transparent 34rem),
+			var(--page);
+	}
+
+	.holding-main {
+		display: grid;
+		align-items: start;
+		min-height: 100svh;
+		padding-block: clamp(4rem, 6vw, 6rem);
+	}
+
+	.holding-grid {
+		--visual-offset: clamp(7rem, 10vw, 10rem);
+
+		display: grid;
+		grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+		gap: clamp(3rem, 8vw, 8rem);
+		align-items: stretch;
+	}
+
+	.holding-copy {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: var(--visual-offset);
+	}
+
+	.holding-brand {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.holding-message {
+		transform: translateY(3rem);
+	}
+
+	.visual-wrap {
+		padding-top: var(--visual-offset);
+	}
+
+	h1 {
+		margin: 1.1rem 0 1.5rem;
+	}
+
+	h1 em {
+		color: var(--blue-700);
+		font-weight: inherit;
+	}
+
+	.visual-wrap > p {
+		display: flex;
+		align-items: center;
+		gap: 0.55rem;
+		margin: 1rem 0 0;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+	}
+
+	.visual-wrap > p span {
+		width: 0.55rem;
+		height: 0.55rem;
+		border-radius: 50%;
+		background: var(--orange-500);
+		box-shadow: 0 0 0 5px var(--orange-100);
+	}
+
+	@media (max-width: 50rem) {
+		.holding-main {
+			padding-block: 2rem;
+		}
+
+		.holding-grid {
+			--visual-offset: 0;
+
+			grid-template-columns: 1fr;
+			align-items: start;
+		}
+
+		.holding-copy {
+			justify-content: flex-start;
+			gap: 4rem;
+			padding-top: 0;
+		}
+
+		.holding-brand {
+			position: static;
+		}
+
+		.holding-message {
+			transform: none;
+		}
+
+		.visual-wrap {
+			padding-top: 0;
+			padding-bottom: 2rem;
+		}
+	}
+</style>

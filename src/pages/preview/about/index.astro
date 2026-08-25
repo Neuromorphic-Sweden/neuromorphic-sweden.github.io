@@ -1,0 +1,60 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { contactEmail, reportUrl } from '../../../data/site';
+---
+
+<SiteLayout title="About" description="About Neuromorphic Sweden, its neutral national scope, principles and contact information.">
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">About</p>
+			<h1>A shared identity for a distributed ecosystem.</h1>
+			<p class="lead">Neuromorphic Sweden is intended to make national capabilities more visible and connected across universities, institutes, companies, startups and public actors.</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container about-grid">
+			<div><p class="eyebrow">Purpose</p><h2>Connect without centralizing.</h2></div>
+			<div class="prose">
+				<p class="lead">The field extends from foundational materials to deployed intelligent systems. Its progress depends on collaboration across disciplinary, organizational and sector boundaries.</p>
+				<p>This site provides a neutral place to explain the technology, show the breadth of activity in Sweden, document shared priorities and make collaboration easier. It does not represent one university, company or institute.</p>
+				<p>Neuromorphic Sweden is rooted in open ecosystem work carried out through the completed NIPS and NEUTEC feasibility studies. Those projects were coordinated by Luleå University of Technology and funded by Vinnova; the continuing ecosystem is broader than either project.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">Principles</p><h2>How the ecosystem should be presented.</h2></div>
+				<p>A neutral national platform must make participation, evidence and institutional roles clear.</p>
+			</div>
+			<div class="card-grid two">
+				<article class="card"><span class="number">01</span><h3>National and inclusive</h3><p>Participation is not defined by geography within Sweden, institutional size or role in a former project.</p></article>
+				<article class="card"><span class="number">02</span><h3>Evidence-aware</h3><p>Demonstrated findings, strategic ambitions and future opportunities are described separately.</p></article>
+				<article class="card"><span class="number">03</span><h3>Cross-disciplinary</h3><p>Materials, circuits, algorithms, systems, neuroscience and societal perspectives all belong in the conversation.</p></article>
+				<article class="card"><span class="number">04</span><h3>Open to connection</h3><p>The ecosystem should help independent and sometimes competing actors find shared tools, questions and opportunities.</p></article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section dark">
+		<div class="container contact-grid">
+			<div><p class="eyebrow">Inquiries</p><h2>Start a conversation.</h2></div>
+			<div>
+				<p class="lead">For questions about Neuromorphic Sweden, ecosystem participation or the former national studies:</p>
+				<a class="email" href={`mailto:${contactEmail}`}>{contactEmail}</a>
+				<p class="report-link"><a href={reportUrl}>Read the Neuromorphic Sweden report <span aria-hidden="true">↗</span></a></p>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.about-grid, .contact-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); gap: clamp(3rem, 8vw, 8rem); }
+	.email { display: inline-block; margin-top: 1rem; color: var(--white); font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 3.2rem); line-height: 1.15; text-decoration-color: var(--orange-500); }
+	.email:hover { color: var(--orange-100); }
+	.report-link { margin-top: 2rem; }
+	.report-link a { color: var(--blue-200); }
+	@media (max-width: 52rem) { .about-grid, .contact-grid { grid-template-columns: 1fr; } }
+</style>

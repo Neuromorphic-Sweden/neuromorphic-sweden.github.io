@@ -1,0 +1,117 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { contactEmail } from '../../../data/site';
+
+const groups = [
+	{
+		title: 'Universities',
+		text: 'Research documented across Chalmers, KTH, Linköping, Luleå, Lund, Mälardalen, Stockholm, Umeå, Uppsala, Örebro and the University of Gothenburg.',
+	},
+	{
+		title: 'Research institutes',
+		text: 'National capabilities include applied research in sensing, algorithms, defence, systems integration, software and test environments.',
+	},
+	{
+		title: 'Industry and startups',
+		text: 'Swedish activity spans telecom, automation, automotive, sensing, space, defence, semiconductors, industrial systems and emerging neuromorphic products.',
+	},
+	{
+		title: 'Public and innovation actors',
+		text: 'Funding agencies, public authorities, testbeds, incubators and innovation environments help connect research, infrastructure, skills and adoption.',
+	},
+];
+---
+
+<SiteLayout
+	title="Ecosystem"
+	description="A neutral overview of the universities, institutes, companies, startups and public actors in Sweden's neuromorphic ecosystem."
+>
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">Ecosystem</p>
+			<h1>National in scope. Cross-disciplinary by necessity.</h1>
+			<p class="lead">
+				Neuromorphic Sweden is a meeting point across institutional and disciplinary boundaries.
+				No single organization represents the breadth of the field.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container ecosystem-grid">
+			<div>
+				<p class="eyebrow">A distributed capability</p>
+				<h2>Many actors, one connected stack.</h2>
+				<p class="lead">
+					The 2025 national mapping found internationally connected research and strong industrial
+					domains, but limited collaboration between materials, circuits, algorithms and systems.
+				</p>
+				<p>
+					The names below indicate activity documented by the feasibility studies. They are not a
+					membership list and should not be read as exhaustive or ranked.
+				</p>
+			</div>
+			<div>
+				{groups.map((group) => (
+					<section class="org-group">
+						<h3>{group.title}</h3>
+						<p>{group.text}</p>
+					</section>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">Shared needs</p><h2>What the ecosystem has asked for.</h2></div>
+				<p>Workshops and interviews repeatedly identified practical gaps that no individual actor can resolve alone.</p>
+			</div>
+			<div class="card-grid">
+				<article class="card"><span class="number">01</span><h3>Access</h3><p>Hardware, fabrication, cleanrooms, testbeds, realistic datasets and evaluation environments.</p></article>
+				<article class="card"><span class="number">02</span><h3>Integration</h3><p>Tools and projects connecting materials, circuits, algorithms, software and application requirements.</p></article>
+				<article class="card"><span class="number">03</span><h3>Skills</h3><p>Courses, shared teaching modules, mobility, industrial doctoral projects and professional development.</p></article>
+				<article class="card"><span class="number">04</span><h3>Demonstration</h3><p>Transparent benchmarks and credible prototypes that test benefits in relevant operating conditions.</p></article>
+				<article class="card"><span class="number">05</span><h3>Connection</h3><p>National matchmaking, international partnerships and a stronger coordinated presence in European programmes.</p></article>
+				<article class="card"><span class="number">06</span><h3>Translation</h3><p>Support through the research-to-innovation gap, including IP, standards, startups and lab-to-fab pathways.</p></article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section compact dark">
+		<div class="container join-grid">
+			<div><p class="eyebrow">Contribute</p><h2>Help make the map more complete.</h2></div>
+			<div>
+				<p>If your organization is active in neuromorphic research, technology, infrastructure, education or application in Sweden, we welcome an inquiry.</p>
+				<a class="button contact" href={`mailto:${contactEmail}`}>Contact {contactEmail}</a>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.ecosystem-grid,
+	.join-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+		gap: clamp(3rem, 8vw, 8rem);
+	}
+
+	.contact {
+		margin-top: 1rem;
+		background: var(--orange-500);
+		border-color: var(--orange-500);
+	}
+
+	.contact:hover {
+		background: var(--orange-600);
+	}
+
+	@media (max-width: 52rem) {
+		.ecosystem-grid,
+		.join-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

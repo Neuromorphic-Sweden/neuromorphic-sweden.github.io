@@ -1,0 +1,157 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { reportUrl } from '../../../data/site';
+
+const nipsUrl = 'https://www.vinnova.se/en/p/neuromorphic-innovation-platform-sweden-nips/';
+const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorphic-technology-neutec-towards-global-leadership-in-next-generation-intelligent-systems/';
+---
+
+<SiteLayout
+	title="Activities"
+	description="The project history and open workshops that helped establish Neuromorphic Sweden's shared national context."
+>
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">Activities</p>
+			<h1>Built through mapping, dialogue and open workshops.</h1>
+			<p class="lead">
+				Neuromorphic Sweden grows from a sequence of national conversations. Two completed
+				Vinnova-funded feasibility studies established the current evidence base and strategic
+				direction.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<p class="eyebrow">Project history</p>
+			<div class="projects">
+				<article class="project-card">
+					<div class="meta-row"><span class="tag">Completed</span><span class="tag">2024–2025</span></div>
+					<h2>Neuromorphic Innovation Platform Sweden (NIPS)</h2>
+					<p class="lead">A national and international mapping of capabilities, needs and opportunities for a Swedish innovation platform.</p>
+					<dl>
+						<div><dt>Vinnova reference</dt><dd>2024-02857</dd></div>
+						<div><dt>Period</dt><dd>November 2024 – July 2025</dd></div>
+						<div><dt>Coordinator</dt><dd>Luleå University of Technology</dd></div>
+						<div><dt>Partners</dt><dd>ABB, Ericsson, FOI, KTH, Lund University, Saab and Uppsala University</dd></div>
+					</dl>
+					<p>The study combined ecosystem mapping, an open workshop and interviews with more than twenty organizations. Its final report identified strong capabilities alongside gaps in coordination, funding, infrastructure, hardware access and cross-stack integration.</p>
+					<div class="button-row">
+						<a class="button" href={reportUrl}>Read the final report <span aria-hidden="true">↗</span></a>
+						<a class="button secondary" href={nipsUrl}>Vinnova project record <span aria-hidden="true">↗</span></a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="meta-row"><span class="tag">Completed</span><span class="tag">2025–2026</span></div>
+					<h2>Shaping the Future with Neuromorphic Technology (NEUTEC)</h2>
+					<p class="lead">A pre-study that developed a common 2035 vision, strategic plan and flagship areas for a potential future excellence cluster.</p>
+					<dl>
+						<div><dt>Vinnova reference</dt><dd>2025-03290</dd></div>
+						<div><dt>Period</dt><dd>October 2025 – March 2026</dd></div>
+						<div><dt>Coordinator</dt><dd>Luleå University of Technology</dd></div>
+						<div><dt>Collaboration</dt><dd>Universities, institutes, industry, startups and a public authority across Sweden</dd></div>
+					</dl>
+					<p>Three open workshops engaged around one hundred participants. The resulting focus areas and enabling factors were developed by a broad workgroup and an industrial advisory board.</p>
+					<a class="button secondary" href={neutecUrl}>Vinnova project record <span aria-hidden="true">↗</span></a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div><p class="eyebrow">Open workshop series</p><h2>Three settings, one national conversation.</h2></div>
+				<p>The workshops moved from thematic visions and use cases toward shared enabling factors, research needs and a strategic implementation plan.</p>
+			</div>
+			<ol class="timeline">
+				<li><time datetime="2026-01-20">20–21 Jan 2026</time><div><h3>Lund</h3><p>Telecommunications, edge AI, space, defence and environmental monitoring.</p></div></li>
+				<li><time datetime="2026-02-03">3–4 Feb 2026</time><div><h3>Norrköping</h3><p>Industrial systems, automation, robotics, healthcare and wearables.</p></div></li>
+				<li><time datetime="2026-03">March 2026</time><div><h3>Online</h3><p>A final open workshop broadened participation and consolidated input before the pre-study concluded.</p></div></li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="section compact dark">
+		<div class="container outcome-grid">
+			<h2>What the workshops produced</h2>
+			<ul>
+				<li>A shared long-term vision</li>
+				<li>Five strategic focus areas</li>
+				<li>Example cross-stack research projects</li>
+				<li>Needs for infrastructure, tools, talent and integration</li>
+				<li>A plan for research-to-application pathways</li>
+			</ul>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.projects {
+		display: grid;
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.project-card {
+		border: 1px solid var(--line);
+		border-radius: 1.2rem;
+		background: var(--white);
+		padding: clamp(1.5rem, 5vw, 3.5rem);
+		box-shadow: var(--shadow-soft);
+	}
+
+	.project-card h2 {
+		max-width: 55rem;
+		font-size: clamp(2rem, 4vw, 3.2rem);
+	}
+
+	.project-card > p {
+		max-width: 58rem;
+	}
+
+	dl {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0;
+	margin-block: 2rem;
+	border-top: 1px solid var(--line);
+	}
+
+	dl div {
+		border-bottom: 1px solid var(--line);
+		padding-block: 0.85rem;
+	}
+
+	dt {
+		color: var(--blue-700);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	dd {
+		margin: 0.2rem 0 0;
+		padding-right: 1rem;
+	}
+
+	.outcome-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
+		gap: clamp(3rem, 8vw, 8rem);
+	}
+
+	.outcome-grid ul {
+		margin: 0;
+	}
+
+	@media (max-width: 52rem) {
+		dl,
+		.outcome-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

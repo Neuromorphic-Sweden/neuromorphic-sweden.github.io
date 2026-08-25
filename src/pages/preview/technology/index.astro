@@ -1,0 +1,164 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import SignalField from '../../../components/SignalField.astro';
+---
+
+<SiteLayout
+	title="Technology"
+	description="An introduction to neuromorphic technology, from materials and devices to algorithms, systems and applications."
+>
+	<section class="page-hero">
+		<div class="container">
+			<p class="eyebrow">Technology</p>
+			<h1>A different way to sense, compute and adapt.</h1>
+			<p class="lead">
+				Neuromorphic technology draws on principles found in nervous systems to build intelligent
+				systems that operate through events, local dynamics and tightly coupled sensing and
+				computation.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container intro-grid">
+			<div class="prose">
+				<p class="eyebrow">A complementary paradigm</p>
+				<h2>Not simply a smaller version of conventional AI.</h2>
+				<p>
+					Digital computing remains essential. Neuromorphic approaches complement it by addressing
+					applications where data movement, response time, continuous sensing, connectivity or power
+					become limiting factors.
+				</p>
+				<p>
+					Rather than treating every input equally and moving all data through a centralized
+					processor, a neuromorphic system may respond only to events, process signals near the
+					sensor, store and compute in the same physical structure, or use material and circuit
+					dynamics directly.
+				</p>
+			</div>
+			<SignalField compact />
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Foundational mechanisms</p>
+					<h2>Four routes to more capable edge intelligence.</h2>
+				</div>
+				<p>
+					The national studies identify four complementary mechanisms. Their value depends on the
+					application, and the strongest results often come from combining them.
+				</p>
+			</div>
+			<div class="card-grid two">
+				<article class="card">
+					<span class="number">01</span>
+					<h3>Physical instantiation</h3>
+					<p>Materials, devices and circuits can embody memory, filtering, recurrence and adaptation instead of recreating every operation in software.</p>
+				</article>
+				<article class="card">
+					<span class="number">02</span>
+					<h3>In-memory and near-sensor processing</h3>
+					<p>Computation takes place close to stored or newly sensed information, reducing movement through the system.</p>
+				</article>
+				<article class="card">
+					<span class="number">03</span>
+					<h3>Event-based sparse processing</h3>
+					<p>Changes and salient events trigger processing, allowing activity to follow information content rather than a fixed clock or frame rate.</p>
+				</article>
+				<article class="card">
+					<span class="number">04</span>
+					<h3>Biointegrated systems</h3>
+					<p>Organic and electrochemical materials can bridge ionic biological signals and electronics for low-voltage sensing, adaptation and interfacing.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">From foundation to deployment</p>
+					<h2>Progress requires the whole stack.</h2>
+				</div>
+				<p>
+					Neuromorphic systems cannot be developed effectively in isolated layers. Materials,
+					circuits, algorithms, software and real-world requirements need to inform one another.
+				</p>
+			</div>
+			<ol class="stack-list">
+				<li><span>L1</span><div><h3>Materials and devices</h3><p>Organic electronics, memristors, spintronics, photonics, emerging memories and bio-compatible materials.</p></div></li>
+				<li><span>L2</span><div><h3>Circuits and architectures</h3><p>Mixed-signal circuits, in-memory processing, event-based sensors and heterogeneous integration.</p></div></li>
+				<li><span>L3</span><div><h3>Algorithms and software</h3><p>Spiking networks, event-driven learning, optimization, simulation, interoperability and benchmarking.</p></div></li>
+				<li><span>L4</span><div><h3>Systems and applications</h3><p>Sensor fusion, autonomous systems, telecom, monitoring, healthcare and industrial deployment.</p></div></li>
+				<li><span>+ </span><div><h3>Cross-cutting foundations</h3><p>Neuroscience, co-design, ethics, regulation, security, humanities and social sciences.</p></div></li>
+			</ol>
+		</div>
+	</section>
+
+	<section class="section compact dark">
+		<div class="container caution-grid">
+			<h2>Potential, with precision.</h2>
+			<div>
+				<p>
+					Energy and latency benefits are application- and hardware-dependent. Neuromorphic Sweden
+					aims to support careful benchmarking, realistic test environments and transparent
+					comparison—not universal performance claims.
+				</p>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.intro-grid,
+	.caution-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
+		gap: clamp(3rem, 8vw, 8rem);
+		align-items: center;
+	}
+
+	.stack-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.stack-list li {
+		display: grid;
+		grid-template-columns: 4rem minmax(0, 1fr);
+		gap: 1.5rem;
+		border-top: 1px solid var(--line);
+		padding-block: 1.5rem;
+	}
+
+	.stack-list span {
+		color: var(--orange-600);
+		font-size: 0.8rem;
+		font-weight: 850;
+		letter-spacing: 0.08em;
+	}
+
+	.stack-list h3 {
+		margin-bottom: 0.35rem;
+	}
+
+	.stack-list p {
+		margin-bottom: 0;
+	}
+
+	.caution-grid h2 {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 52rem) {
+		.intro-grid,
+		.caution-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
