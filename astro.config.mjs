@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 // export default defineConfig({});
 
 export default defineConfig({
-  site: 'https://neuromorphic-sweden.github.io',
+	site: 'https://neuromorphic-sweden.se',
 });

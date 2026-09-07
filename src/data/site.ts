@@ -1,18 +1,18 @@
-export const previewBase = '/preview';
+export const siteBase = '';
 
 export const reportUrl =
 	'https://diva-portal.org/smash/get/diva2%3A2008442/FULLTEXT01.pdf';
 
-export const contactEmail = 'Sabine.Mayer@ltu.se';
+export const contactEmail = 'sabine.mayer@neuromorphic-sweden.se';
 
 export const navigation = [
-	{ href: `${previewBase}/`, label: 'Home' },
-	{ href: `${previewBase}/technology/`, label: 'Technology' },
-	{ href: `${previewBase}/focus-areas/`, label: 'Focus areas' },
-	{ href: `${previewBase}/ecosystem/`, label: 'Ecosystem' },
-	{ href: `${previewBase}/activities/`, label: 'Activities' },
-	{ href: `${previewBase}/resources/`, label: 'Resources' },
-	{ href: `${previewBase}/about/`, label: 'About' },
+	{ href: `${siteBase}/`, label: 'Home' },
+	{ href: `${siteBase}/technology/`, label: 'Technology' },
+	{ href: `${siteBase}/focus-areas/`, label: 'Focus areas' },
+	{ href: `${siteBase}/ecosystem/`, label: 'Ecosystem' },
+	{ href: `${siteBase}/activities/`, label: 'Activities' },
+	{ href: `${siteBase}/resources/`, label: 'Resources' },
+	{ href: `${siteBase}/about/`, label: 'About' },
 ];
 
 export const focusAreas = [

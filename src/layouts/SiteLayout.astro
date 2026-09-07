@@ -11,7 +11,7 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description} noindex>
+<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description}>
 	<SiteHeader />
 	<main id="main-content">
 		<slot />

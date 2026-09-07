@@ -4,10 +4,13 @@ Public website for the neutral Swedish neuromorphic research and innovation ecos
 
 ## Routes
 
-- `/` — public under-construction page
-- `/preview/` — unlinked development preview of the full website
-
-Preview routes include `noindex` metadata and are disallowed in `public/robots.txt`. This keeps them out of normal navigation and asks search engines not to index them, but the route is not authentication and should not be used for confidential content.
+- `/` — public landing page
+- `/technology/` — introduction to neuromorphic technology
+- `/focus-areas/` — strategic focus areas
+- `/ecosystem/` — national ecosystem overview
+- `/activities/` — project and workshop history
+- `/resources/` — reports and project records
+- `/about/` — purpose, principles and contact information
 
 ## Development
 
@@ -34,10 +37,11 @@ npm run build
 
 ## Landing-page illustration
 
-The public landing page uses `src/components/SpikeMatrixField.astro`. The previous signal
-illustration remains unchanged in `src/components/SignalField.astro`; to restore it, change only
-the `LandingSignalField` import path in `src/pages/index.astro` from `SpikeMatrixField.astro` to
-`SignalField.astro`.
+The public landing page uses `src/components/AdaptiveSpikeMatrixField.astro`, a bidirectional
+variant with sparse edge-to-frontend feedback. The unidirectional matrix animation remains in
+`src/components/SpikeMatrixField.astro`, and the earlier signal illustration remains unchanged in
+`src/components/SignalField.astro`. To restore either backup, change only the `LandingSignalField`
+import path in `src/pages/index.astro`.
 
 ## Deployment
 

@@ -1,4 +1,12 @@
-<div class="spike-matrix" aria-hidden="true">
+---
+interface Props {
+	feedback?: boolean;
+}
+
+const { feedback = false } = Astro.props;
+---
+
+<div class:list={['spike-matrix', { feedback }]} aria-hidden="true">
 	<svg viewBox="0 0 760 480" role="presentation">
 		<defs>
 			<linearGradient id="matrix-fade" x1="0" x2="1">
@@ -106,6 +114,41 @@
 				<rect class="response-late" x="647" y="377" width="18" height="18" rx="3" />
 			</g>
 		</g>
+
+		<!-- Sparse return traffic modulates selected frontend spike amplitudes. -->
+		{feedback && (
+			<g class="feedback-system">
+				<g class="feedback-routes">
+					<path d="M416 115C374 115 339 105 294 105H131" />
+					<path d="M516 240C450 240 365 225 294 225H130" />
+					<path d="M641 340C560 340 410 345 294 345H151" />
+				</g>
+				<g class="feedback-sources">
+					<g style="--feedback-delay: -2s">
+						<circle cx="416" cy="115" r="22" />
+						<rect x="407" y="106" width="18" height="18" rx="3" />
+					</g>
+					<g style="--feedback-delay: -16.7s">
+						<circle cx="516" cy="240" r="22" />
+						<rect x="507" y="231" width="18" height="18" rx="3" />
+					</g>
+					<g style="--feedback-delay: -31.4s">
+						<circle cx="641" cy="340" r="22" />
+						<rect x="632" y="331" width="18" height="18" rx="3" />
+					</g>
+				</g>
+				<g class="feedback-packets">
+					<path style="--feedback-delay: -2s" pathLength="100" d="M416 115C374 115 339 105 294 105H131" />
+					<path style="--feedback-delay: -16.7s" pathLength="100" d="M516 240C450 240 365 225 294 225H130" />
+					<path style="--feedback-delay: -31.4s" pathLength="100" d="M641 340C560 340 410 345 294 345H151" />
+				</g>
+				<g class="adaptive-peaks">
+					<path style="--feedback-delay: -2s; --peak-scale: 1.8" d="M127 105l4-25 4 25" />
+					<path style="--feedback-delay: -16.7s; --peak-scale: 1.7" d="M126 225l4-29 4 29" />
+					<path style="--feedback-delay: -31.4s; --peak-scale: 1.45" d="M147 345l4-49 4 49" />
+				</g>
+			</g>
+		)}
 	</svg>
 </div>
 
@@ -246,6 +289,58 @@
 		animation-delay: calc(var(--delay) + 0.36s);
 	}
 
+	.feedback-routes path {
+		fill: none;
+		stroke: rgb(49 95 123 / 24%);
+		stroke-dasharray: 2 7;
+		stroke-linecap: round;
+		stroke-width: 1.3;
+		vector-effect: non-scaling-stroke;
+	}
+
+	.feedback-sources circle {
+		fill: var(--blue-700);
+		filter: url(#soft-glow);
+		opacity: 0;
+		animation: feedback-source-cycle 44s ease-out infinite;
+		animation-delay: var(--feedback-delay);
+		transform-box: fill-box;
+		transform-origin: center;
+	}
+
+	.feedback-sources rect {
+		fill: var(--blue-700);
+		opacity: 0;
+		animation: feedback-cell-cycle 44s ease-out infinite;
+		animation-delay: var(--feedback-delay);
+	}
+
+	/* Three return paths per 44 seconds make about 10% of all animated packets feedback events. */
+	.feedback-packets path {
+		fill: none;
+		stroke: var(--blue-700);
+		stroke-dasharray: 5 95;
+		stroke-linecap: round;
+		stroke-width: 5;
+		animation: feedback-packet-cycle 44s linear infinite;
+		animation-delay: var(--feedback-delay);
+		vector-effect: non-scaling-stroke;
+	}
+
+	.adaptive-peaks path {
+		fill: none;
+		stroke: var(--orange-500);
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 3;
+		opacity: 0;
+		animation: synaptic-weight-cycle 44s ease-in-out infinite;
+		animation-delay: var(--feedback-delay);
+		transform-box: fill-box;
+		transform-origin: center bottom;
+		vector-effect: non-scaling-stroke;
+	}
+
 	@keyframes spike-cycle {
 		0%, 6%, 100% { opacity: 0; transform: scaleY(0.1); }
 		7% { opacity: 1; transform: scaleY(1); }
@@ -271,6 +366,33 @@
 		31% { opacity: 0.92; }
 		38% { opacity: 0.5; }
 		58% { opacity: 0; }
+	}
+
+	@keyframes feedback-source-cycle {
+		0%, 2%, 100% { opacity: 0; transform: scale(0.4); }
+		4% { opacity: 0.2; transform: scale(1); }
+		10% { opacity: 0; transform: scale(1.7); }
+	}
+
+	@keyframes feedback-cell-cycle {
+		0%, 2%, 100% { opacity: 0; }
+		4% { opacity: 0.9; }
+		9% { opacity: 0.25; }
+		12% { opacity: 0; }
+	}
+
+	@keyframes feedback-packet-cycle {
+		0%, 4% { opacity: 0; stroke-dashoffset: 0; }
+		5% { opacity: 1; stroke-dashoffset: 0; }
+		17% { opacity: 1; stroke-dashoffset: -95; }
+		19%, 100% { opacity: 0; stroke-dashoffset: -95; }
+	}
+
+	@keyframes synaptic-weight-cycle {
+		0%, 16%, 100% { opacity: 0; transform: scaleY(1); }
+		19% { opacity: 0.95; transform: scaleY(1); }
+		24%, 39% { opacity: 1; transform: scaleY(var(--peak-scale)); }
+		49% { opacity: 0; transform: scaleY(1); }
 	}
 
 	@media (max-width: 34rem) {

@@ -1,140 +1,207 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import LandingSignalField from '../components/SpikeMatrixField.astro';
-import Wordmark from '../components/Wordmark.astro';
-import { reportUrl } from '../data/site';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import LandingSignalField from '../components/AdaptiveSpikeMatrixField.astro';
+import { focusAreas, siteBase, reportUrl } from '../data/site';
+
+const registrationUrl =
+	'https://docs.google.com/forms/d/e/1FAIpQLSdBfci4M4Rpris6VVJUIw5L1XpzxADHqco56JA_CT_85jLYiw/viewform?usp=dialog';
 ---
 
-<BaseLayout
-	title="Neuromorphic Sweden — Under neurogenesis"
-	description="Neuromorphic Sweden is taking shape: a national ecosystem for research and innovation in neuromorphic technology."
-	bodyClass="holding-page"
+<SiteLayout
+	title="A national ecosystem for neuromorphic technology"
+	description="Neuromorphic Sweden connects research, industry, institutes and public actors across the neuromorphic technology stack."
 >
-	<main id="main-content" class="holding-main">
-		<div class="container holding-grid">
-			<section class="holding-copy">
-				<div class="holding-brand"><Wordmark /></div>
-				<div class="holding-message">
-					<h1>Under<br /><em>neurogenesis…</em></h1>
-					<p class="lead">
-						Connections are forming across Sweden's research and innovation ecosystem. A site
-						will appear soon.
-					</p>
-					<div class="button-row">
-						<a class="button" href={reportUrl}>Read the Neuromorphic Sweden report</a>
-					</div>
+	<section class="hero">
+		<div class="container hero-grid">
+			<div>
+				<p class="eyebrow">Neuromorphic Sweden</p>
+				<h1>Intelligence shaped by events, not excess.</h1>
+				<p class="lead">
+					A neutral meeting point for universities, research institutes, industry, startups and
+					public actors advancing neuromorphic technology in Sweden.{' '}
+					<a class="join-link" href={registrationUrl}>We welcome you to join us! <span aria-hidden="true">↗</span></a>
+				</p>
+				<div class="button-row">
+					<a class="button" href={`${siteBase}/ecosystem/`}>Explore the ecosystem</a>
+					<a class="button secondary" href={`${siteBase}/technology/`}>Understand the technology</a>
 				</div>
-			</section>
-			<div class="visual-wrap">
-				<LandingSignalField />
-				<p><span></span> Signals detected · synapses forming</p>
+			</div>
+			<LandingSignalField />
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Why neuromorphic?</p>
+					<h2>Computing closer to the world it senses.</h2>
+				</div>
+				<p>
+					Neuromorphic technology takes inspiration from nervous systems to process information
+					when and where it matters. It complements conventional digital AI with new ways to sense,
+					compute and adapt under tight constraints.
+				</p>
+			</div>
+			<ul class="feature-list">
+				<li><strong>Event-driven</strong><br />Respond to meaningful changes instead of processing every sample.</li>
+				<li><strong>Near-sensor</strong><br />Interpret data close to where it is produced.</li>
+				<li><strong>In and near memory</strong><br />Reduce costly movement between memory and processors.</li>
+				<li><strong>Adaptive by design</strong><br />Use material, circuit and system dynamics as part of computation.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section tint">
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">Strategic focus</p>
+					<h2>Five areas for shared progress.</h2>
+				</div>
+				<p>
+					Open workshops held through the former NEUTEC project consolidated opportunities where
+					Swedish capabilities can contribute across research and application.
+				</p>
+			</div>
+			<div class="focus-grid">
+				{focusAreas.map((area, index) => (
+					<article class="focus-card">
+						<span>0{index + 1}</span>
+						<div>
+							<h3>{area.title}</h3>
+							<p>{area.description}</p>
+						</div>
+					</article>
+				))}
+			</div>
+			<div class="button-row">
+				<a class="button secondary" href={`${siteBase}/focus-areas/`}>Explore the focus areas</a>
 			</div>
 		</div>
-	</main>
-</BaseLayout>
+	</section>
+
+	<section class="section dark">
+		<div class="container history-grid">
+			<div>
+				<p class="eyebrow">A shared foundation</p>
+				<h2>Mapped nationally. Shaped openly.</h2>
+			</div>
+			<div>
+				<p class="lead">
+					Two completed Vinnova-funded feasibility studies mapped capabilities, engaged the
+					ecosystem and developed a shared strategic direction.
+				</p>
+				<p>
+					The 2025 NIPS study combined national mapping and interviews with an open workshop in
+					Stockholm to identify opportunities and shared needs. Building on that foundation,
+					NEUTEC brought around one hundred participants into three further open workshops.
+				</p>
+				<div class="button-row">
+					<a class="button report-button" href={reportUrl}>Read the national report <span aria-hidden="true">↗</span></a>
+					<a class="button dark-secondary" href={`${siteBase}/activities/`}>Project history</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</SiteLayout>
 
 <style>
-	:global(.holding-page) {
-		background:
-			radial-gradient(circle at 85% 10%, rgb(111 150 170 / 22%), transparent 34rem),
-			var(--page);
-	}
-
-	.holding-main {
-		display: grid;
-		align-items: start;
-		min-height: 100svh;
-		padding-block: clamp(4rem, 6vw, 6rem);
-	}
-
-	.holding-grid {
-		--visual-offset: clamp(7rem, 10vw, 10rem);
-
-		display: grid;
-		grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
-		gap: clamp(3rem, 8vw, 8rem);
-		align-items: stretch;
-	}
-
-	.holding-copy {
+	.hero {
 		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding-top: var(--visual-offset);
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 88% 0%, rgb(111 150 170 / 28%), transparent 33rem),
+			linear-gradient(120deg, var(--page), var(--blue-50));
+		padding-block: clamp(4rem, 9vw, 8rem);
 	}
 
-	.holding-brand {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	.holding-message {
-		transform: translateY(3rem);
-	}
-
-	.visual-wrap {
-		padding-top: var(--visual-offset);
-	}
-
-	h1 {
-		margin: 1.1rem 0 1.5rem;
-	}
-
-	h1 em {
-		color: var(--blue-700);
-		font-weight: inherit;
-	}
-
-	.visual-wrap > p {
-		display: flex;
+	.hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+		gap: clamp(3rem, 7vw, 7rem);
 		align-items: center;
-		gap: 0.55rem;
-		margin: 1rem 0 0;
-		font-size: 0.78rem;
+	}
+
+	.hero h1 {
+		margin-bottom: 1.5rem;
+	}
+
+	.join-link {
 		font-weight: 700;
-		letter-spacing: 0.07em;
-		text-transform: uppercase;
 	}
 
-	.visual-wrap > p span {
-		width: 0.55rem;
-		height: 0.55rem;
-		border-radius: 50%;
+	.focus-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1px;
+		border: 1px solid var(--line);
+		background: var(--line);
+	}
+
+	.focus-card {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+		gap: 1rem;
+		background: var(--white);
+		padding: clamp(1.3rem, 3vw, 2rem);
+	}
+
+	.focus-card:last-child {
+		grid-column: 1 / -1;
+	}
+
+	.focus-card > span {
+		color: var(--orange-600);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+	}
+
+	.focus-card h3 {
+		margin-bottom: 0.4rem;
+	}
+
+	.focus-card p {
+		margin-bottom: 0;
+	}
+
+	.history-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
+		gap: clamp(3rem, 8vw, 8rem);
+	}
+
+	.report-button {
 		background: var(--orange-500);
-		box-shadow: 0 0 0 5px var(--orange-100);
+		border-color: var(--orange-500);
 	}
 
-	@media (max-width: 50rem) {
-		.holding-main {
-			padding-block: 2rem;
-		}
+	.report-button:hover {
+		background: var(--orange-600);
+	}
 
-		.holding-grid {
-			--visual-offset: 0;
+	.dark-secondary {
+		border-color: rgb(200 217 225 / 35%);
+		background: transparent;
+	}
 
+	.dark-secondary:hover {
+		background: rgb(255 255 255 / 8%);
+	}
+
+	@media (max-width: 52rem) {
+		.hero-grid,
+		.history-grid {
 			grid-template-columns: 1fr;
-			align-items: start;
 		}
 
-		.holding-copy {
-			justify-content: flex-start;
-			gap: 4rem;
-			padding-top: 0;
+		.focus-grid {
+			grid-template-columns: 1fr;
 		}
 
-		.holding-brand {
-			position: static;
-		}
-
-		.holding-message {
-			transform: none;
-		}
-
-		.visual-wrap {
-			padding-top: 0;
-			padding-bottom: 2rem;
+		.focus-card:last-child {
+			grid-column: auto;
 		}
 	}
 </style>

@@ -1,6 +1,6 @@
 ---
-import SiteLayout from '../../../layouts/SiteLayout.astro';
-import { reportUrl } from '../../../data/site';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { reportUrl } from '../../data/site';
 
 const nipsUrl = 'https://www.vinnova.se/en/p/neuromorphic-innovation-platform-sweden-nips/';
 const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorphic-technology-neutec-towards-global-leadership-in-next-generation-intelligent-systems/';
@@ -55,16 +55,6 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 		</div>
 	</section>
 
-	<section class="section">
-		<div class="container editorial-grid">
-			<div><p class="eyebrow">Editorial approach</p><h2>Careful claims for an emerging field.</h2></div>
-			<div class="prose">
-				<p>Performance depends on the application, hardware, model and comparison method. Public material should distinguish demonstrated results from targets, projections and workshop visions.</p>
-				<div class="notice"><p><strong>Our default language:</strong> “can enable,” “for suitable workloads,” and “the study identified”—with dates and sources wherever the context matters.</p></div>
-				<p>Market forecasts, universal efficiency multipliers and long-range clinical timelines are not used as general facts on this site.</p>
-			</div>
-		</div>
-	</section>
 </SiteLayout>
 
 <style>
@@ -74,6 +64,5 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 	.resource-meta time { margin-top: 0.35rem; color: var(--muted); font-weight: 600; }
 	.resource-list h3 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 500; }
 	.resource-list p { max-width: 47rem; }
-	.editorial-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); gap: clamp(3rem, 8vw, 8rem); }
-	@media (max-width: 52rem) { .resource-list article, .editorial-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+	@media (max-width: 52rem) { .resource-list article { grid-template-columns: 1fr; gap: 1.5rem; } }
 </style>
