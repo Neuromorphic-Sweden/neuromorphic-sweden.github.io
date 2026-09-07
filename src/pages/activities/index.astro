@@ -52,6 +52,10 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 						<div><dt>Period</dt><dd>October 2025 – March 2026</dd></div>
 						<div><dt>Coordinator</dt><dd>Luleå University of Technology</dd></div>
 						<div><dt>Collaboration</dt><dd>Universities, institutes, industry, startups and a public authority across Sweden</dd></div>
+						<div class="partner-row">
+							<dt>Partners of the NEUTEC Advisory Board and Workgroup</dt>
+							<dd>ABB Robotics, Acconeer, Axis Communications, Bertin Exensor, Ericsson, Frontgrade Gaisler, Hitachi Energy, Saab, Terranet, KTH Royal Institute of Technology, Linköping University, Lund University, Uppsala University, Örebro University, Swedish Defence Materiel Administration (FMV), Swedish Defence Research Agency (FOI) and RISE Research Institutes of Sweden</dd>
+						</div>
 					</dl>
 					<p>Three open workshops engaged around one hundred participants. The resulting focus areas and enabling factors were developed by a broad workgroup and an industrial advisory board.</p>
 					<a class="button secondary" href={neutecUrl}>Vinnova project record <span aria-hidden="true">↗</span></a>
@@ -150,6 +154,14 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 	dd {
 		margin: 0.2rem 0 0;
 		padding-right: 1rem;
+	}
+
+	.partner-row {
+		grid-column: 1 / -1;
+	}
+
+	.partner-row dd {
+		padding-right: 0;
 	}
 
 	.outcome-grid {
