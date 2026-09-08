@@ -1,0 +1,250 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import reviewQueue from '../../data/discovery-review-queue.json';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import {
+	discoveryTypeLabels,
+	formatDiscoveryDate,
+	githubEditUrl,
+	githubReviewUrl,
+} from '../../lib/discovery';
+
+export async function getStaticPaths() {
+	if (process.env.REVIEW_SITE !== 'true') return [];
+	const candidateIds = new Set(reviewQueue.candidateIds);
+	const entries = await getCollection(
+		'discoveries',
+		({ data }) => !data.internal && candidateIds.has(data.candidateId),
+	);
+	return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+interface Props {
+	entry: CollectionEntry<'discoveries'>;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const reviewUrl = githubReviewUrl(entry);
+const editUrl = githubEditUrl(entry);
+const trlRange = data.trl
+	? data.trl.minimum === data.trl.maximum || data.trl.maximum === undefined
+		? data.trl.minimum
+		: `${data.trl.minimum ?? '?'}–${data.trl.maximum}`
+	: undefined;
+---
+
+<SiteLayout
+	title={`${data.title} — Editorial review`}
+	description={data.tldr}
+	noindex
+	bodyClass="review-site"
+>
+	<section class="page-hero review-detail-hero">
+		<div class="container">
+			<a class="back-link" href="/preview/"><span aria-hidden="true">←</span> Review queue</a>
+			<div class="meta-row">
+				<span class="tag">{discoveryTypeLabels[data.recordType]}</span>
+				<span class="tag">AI-assisted draft</span>
+			</div>
+			<h1>{data.title}</h1>
+			<p class="lead">{data.tldr}</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container detail-grid">
+			<article class="review-copy">
+				<p class="eyebrow">Proposed summary</p>
+				<p class="summary">{data.summary}</p>
+
+				{data.useCases.length > 0 && (
+					<section>
+						<h2>Use-case examples</h2>
+						<ul>{data.useCases.map((item) => <li>{item}</li>)}</ul>
+					</section>
+				)}
+
+				{data.trl && (
+					<section class="trl-panel">
+						<p class="eyebrow">Technology readiness</p>
+						<h2>{trlRange ? `TRL ${trlRange}` : 'TRL not determined'}</h2>
+						<dl>
+							<div><dt>Basis</dt><dd>{data.trl.basis}</dd></div>
+							<div><dt>Confidence</dt><dd>{data.trl.confidence}</dd></div>
+							<div><dt>Scope</dt><dd>{data.trl.scope}</dd></div>
+							<div><dt>Evidence</dt><dd>{data.trl.evidence}</dd></div>
+						</dl>
+						{data.trl.basis === 'ai-estimate' && <p class="trl-warning">An AI-estimated TRL is provisional and must be checked by a reviewer before publication.</p>}
+					</section>
+				)}
+
+				{data.evidence.length > 0 && (
+					<section>
+						<h2>Supporting evidence</h2>
+						<ul class="evidence-list">{data.evidence.map((item) => <li>{item}</li>)}</ul>
+					</section>
+				)}
+			</article>
+
+			<aside class="review-sidebar">
+				<section class="action-panel" aria-labelledby="review-actions-title">
+					<p class="eyebrow">Editorial decision</p>
+					<h2 id="review-actions-title">Complete the action on GitHub.</h2>
+					<p>The buttons open the proposal branch or pull request. GitHub verifies that you have permission to make the change.</p>
+					<div class="action-buttons">
+						<a class="button" href={reviewUrl}>Publish</a>
+						<a class="button secondary delete" href={reviewUrl}>Delete</a>
+						<a class="button secondary" href={editUrl}>Edit</a>
+					</div>
+					<details>
+						<summary>What should I do on GitHub?</summary>
+						<ul>
+							<li><strong>Publish:</strong> approve the pull request and merge it into <code>main</code>.</li>
+							<li><strong>Delete:</strong> remove this JSON file from a batch proposal, or close a single-record pull request with the <code>rejected</code> label.</li>
+							<li><strong>Edit:</strong> correct the generated JSON on the proposal branch, commit the change, then return here after the preview rebuilds.</li>
+						</ul>
+					</details>
+				</section>
+
+				<section class="provenance-panel">
+					<h2>Provenance</h2>
+					<dl>
+						<div><dt>Original source</dt><dd><a href={data.sourceUrl}>{data.sourceName ?? new URL(data.sourceUrl).hostname} <span aria-hidden="true">↗</span></a></dd></div>
+						{data.organisation && <div><dt>Organisation</dt><dd>{data.organisation}</dd></div>}
+						{data.location && <div><dt>Location</dt><dd>{data.location}</dd></div>}
+						<div><dt>Discovered</dt><dd>{formatDiscoveryDate(data.discoveredAt)}</dd></div>
+						<div><dt>Last checked</dt><dd>{formatDiscoveryDate(data.lastCheckedAt)}</dd></div>
+						<div><dt>Candidate ID</dt><dd><code>{data.candidateId}</code></dd></div>
+						<div><dt>AI model</dt><dd>{data.ai.model ?? 'Not recorded'}</dd></div>
+					</dl>
+				</section>
+			</aside>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.review-detail-hero {
+		padding-block: clamp(3.5rem, 8vw, 6.5rem);
+	}
+
+	.back-link {
+		display: inline-block;
+		margin-bottom: 2rem;
+		font-weight: 750;
+		text-decoration: none;
+	}
+
+	.detail-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr);
+		gap: clamp(3rem, 8vw, 7rem);
+		align-items: start;
+	}
+
+	.review-copy {
+		max-width: 49rem;
+	}
+
+	.review-copy > section {
+		margin-top: 3.5rem;
+	}
+
+	.review-copy h2,
+	.review-sidebar h2 {
+		font-family: var(--font-sans);
+		font-size: 1.35rem;
+		font-weight: 750;
+		letter-spacing: -0.01em;
+	}
+
+	.summary {
+		font-size: clamp(1.15rem, 2vw, 1.35rem);
+		line-height: 1.7;
+	}
+
+	.trl-panel,
+	.action-panel,
+	.provenance-panel {
+		border: 1px solid var(--line);
+		border-radius: 1rem;
+		background: var(--white);
+		padding: clamp(1.3rem, 3vw, 2rem);
+	}
+
+	.trl-panel dl,
+	.provenance-panel dl {
+		margin: 0;
+	}
+
+	.trl-panel dl div,
+	.provenance-panel dl div {
+		border-top: 1px solid var(--line);
+		padding-block: 0.8rem;
+	}
+
+	dt {
+		color: var(--blue-700);
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	dd {
+		margin: 0.2rem 0 0;
+	}
+
+	.trl-warning {
+		border-left: 3px solid var(--orange-500);
+		margin-top: 1rem;
+		background: var(--orange-100);
+		padding: 0.8rem 1rem;
+	}
+
+	.review-sidebar {
+		display: grid;
+		gap: 1rem;
+		position: sticky;
+		top: 1rem;
+	}
+
+	.action-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin-block: 1.5rem;
+	}
+
+	.button.delete {
+		border-color: #b94d3f;
+		color: #96392e;
+	}
+
+	details {
+		border-top: 1px solid var(--line);
+		padding-top: 1rem;
+	}
+
+	summary {
+		cursor: pointer;
+		color: var(--navy-900);
+		font-weight: 750;
+	}
+
+	code {
+		overflow-wrap: anywhere;
+	}
+
+	@media (max-width: 52rem) {
+		.detail-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.review-sidebar {
+			position: static;
+		}
+	}
+</style>

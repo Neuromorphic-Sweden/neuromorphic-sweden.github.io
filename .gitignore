@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# local discovery service (code, database, raw crawls and logs)
+.local-discovery/
+
 # macOS-specific files
 .DS_Store
 

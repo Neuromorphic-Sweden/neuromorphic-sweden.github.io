@@ -11,6 +11,7 @@ Public website for the neutral Swedish neuromorphic research and innovation ecos
 - `/activities/` — project and workshop history
 - `/resources/` — reports and project records
 - `/about/` — purpose, principles and contact information
+- `/preview/` — unlisted editorial review dashboard for crawler proposal branches
 
 ## Development
 
@@ -46,3 +47,9 @@ import path in `src/pages/index.astro`.
 ## Deployment
 
 Pushes to `main` are built and deployed to GitHub Pages by `.github/workflows/deploy.yml`.
+
+AI-assisted additions are prepared by the ignored local service in `.local-discovery/`, proposed
+through a `crawler/review` pull request and rendered at `review.neuromorphic-sweden.se` before
+publication. See [the reviewer workflow](.github/REVIEW_WORKFLOW.md). The review host must build
+with `REVIEW_SITE=true`, which redirects its root route to `/preview/`; production keeps the normal
+landing page.

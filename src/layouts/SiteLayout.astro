@@ -6,15 +6,52 @@ import SiteFooter from '../components/SiteFooter.astro';
 interface Props {
 	title: string;
 	description: string;
+	noindex?: boolean;
+	bodyClass?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false, bodyClass } = Astro.props;
+const reviewSite = process.env.REVIEW_SITE === 'true';
 ---
 
-<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description}>
+<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description} noindex={noindex || reviewSite} bodyClass={bodyClass}>
+	{reviewSite && (
+		<div class="review-build-banner" role="status">
+			<div class="container">
+				<strong>Editorial review build</strong>
+				<span>This material is not yet published.</span>
+				<a href="/preview/">Open the review queue</a>
+			</div>
+		</div>
+	)}
 	<SiteHeader />
 	<main id="main-content">
 		<slot />
 	</main>
 	<SiteFooter />
 </BaseLayout>
+
+<style>
+	.review-build-banner {
+		background: var(--orange-100);
+		border-bottom: 1px solid rgb(201 87 32 / 28%);
+		padding-block: 0.55rem;
+	}
+
+	.review-build-banner .container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1rem;
+		align-items: center;
+		font-size: 0.82rem;
+	}
+
+	.review-build-banner span {
+		color: var(--muted);
+	}
+
+	.review-build-banner a {
+		margin-left: auto;
+		font-weight: 750;
+	}
+</style>

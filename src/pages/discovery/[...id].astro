@@ -1,0 +1,92 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { discoveryTypeLabels, formatDiscoveryDate } from '../../lib/discovery';
+
+export async function getStaticPaths() {
+	const entries = await getCollection('discoveries', ({ data }) => !data.internal);
+	return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+interface Props {
+	entry: CollectionEntry<'discoveries'>;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const reviewSite = process.env.REVIEW_SITE === 'true';
+const trlRange = data.trl
+	? data.trl.minimum === data.trl.maximum || data.trl.maximum === undefined
+		? data.trl.minimum
+		: `${data.trl.minimum ?? '?'}–${data.trl.maximum}`
+	: undefined;
+const returnPath =
+	data.recordType === 'event'
+		? '/activities/'
+		: data.recordType === 'organisation'
+			? '/ecosystem/'
+			: '/resources/';
+---
+
+<SiteLayout title={data.title} description={data.tldr}>
+	<section class="page-hero discovery-hero">
+		<div class="container">
+			<a class="back-link" href={returnPath}><span aria-hidden="true">←</span> Back</a>
+			<div class="meta-row">
+				<span class="tag">{discoveryTypeLabels[data.recordType]}</span>
+				{data.ai.assisted && <span class="tag">{reviewSite ? 'AI-assisted draft' : 'AI-assisted · Human reviewed'}</span>}
+			</div>
+			<h1>{data.title}</h1>
+			<p class="lead">{data.tldr}</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container detail-grid">
+			<article class="discovery-copy">
+				<p class="summary">{data.summary}</p>
+				{data.useCases.length > 0 && <section><h2>Use-case examples</h2><ul>{data.useCases.map((item) => <li>{item}</li>)}</ul></section>}
+				{data.trl && (
+					<section class="trl-panel">
+						<h2>{trlRange ? `Technology readiness: TRL ${trlRange}` : 'Technology readiness not determined'}</h2>
+						<p><strong>Scope:</strong> {data.trl.scope}</p>
+						<p><strong>Basis:</strong> {data.trl.basis}. <strong>Confidence:</strong> {data.trl.confidence}.</p>
+						<p>{data.trl.evidence}</p>
+					</section>
+				)}
+			</article>
+
+			<aside class="source-panel">
+				<p class="eyebrow">Source and freshness</p>
+				<p><a class="button" href={data.sourceUrl}>Open original source <span aria-hidden="true">↗</span></a></p>
+				<dl>
+					{data.organisation && <div><dt>Organisation</dt><dd>{data.organisation}</dd></div>}
+					{data.location && <div><dt>Location</dt><dd>{data.location}</dd></div>}
+					{data.sourcePublishedAt && <div><dt>Source date</dt><dd>{formatDiscoveryDate(data.sourcePublishedAt)}</dd></div>}
+					<div><dt>Last checked</dt><dd>{formatDiscoveryDate(data.lastCheckedAt)}</dd></div>
+				</dl>
+				<p class="method-note">This concise record was prepared with automated discovery and, where indicated, AI assistance. It was reviewed before publication; the original source remains authoritative.</p>
+			</aside>
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.discovery-hero { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+	.back-link { display: inline-block; margin-bottom: 2rem; font-weight: 750; text-decoration: none; }
+	.detail-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(19rem, 0.75fr); gap: clamp(3rem, 8vw, 7rem); align-items: start; }
+	.discovery-copy { max-width: 49rem; }
+	.discovery-copy section { margin-top: 3rem; }
+	.discovery-copy h2 { font-family: var(--font-sans); font-size: 1.35rem; font-weight: 750; letter-spacing: -0.01em; }
+	.summary { font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.7; }
+	.trl-panel,
+	.source-panel { border: 1px solid var(--line); border-radius: 1rem; background: var(--white); padding: clamp(1.3rem, 3vw, 2rem); }
+	.source-panel { position: sticky; top: 1rem; }
+	.source-panel dl { margin-block: 1.5rem; }
+	.source-panel dl div { border-top: 1px solid var(--line); padding-block: 0.8rem; }
+	dt { color: var(--blue-700); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+	dd { margin: 0.2rem 0 0; }
+	.method-note { margin-bottom: 0; font-size: 0.86rem; }
+	@media (max-width: 52rem) { .detail-grid { grid-template-columns: 1fr; } .source-panel { position: static; } }
+</style>

@@ -23,6 +23,7 @@ jobs:
           node-version: 24
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:

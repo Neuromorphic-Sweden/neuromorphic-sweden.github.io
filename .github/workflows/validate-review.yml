@@ -1,0 +1,36 @@
+name: Validate proposed content
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      REVIEW_SITE: 'true'
+    steps:
+      - name: Checkout proposal
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate and build review site
+        run: npm run build
+
+      - name: Upload review build
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-site-${{ github.event.pull_request.number }}
+          path: dist/
+          retention-days: 14

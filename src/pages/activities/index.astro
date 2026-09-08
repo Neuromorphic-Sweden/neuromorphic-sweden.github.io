@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import DiscoverySection from '../../components/DiscoverySection.astro';
 import { reportUrl } from '../../data/site';
 
 const nipsUrl = 'https://www.vinnova.se/en/p/neuromorphic-innovation-platform-sweden-nips/';
@@ -90,6 +91,12 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 			</ol>
 		</div>
 	</section>
+
+	<DiscoverySection
+		title="Upcoming and recently announced activities."
+		description="Events and opportunities discovered from monitored sources, with dates checked against the original announcement."
+		recordTypes={['event']}
+	/>
 
 	<section class="section compact dark">
 		<div class="container outcome-grid">

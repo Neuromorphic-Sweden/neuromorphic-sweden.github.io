@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import DiscoveryCard from './DiscoveryCard.astro';
+import reviewQueue from '../data/discovery-review-queue.json';
+import type { DiscoveryRecordType } from '../lib/discovery';
+import { sortDiscoveries } from '../lib/discovery';
+
+interface Props {
+	title: string;
+	description: string;
+	recordTypes: DiscoveryRecordType[];
+	limit?: number;
+	tint?: boolean;
+}
+
+const { title, description, recordTypes, limit = 6, tint = false } = Astro.props;
+const reviewSite = process.env.REVIEW_SITE === 'true';
+const reviewCandidateIds = new Set(reviewQueue.candidateIds);
+const entries = sortDiscoveries(
+	await getCollection(
+		'discoveries',
+		({ data }) => !data.internal && recordTypes.includes(data.recordType),
+	),
+).slice(0, limit);
+---
+
+{entries.length > 0 && (
+	<section class:list={['section', { tint }]}>
+		<div class="container">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow">AI-assisted discovery</p>
+					<h2>{title}</h2>
+				</div>
+				<p>{description} {reviewSite ? 'Cards labelled “Review record” are proposals awaiting editorial review; other entries are already published.' : 'Every entry links to its original source and has passed editorial review before publication.'}</p>
+			</div>
+			<div class="discovery-grid">
+				{entries.map((entry) => <DiscoveryCard entry={entry} review={reviewSite && reviewCandidateIds.has(entry.data.candidateId)} />)}
+			</div>
+		</div>
+	</section>
+)}
+
+<style>
+	.discovery-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 64rem) {
+		.discovery-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 42rem) {
+		.discovery-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,18 @@
+{
+  "candidateId": "collection-placeholder",
+  "title": "Discovery collection placeholder",
+  "recordType": "resource",
+  "summary": "This internal record keeps the typed collection available before the crawler proposes its first publication candidate.",
+  "tldr": "Internal collection placeholder; never rendered on the website.",
+  "sourceUrl": "https://neuromorphic-sweden.se/",
+  "sourceName": "Neuromorphic Sweden",
+  "internal": true,
+  "discoveredAt": "2026-09-08T00:00:00Z",
+  "lastCheckedAt": "2026-09-08T00:00:00Z",
+  "tags": [],
+  "useCases": [],
+  "evidence": [],
+  "ai": {
+    "assisted": false
+  }
+}

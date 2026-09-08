@@ -1,0 +1,100 @@
+---
+import type { DiscoveryEntry } from '../lib/discovery';
+import {
+	discoveryDate,
+	discoveryHref,
+	discoveryTypeLabels,
+	formatDiscoveryDate,
+} from '../lib/discovery';
+
+interface Props {
+	entry: DiscoveryEntry;
+	review?: boolean;
+}
+
+const { entry, review = false } = Astro.props;
+const { data } = entry;
+const date = discoveryDate(entry);
+---
+
+<article class:list={['discovery-card', { review }]}>
+	<div class="discovery-meta">
+		<span>{discoveryTypeLabels[data.recordType]}</span>
+		<time datetime={date.toISOString()}>{formatDiscoveryDate(date)}</time>
+	</div>
+	<h3><a href={discoveryHref(entry, review)}>{data.title}</a></h3>
+	<p class="tldr">{data.tldr}</p>
+	{data.organisation && <p class="organisation">{data.organisation}</p>}
+	<div class="discovery-links">
+		<a href={discoveryHref(entry, review)}>{review ? 'Review record' : 'Details'} <span aria-hidden="true">→</span></a>
+		<a href={data.sourceUrl}>Original source <span aria-hidden="true">↗</span></a>
+	</div>
+</article>
+
+<style>
+	.discovery-card {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		border: 1px solid var(--line);
+		border-radius: 1rem;
+		background: rgb(255 255 255 / 82%);
+		padding: clamp(1.25rem, 3vw, 1.8rem);
+	}
+
+	.discovery-card.review {
+		box-shadow: var(--shadow-soft);
+	}
+
+	.discovery-meta,
+	.discovery-links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.6rem 1rem;
+	}
+
+	.discovery-meta {
+		margin-bottom: 1.5rem;
+		color: var(--blue-700);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.discovery-meta time {
+		color: var(--muted);
+		font-weight: 650;
+	}
+
+	h3 {
+		font-size: 1.35rem;
+	}
+
+	h3 a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	h3 a:hover {
+		color: var(--orange-600);
+	}
+
+	.tldr {
+		flex: 1;
+	}
+
+	.organisation {
+		font-size: 0.86rem;
+		font-weight: 700;
+	}
+
+	.discovery-links {
+		justify-content: flex-start;
+		margin-top: 1rem;
+		font-size: 0.86rem;
+		font-weight: 750;
+	}
+</style>

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import DiscoverySection from '../../components/DiscoverySection.astro';
 import { reportUrl } from '../../data/site';
 
 const nipsUrl = 'https://www.vinnova.se/en/p/neuromorphic-innovation-platform-sweden-nips/';
@@ -54,6 +55,12 @@ const neutecUrl = 'https://www.vinnova.se/en/p/shaping-the-future-with-neuromorp
 			</div>
 		</div>
 	</section>
+
+	<DiscoverySection
+		title="Recently discovered resources and tools."
+		description="A monitored selection of reports, research resources, hardware and software relevant to the field."
+		recordTypes={['resource', 'hardware', 'software']}
+	/>
 
 </SiteLayout>
 
