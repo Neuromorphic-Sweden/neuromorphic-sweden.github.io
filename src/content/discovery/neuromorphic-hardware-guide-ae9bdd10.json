@@ -28,6 +28,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/1",
     "sourcePath": "src/content/discovery/neuromorphic-hardware-guide-ae9bdd10.json"
   },
   "sourcePublishedAt": "2026-01-01"
