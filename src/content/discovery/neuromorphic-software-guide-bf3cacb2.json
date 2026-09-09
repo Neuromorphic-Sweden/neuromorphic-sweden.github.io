@@ -1,0 +1,33 @@
+{
+  "candidateId": "bf3cacb25af9b3fe36e7",
+  "title": "Neuromorphic Software Guide",
+  "recordType": "resource",
+  "summary": "This page serves as a curated directory of open-source tools for neuromorphic computing and spiking neural networks (SNNs). It lists software libraries supporting gradient-based training, simulation on GPUs/TPUs/CPU, event camera data processing, and hardware-in-the-loop development. Resources cover various frameworks including PyTorch extensions, JAX implementations, C++ simulators, and domain-specific languages for neuron modeling. The collection emphasizes interoperability across different neuromorphic processors and computational backends.",
+  "tldr": "A curated directory of open-source software tools supporting spiking neural network simulation, training, event camera processing, and hardware-in-the-loop development.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-08T21:58:12+00:00",
+  "lastCheckedAt": "2026-09-08T21:58:06+00:00",
+  "tags": [
+    "software",
+    "open-source"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Explore our curated collection of open source neuromorphic software resources.",
+    "- Focuses on gradient-based training of SNNs, based on PyTorch for GPU acceleration and gradient computation.",
+    "- Free, open-source simulator for SNNs, written in Python, focusing on ease of use and flexibility."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-08T21:58:12+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/1",
+    "sourcePath": "src/content/discovery/neuromorphic-software-guide-bf3cacb2.json"
+  },
+  "sourcePublishedAt": "2026-01-01"
+}

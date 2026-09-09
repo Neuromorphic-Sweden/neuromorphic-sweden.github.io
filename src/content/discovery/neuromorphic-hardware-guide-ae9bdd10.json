@@ -1,0 +1,35 @@
+{
+  "candidateId": "ae9bdd10e0f369b43180",
+  "title": "Neuromorphic Hardware Guide",
+  "recordType": "resource",
+  "summary": "The Open Neuromorphic Hardware Guide is a community-maintained directory listing neuromorphic chips and architectures. It covers digital processors like SpiNNclouds SpiNNaker 2, Intel's Loihi 2, IBM's TrueNorth, and SynSense's DynapCNN alongside mixed-signal systems such as Heidelberg University's BrainScaleS-2, Innatera's Pulsar and imec's SENeCA. The resource details specifications for edge AI applications including ultra-low power consumption, on-chip learning capabilities, and event-driven sensing integration.",
+  "tldr": "A community-maintained directory cataloguing neuromorphic hardware ranging from digital processors to mixed-signal chips with varying release dates between 2014 and 2025.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-08T21:58:06+00:00",
+  "lastCheckedAt": "2026-09-08T21:57:59+00:00",
+  "tags": [
+    "neuromorphic",
+    "hardware"
+  ],
+  "useCases": [],
+  "evidence": [
+    "This directory provides a comprehensive overview of neuromorphic hardware, from pioneering past projects to the latest commercial and research chips.",
+    "The TSP1 is a time-series, brain-inspired chip designed for ultra-low power edge AI applications...",
+    "TEXEL is a fabricated 180 nm mixed-signal spiking neural network processor... Released",
+    "Pulsar is a brain-inspired neuromorphic microcontroller designed for ultra-low-power, real-time intelligence in edge devices. It combines a Spiking Neural Network (SNN) engine with a RISC-V MCU and CNN acceleration...",
+    "The DYNAP-SE2 is a configurable, mixed-signal neuromorphic chip featuring 1024 neurons... Released"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-08T21:58:06+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/1",
+    "sourcePath": "src/content/discovery/neuromorphic-hardware-guide-ae9bdd10.json"
+  },
+  "sourcePublishedAt": "2026-01-01"
+}
