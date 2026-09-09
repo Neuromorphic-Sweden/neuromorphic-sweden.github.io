@@ -2,7 +2,7 @@
   "candidateId": "ae9bdd10e0f369b43180",
   "title": "Neuromorphic Hardware Guide",
   "recordType": "resource",
-  "summary": "The Open Neuromorphic Hardware Guide is a community-maintained directory listing neuromorphic chips and architectures. It covers digital processors like Intel's Loihi 2 (released 2019), IBM's TrueNorth, and SynSense's DynapCNN alongside mixed-signal systems such as Heidelberg University's BrainScaleS-2 and imec's SENeCA. The resource details specifications for edge AI applications including ultra-low power consumption, on-chip learning capabilities, and event-driven sensing integration.",
+  "summary": "The Open Neuromorphic Hardware Guide is a community-maintained directory listing neuromorphic chips and architectures. It covers digital processors like SpiNNclouds SpiNNaker 2, Intel's Loihi 2, IBM's TrueNorth, and SynSense's DynapCNN alongside mixed-signal systems such as Heidelberg University's BrainScaleS-2, Innatera's Pulsar and imec's SENeCA. The resource details specifications for edge AI applications including ultra-low power consumption, on-chip learning capabilities, and event-driven sensing integration.",
   "tldr": "A community-maintained directory cataloguing neuromorphic hardware ranging from digital processors to mixed-signal chips with varying release dates between 2014 and 2025.",
   "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/",
   "sourceName": "open-neuromorphic.org",
