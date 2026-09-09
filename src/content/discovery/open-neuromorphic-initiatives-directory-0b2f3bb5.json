@@ -2,7 +2,7 @@
   "candidateId": "0b2f3bb5cc60f7e236fd",
   "title": "Open Neuromorphic Initiatives Directory",
   "recordType": "resource",
-  "summary": "This resource lists ongoing community initiatives within the Open Neuromorphic ecosystem focused on neuromorphic computing. Current efforts include live coding sessions for software development and contributions to hardware/software directories by specific individuals. Past contributors supported the initial conception of the organization. The page serves as a central hub for resources, news, and collaboration but does not specify project dates or Technology Readiness Levels.",
+  "summary": "This resource lists ongoing community initiatives within the Open Neuromorphic ecosystem focused on neuromorphic computing. Current efforts include live coding sessions for software development and contributions to hardware/software directories by specific individuals. Past contributors supported the initial conception of the organization. The page serves as a central hub for resources, news, and collaboration but does not necessarily specify project dates or Technology Readiness Levels.",
   "tldr": "Directory listing Open Neuromorphic community initiatives covering live coding sessions, resource development, and past foundational contributions to neuromorphic computing.",
   "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/initiatives/",
   "sourceName": "open-neuromorphic.org",
