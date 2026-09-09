@@ -1,0 +1,33 @@
+{
+  "candidateId": "0b2f3bb5cc60f7e236fd",
+  "title": "Open Neuromorphic Initiatives Directory",
+  "recordType": "resource",
+  "summary": "This resource lists ongoing community initiatives within the Open Neuromorphic ecosystem focused on neuromorphic computing. Current efforts include live coding sessions for software development and contributions to hardware/software directories by specific individuals. Past contributors supported the initial conception of the organization. The page serves as a central hub for resources, news, and collaboration but does not specify project dates or Technology Readiness Levels.",
+  "tldr": "Directory listing Open Neuromorphic community initiatives covering live coding sessions, resource development, and past foundational contributions to neuromorphic computing.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/initiatives/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-08T21:58:18+00:00",
+  "lastCheckedAt": "2026-09-08T21:58:12+00:00",
+  "tags": [
+    "neuromorphic-computing",
+    "community-initiatives"
+  ],
+  "useCases": [],
+  "evidence": [
+    "This page highlights some of the key ongoing initiatives that individuals are leading to foster growth, education, and collaboration within the neuromorphic field.",
+    "Current Initiatives Contributors: Justin Riddiough, Alexandre Marcireau, Effiong Blessing The elected Executive Committee of Open Neuromorphic",
+    "Live coding sessions exploring neuromorphic software, tackling challenges, and discussing the latest in neuromorphic development."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-08T21:58:18+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/open-neuromorphic-initiatives-directory-0b2f3bb5.json"
+  },
+  "sourcePublishedAt": "2026-01-01",
+  "organisation": "Open Neuromorphic"
+}
