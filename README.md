@@ -50,6 +50,6 @@ Pushes to `main` are built and deployed to GitHub Pages by `.github/workflows/de
 
 AI-assisted additions are prepared by the ignored local service in `.local-discovery/`, proposed
 through a `crawler/review` pull request and rendered at `review.neuromorphic-sweden.se` before
-publication. See [the reviewer workflow](.github/REVIEW_WORKFLOW.md). The review host must build
-with `REVIEW_SITE=true`, which redirects its root route to `/preview/`; production keeps the normal
-landing page.
+publication. See [the reviewer workflow](.github/REVIEW_WORKFLOW.md). Both normal and review builds
+keep the public landing page at `/`; the unlisted editorial dashboard is available only at
+`/preview/`. A build using `REVIEW_SITE=true` remains globally excluded from search indexing.

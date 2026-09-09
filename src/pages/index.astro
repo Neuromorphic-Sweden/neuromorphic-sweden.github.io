@@ -1,6 +1,5 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-import LandingSignalField from '../components/AdaptiveSpikeMatrixField.astro';
 import { focusAreas, siteBase, reportUrl } from '../data/site';
 
 const registrationUrl =
@@ -12,8 +11,8 @@ const registrationUrl =
 	description="Neuromorphic technologies enable energy-efficient, adaptive and resilient sensing and computation at the interface between AI and the physical world."
 >
 	<section class="hero">
-		<div class="container hero-grid">
-			<div>
+		<div class="container">
+			<div class="hero-copy">
 				<p class="eyebrow">Neuromorphic Sweden</p>
 				<h1>Near-Sensor Intelligence for Scalable Real-World Interaction</h1>
 				<p class="lead">
@@ -31,7 +30,6 @@ const registrationUrl =
 					<a class="button secondary" href={`${siteBase}/technology/`}>Understand the technology</a>
 				</div>
 			</div>
-			<LandingSignalField />
 		</div>
 	</section>
 
@@ -121,11 +119,8 @@ const registrationUrl =
 		padding-block: clamp(4rem, 9vw, 8rem);
 	}
 
-	.hero-grid {
-		display: grid;
-		grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
-		gap: clamp(3rem, 7vw, 7rem);
-		align-items: center;
+	.hero-copy {
+		max-width: 58rem;
 	}
 
 	.hero h1 {
@@ -196,7 +191,6 @@ const registrationUrl =
 	}
 
 	@media (max-width: 52rem) {
-		.hero-grid,
 		.history-grid {
 			grid-template-columns: 1fr;
 		}

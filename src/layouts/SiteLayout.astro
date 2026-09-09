@@ -12,10 +12,16 @@ interface Props {
 
 const { title, description, noindex = false, bodyClass } = Astro.props;
 const reviewSite = process.env.REVIEW_SITE === 'true';
+const reviewPage = Astro.url.pathname === '/preview' || Astro.url.pathname.startsWith('/preview/');
 ---
 
-<BaseLayout title={`${title} — Neuromorphic Sweden`} description={description} noindex={noindex || reviewSite} bodyClass={bodyClass}>
-	{reviewSite && (
+<BaseLayout
+	title={`${title} — Neuromorphic Sweden`}
+	description={description}
+	noindex={noindex || reviewPage || reviewSite}
+	bodyClass={bodyClass}
+>
+	{reviewPage && (
 		<div class="review-build-banner" role="status">
 			<div class="container">
 				<strong>Editorial review build</strong>
