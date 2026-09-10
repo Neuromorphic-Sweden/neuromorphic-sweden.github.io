@@ -35,6 +35,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/intel-neuromorphic-computing-hardware-research-ecosystem-7f1c7fb8.json"
   },
   "sourcePublishedAt": "2025-08-05",

@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/snntorch-neuromorphic-pytorch-library-releases-6b240b0d.json"
   },
   "sourcePublishedAt": "2024-03-17"

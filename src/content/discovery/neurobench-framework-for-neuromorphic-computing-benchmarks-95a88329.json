@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/neurobench-framework-for-neuromorphic-computing-benchmarks-95a88329.json"
   },
   "sourcePublishedAt": "2025-02-11"

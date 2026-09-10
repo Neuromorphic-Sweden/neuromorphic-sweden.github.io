@@ -31,6 +31,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/spiking-neural-processor-t1-by-innatera-5f0b7f0e.json"
   },
   "sourcePublishedAt": "2023-01-02",

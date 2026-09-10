@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/acm-international-conference-on-neuromorphic-systems-icons-73367ce5.json"
   },
   "sourcePublishedAt": "2026-04-08",

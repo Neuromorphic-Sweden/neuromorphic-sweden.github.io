@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/lava-framework-c0d7782e.json"
   },
   "sourcePublishedAt": "2023-05-31",

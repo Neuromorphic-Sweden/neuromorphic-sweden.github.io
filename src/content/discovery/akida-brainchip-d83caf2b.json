@@ -33,6 +33,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/akida-brainchip-d83caf2b.json"
   },
   "sourcePublishedAt": "2023-12-26",

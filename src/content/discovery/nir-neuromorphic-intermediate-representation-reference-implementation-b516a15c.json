@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/nir-neuromorphic-intermediate-representation-reference-implementation-b516a15c.json"
   },
   "sourcePublishedAt": "2023-07-01"

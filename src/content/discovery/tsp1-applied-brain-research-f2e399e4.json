@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/tsp1-applied-brain-research-f2e399e4.json"
   },
   "sourcePublishedAt": "2023-01-02",

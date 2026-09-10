@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/nest-simulator-0db44220.json"
   },
   "sourcePublishedAt": "2025-07-30",

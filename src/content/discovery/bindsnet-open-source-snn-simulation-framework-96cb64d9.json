@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/bindsnet-open-source-snn-simulation-framework-96cb64d9.json"
   },
   "sourcePublishedAt": "2025-07-30"

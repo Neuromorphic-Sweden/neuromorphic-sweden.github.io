@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/norse-neuromorphic-software-library-releases-cf5333f9.json"
   },
   "sourcePublishedAt": "2024-03-18"

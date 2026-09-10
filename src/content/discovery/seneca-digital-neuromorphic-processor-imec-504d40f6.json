@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/seneca-digital-neuromorphic-processor-imec-504d40f6.json"
   },
   "sourcePublishedAt": "2023-01-02",

@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/snntorch-pytorch-based-snn-framework-50e23b2c.json"
   },
   "sourcePublishedAt": "2023-04-04",

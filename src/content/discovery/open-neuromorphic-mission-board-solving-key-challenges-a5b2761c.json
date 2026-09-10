@@ -23,6 +23,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/open-neuromorphic-mission-board-solving-key-challenges-a5b2761c.json"
   },
   "sourcePublishedAt": "2025-10-19",

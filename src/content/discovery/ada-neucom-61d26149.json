@@ -34,6 +34,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/ada-neucom-61d26149.json"
   },
   "sourcePublishedAt": "2023-01-02",

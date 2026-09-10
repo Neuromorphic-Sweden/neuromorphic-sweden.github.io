@@ -28,6 +28,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/open-neuromorphic-community-resources-cf0f100f.json"
   },
   "sourcePublishedAt": "2026-07-09",

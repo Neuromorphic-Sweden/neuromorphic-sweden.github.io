@@ -35,6 +35,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/speck-synsense-ee316f0a.json"
   },
   "sourcePublishedAt": "2023-04-26",

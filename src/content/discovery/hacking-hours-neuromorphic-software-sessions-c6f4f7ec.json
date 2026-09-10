@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/hacking-hours-neuromorphic-software-sessions-c6f4f7ec.json"
   },
   "sourcePublishedAt": "2024-01-01",

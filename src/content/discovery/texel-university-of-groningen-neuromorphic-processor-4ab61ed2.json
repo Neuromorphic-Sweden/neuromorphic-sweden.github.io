@@ -32,6 +32,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/texel-university-of-groningen-neuromorphic-processor-4ab61ed2.json"
   },
   "sourcePublishedAt": "2025-06-11",

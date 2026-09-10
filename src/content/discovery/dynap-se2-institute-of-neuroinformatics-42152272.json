@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/dynap-se2-institute-of-neuroinformatics-42152272.json"
   },
   "sourcePublishedAt": "2025-05-15"

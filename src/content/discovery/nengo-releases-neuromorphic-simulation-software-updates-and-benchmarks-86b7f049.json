@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/nengo-releases-neuromorphic-simulation-software-updates-and-benchmarks-86b7f049.json"
   },
   "sourcePublishedAt": "2023-11-17"

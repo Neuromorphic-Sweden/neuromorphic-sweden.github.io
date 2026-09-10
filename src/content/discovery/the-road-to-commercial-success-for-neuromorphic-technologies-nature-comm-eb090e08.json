@@ -37,6 +37,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
     "sourcePath": "src/content/discovery/the-road-to-commercial-success-for-neuromorphic-technologies-nature-comm-eb090e08.json"
   },
   "sourcePublishedAt": "2025-04-15"
