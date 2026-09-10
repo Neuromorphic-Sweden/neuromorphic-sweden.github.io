@@ -1,0 +1,33 @@
+{
+  "candidateId": "c6f4f7ec9509ef10f820",
+  "title": "Hacking Hours: Neuromorphic Software Sessions",
+  "recordType": "resource",
+  "summary": "Open Neuromorphic hosts 'Hacking Hours,' interactive coding sessions led by Jens E. Pedersen focused on neuromorphic software frameworks and tools. These events feature guest developers from the community and industry, offering live demonstrations of debugging techniques, best practices, and collaborative problem-solving for specific challenges. Sessions are typically streamed and recorded for later viewing. The resource serves as a platform to explore practical aspects of neuromorphic computing through direct engagement with experts.",
+  "tldr": "Open Neuromorphic hosts interactive 'Hacking Hours' sessions led by Jens E. Pedersen that feature live coding, debugging demonstrations, and expert collaboration on neuromorphic software frameworks and tools.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/initiatives/hacking-hours/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:57+00:00",
+  "lastCheckedAt": "2026-09-10T20:31:50+00:00",
+  "tags": [
+    "neuromorphic-software",
+    "coding-sessions",
+    "community-events"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Hacking Hours are live, interactive coding sessions dedicated to exploring the world of neuromorphic software.",
+    "Hosted by Jens E. Pedersen, these sessions often feature guest developers from the community and industry to provide deep dives into specific neuromorphic frameworks, tools, and problem-solving techniques."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:57+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/hacking-hours-neuromorphic-software-sessions-c6f4f7ec.json"
+  },
+  "sourcePublishedAt": "2024-01-01",
+  "organisation": "Open Neuromorphic"
+}

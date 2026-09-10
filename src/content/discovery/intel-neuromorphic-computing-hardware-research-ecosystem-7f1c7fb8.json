@@ -1,0 +1,44 @@
+{
+  "candidateId": "7f1c7fb8750bbd2bdf4f",
+  "title": "Intel Neuromorphic Computing Hardware & Research Ecosystem",
+  "recordType": "hardware",
+  "summary": "Intel Labs develops neuromorphic hardware including Loihi 2 processors and the Hala Point system (1.15 billion neurons), aiming for sustainable AI via sparse event-driven computation. Tools like Lava support neuro-inspired application development across sensing, robotics, healthcare, and telecoms. The Intel Neuromorphic Research Community fosters global collaboration to transition technology from prototypes to products.",
+  "tldr": "Intel offers Loihi 2 processors and the Hala Point system for energy-efficient neuromorphic AI applications in sectors like robotics and telecommunications through a collaborative research community.",
+  "sourceUrl": "https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html",
+  "sourceName": "intel.com",
+  "discoveredAt": "2026-09-10T20:27:21+00:00",
+  "lastCheckedAt": "2026-09-10T20:27:14+00:00",
+  "tags": [
+    "neuromorphic hardware",
+    "Loihi 2",
+    "Hala Point",
+    "spiking neural networks"
+  ],
+  "useCases": [
+    "sensing",
+    "robotics",
+    "healthcare",
+    "telecommunications optimization",
+    "large-scale AI applications"
+  ],
+  "evidence": [
+    "Intel Labs provides tools for developers to advance the development process of neuromorphic computing.",
+    "Hala Point, the industry's first 1.15 billion neuron neuromorphic system, builds a path toward more sustainable AI.",
+    "Loihi 2 outperforms its predecessor with up to 10x faster processing capability and comes with Lava software framework.",
+    "Research using Loihi 2 processors has demonstrated orders of magnitude gains in the efficiency, speed, and adaptability of small-scale edge workloads."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:27:21+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/intel-neuromorphic-computing-hardware-research-ecosystem-7f1c7fb8.json"
+  },
+  "sourcePublishedAt": "2025-08-05",
+  "organisation": "Intel Labs",
+  "location": "Global (with specific mentions of Israel, Singapore)",
+  "country": "US"
+}

@@ -1,0 +1,31 @@
+{
+  "candidateId": "cf5333f9ca8b165f651f",
+  "title": "Norse: Neuromorphic Software Library Releases",
+  "recordType": "software",
+  "summary": "The GitHub repository for the Norse library documents releases of a Python-only neuromorphic software module. Version v1.0.0 marked the first stable release after nearly four years, introducing differentiable spike-to-time encoding and Adaptive Exponential Fire Neuron models with refractory states. Earlier versions added Izhikevich neuron models, sparse equations for LIF dynamics, and compatibility with PyTorch Lightning to enable scaling across multiple GPUs or supercomputing clusters. Performance optimizations included C++ implementations of LIF equations and SuperSpike synthetic gradients, doubling speed in some instances. The library supports various spiking neural network architectures like MobileNet and VGG.",
+  "tldr": "Norse is a Python-only neuromorphic software library offering stable releases with neuron models, PyTorch compatibility, and performance optimizations for deep learning applications.",
+  "sourceUrl": "https://github.com/norse/norse/releases",
+  "sourceName": "github.com",
+  "discoveredAt": "2026-09-10T20:27:58+00:00",
+  "lastCheckedAt": "2026-09-10T20:27:51+00:00",
+  "tags": [
+    "software",
+    "neural-networks"
+  ],
+  "useCases": [],
+  "evidence": [
+    "This is the first stable release of Norse. We feel like that after close to almost 4 years of development it is time to take this step.",
+    "Norse now features spiking convolutions, MobileNet and VGG networks which can be used out-of-the box."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:27:58+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/norse-neuromorphic-software-library-releases-cf5333f9.json"
+  },
+  "sourcePublishedAt": "2024-03-18"
+}

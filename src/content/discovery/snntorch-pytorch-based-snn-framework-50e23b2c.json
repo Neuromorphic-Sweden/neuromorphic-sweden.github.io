@@ -1,0 +1,33 @@
+{
+  "candidateId": "50e23b2c3340d47245cb",
+  "title": "snnTorch: PyTorch-based SNN Framework",
+  "recordType": "resource",
+  "summary": "snnTorch is a Python package extending PyTorch for spiking neural network (SNN) simulations. Maintained by the UCSC Neuromorphic Computing Group since at least 2023-04-04, it integrates autograd-compatible neuron models into computational graphs to enable GPU acceleration via CUDA. The framework supports various recursive neuron functions and includes tools for spike generation, data conversion, visualization, and surrogate gradients. It operates under the MIT License with documentation licensed under Creative Commons Attribution-Share Alike 3.0 Unported.",
+  "tldr": "snnTorch is a PyTorch extension enabling efficient GPU-accelerated simulation of spiking neural networks through recursive neuron models and autograd integration.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/snn-frameworks/snntorch/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:30:51+00:00",
+  "lastCheckedAt": "2026-09-10T20:30:46+00:00",
+  "tags": [
+    "software",
+    "frameworks"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Overview snnTorch is a Python package designed for spiking neural network simulations and extends PyTorch's capabilities to spiking neurons.",
+    "The framework allows seamless integration of spiking neurons into PyTorch's computational graph, treating them as recurrent units.",
+    "Users can benefit from GPU acceleration in the same way as PyTorch, provided network models and tensors are loaded onto CUDA."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:30:51+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/snntorch-pytorch-based-snn-framework-50e23b2c.json"
+  },
+  "sourcePublishedAt": "2023-04-04",
+  "organisation": "UCSC Neuromorphic Computing Group"
+}

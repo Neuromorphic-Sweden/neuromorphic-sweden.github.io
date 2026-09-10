@@ -1,0 +1,31 @@
+{
+  "candidateId": "e24219323e7387c91f7e",
+  "title": "Norse SNN Framework",
+  "recordType": "resource",
+  "summary": "Norse is a deep learning Python library for simulating spiking neural networks (SNNs) built on PyTorch. Developed by Christian Pehle and Jens Egholm Pedersen with funding from EC Horizon 2020 and the German Research Foundation, it offers bio-inspired neuron models to create energy-efficient computational frameworks. The tool supports classification tasks using datasets like MNIST and CIFAR while enabling custom model adaptation for neuromorphic engineering.",
+  "tldr": "Norse is a PyTorch-based Python library facilitating spiking neural network simulation with support from EC Horizon 2020 funding.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/snn-frameworks/norse/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:12+00:00",
+  "lastCheckedAt": "2026-09-10T20:31:07+00:00",
+  "tags": [
+    "software",
+    "framework"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Norse is a deep learning Python library used for simulating spiking neural networks (SNN)s that leverages PyTorch with bio-inspired neural networks.",
+    "Additionally, Norse is a community-driven project, encouraging community contributions and development."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:12+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/norse-snn-framework-e2421932.json"
+  },
+  "sourcePublishedAt": "2023-08-02"
+}

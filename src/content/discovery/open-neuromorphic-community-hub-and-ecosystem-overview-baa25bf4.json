@@ -1,0 +1,37 @@
+{
+  "candidateId": "baa25bf4602250485554",
+  "title": "Open Neuromorphic community hub and ecosystem overview",
+  "recordType": "resource",
+  "summary": "Open Neuromorphic (ONM) is a global, open-source initiative connecting academia, industry, and individuals to advance neuromorphic computing. Established in 2025 with an Executive Committee, the organization provides curated guides on hardware and software, educational content via blogs and workshops, live hacking sessions, and collaborative platforms including GitHub repositories and Discord channels. The community focuses on Spiking Neural Network frameworks, event-based sensing tools, digital/analog/mixed-signal neuromorphic hardware, and improving interoperability across diverse engineering areas from computational neuroscience to performance-driven machine learning.",
+  "tldr": "Open Neuromorphic is a global open-source hub offering resources for simulation, training, inference, and mixed-signal hardware development within the neuromorphic ecosystem.",
+  "sourceUrl": "https://open-neuromorphic.org/about/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:29:27+00:00",
+  "lastCheckedAt": "2026-09-10T20:29:21+00:00",
+  "tags": [
+    "neuromorphic computing",
+    "open source",
+    "Spiking Neural Networks",
+    "event-based sensing",
+    "mixed-signal hardware"
+  ],
+  "useCases": [],
+  "evidence": [
+    "ONM began as a collective of open source enthusiasts from academia, industry, and individual contributors passionate about advancing neuromorphic computing.",
+    "In 2025, we established our first Executive Committee to provide leadership, coordinate activities, and ensure the sustainable growth of ONM.",
+    "The Neuromorphic Hub: Our curated guides to Neuromorphic Hardware and Software are designed to help you navigate the landscape and find the tools and platforms you need."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:29:27+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/open-neuromorphic-community-hub-and-ecosystem-overview-baa25bf4.json"
+  },
+  "sourcePublishedAt": "2026-01-01",
+  "organisation": "Open Neuromorphic",
+  "location": "Global (community-based)"
+}

@@ -1,0 +1,32 @@
+{
+  "candidateId": "c0d7782e9f5f9266da60",
+  "title": "Lava Framework",
+  "recordType": "resource",
+  "summary": "The Lava framework is an open-source software tool developed by the Intel Neuromorphic Computing Team for neuromorphic computing. It provides abstractions to map neuro-inspired applications onto hardware and supports various neuron models, network topologies, and training tools. The library features a modular structure allowing integration of algorithms and interfaces with third-party devices while remaining platform-agnostic across different operating systems and architectures. Lava enables prototyping on standard CPUs/GPUs before deployment on neuromorphic chips, emphasizing hyper-granular parallelism, dynamic neural networks, forward connectivity between models, and high energy efficiency.",
+  "tldr": "Lava is an Intel-developed open-source framework for developing neuro-inspired applications compatible with various hardware architectures.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/snn-frameworks/lava/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:18+00:00",
+  "lastCheckedAt": "2026-09-10T20:31:13+00:00",
+  "tags": [
+    "software"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Lava is an open-source software framework designed for neuromorphic computing",
+    "Developed and maintained by the Intel Neuromorphic Computing Team",
+    "The library offers a modular structure for integrating algorithms and supports a wide variety of neuron models, network topologies, and training tools"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:18+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/lava-framework-c0d7782e.json"
+  },
+  "sourcePublishedAt": "2023-05-31",
+  "organisation": "Intel Neuromorphic Computing Team"
+}

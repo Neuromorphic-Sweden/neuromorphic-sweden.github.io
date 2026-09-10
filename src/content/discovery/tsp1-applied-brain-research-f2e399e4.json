@@ -1,0 +1,38 @@
+{
+  "candidateId": "f2e399e43556ee3c939c",
+  "title": "TSP1 - Applied Brain Research",
+  "recordType": "resource",
+  "summary": "The TSP1 is a time-series neural network accelerator designed for ultra-low power edge AI applications. It features ABR's patented state-space model processing technology and the Legendre Memory Unit (LMU). The chip supports up to 20 million parameters, operates at <35mW for text-to-speech tasks, and includes interfaces like SPI, I2C, and GPIO for sensor integration. Package options include a 42-pin WLCSP and 44-pin QFN.",
+  "tldr": "The TSP1 is an ultra-low power time-series neural network accelerator chip designed by Applied Brain Research for edge AI applications such as automatic speech recognition and biosignal classification.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/tsp1-time-series-processor-applied-brain-research/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:29:48+00:00",
+  "lastCheckedAt": "2026-09-10T20:29:43+00:00",
+  "tags": [
+    "neuromorphic hardware"
+  ],
+  "useCases": [
+    "automatic speech recognition",
+    "biosignal classification",
+    "sensor signal processing"
+  ],
+  "evidence": [],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:29:48+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/tsp1-applied-brain-research-f2e399e4.json"
+  },
+  "sourcePublishedAt": "2023-01-02",
+  "organisation": "Applied Brain Research",
+  "trl": {
+    "basis": "source-claimed",
+    "scope": "component",
+    "evidence": "",
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "candidateId": "a5b2761cc64664611d29",
+  "title": "Open Neuromorphic Mission Board: Solving Key Challenges",
+  "recordType": "resource",
+  "summary": "The page describes a community-curated board listing high-impact challenges in neuromorphic computing software, interoperability, and tooling. It invites project maintainers to tag GitHub issues with 'help wanted' labels for selection by an automated system prioritizing recent open tasks. The resource aims to support vital open-source tools and prevent maintainer burnout through collaborative contributions. Contact details are provided via Discord or email (openneuromorphic+contact@gmail.com) for adding persistent links like sponsorship pages.",
+  "tldr": "A community-curated board lists high-impact neuromorphic computing challenges, inviting maintainers to tag GitHub issues for prioritized collaboration and tool support.",
+  "sourceUrl": "https://open-neuromorphic.org/getting-involved/solving-neuromorphic-computings-key-challenges/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:29:00+00:00",
+  "lastCheckedAt": "2026-09-10T20:28:54+00:00",
+  "tags": [
+    "neuromorphic-computing",
+    "open-source",
+    "software-challenges"
+  ],
+  "useCases": [],
+  "evidence": [],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:29:00+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/open-neuromorphic-mission-board-solving-key-challenges-a5b2761c.json"
+  },
+  "sourcePublishedAt": "2025-10-19",
+  "organisation": "Open Neuromorphic",
+  "trl": {
+    "basis": "source-claimed",
+    "scope": "general",
+    "evidence": "",
+    "confidence": "low"
+  }
+}

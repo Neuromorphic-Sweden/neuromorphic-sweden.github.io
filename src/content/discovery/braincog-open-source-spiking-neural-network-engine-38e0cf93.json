@@ -1,0 +1,35 @@
+{
+  "candidateId": "38e0cf930cd8fbb9ea36",
+  "title": "BrainCog: Open Source Spiking Neural Network Engine",
+  "recordType": "resource",
+  "summary": "BrainCog is an open-source spiking neural network (SNN) engine designed for embodied AI and brain simulations. It supports various neuron models including LIF and Izhikevich, learning rules such as STDP and Backpropagation, and encoding strategies like Temporal and Rate coding. The software simulates specific brain areas including the Motor Cortex and Hippocampus. A key feature is its support for Neuromorphic Continual Learning (NCL), enabling asynchronous SNN operation that addresses mismatches in traditional batch-based continual learning methods without requiring workflow reengineering.",
+  "tldr": "BrainCog provides an open-source framework for spiking neural networks with diverse neuron models and supports neuromorphic continual learning for embodied AI applications.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/braincog/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:31+00:00",
+  "lastCheckedAt": "2026-09-10T20:31:25+00:00",
+  "tags": [
+    "software",
+    "spiking-neural-networks",
+    "embodied-ai"
+  ],
+  "useCases": [
+    "brain-simulation",
+    "continual-learning"
+  ],
+  "evidence": [
+    "BrainCog is an open source spiking neural network engine created for Embodied AI and brain simulations.",
+    "Its available learning rules are: STDP, Hebbian, R-STDP, STP, BCM, Backpropagation."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:31+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/braincog-open-source-spiking-neural-network-engine-38e0cf93.json"
+  },
+  "sourcePublishedAt": "2026-01-01"
+}

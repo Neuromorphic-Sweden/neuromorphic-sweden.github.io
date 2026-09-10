@@ -1,0 +1,40 @@
+{
+  "candidateId": "d83caf2b59b92ee23412",
+  "title": "Akida - BrainChip",
+  "recordType": "resource",
+  "summary": "BrainChip's Akida is an ultra-low-power neuromorphic processor designed for edge AI using event-based processing and on-chip learning. The AKD1000 version was released in January 2022, supporting CNNs, RNNs, ViTs, and Temporal Event-based Neural Nets (TENNs). It utilizes Rank Order Coding rather than LIF neurons. Subsequent versions like the AKD2000 are not yet commercially available but have updated SDK support. The platform targets industrial automation, automotive, healthcare, and consumer electronics applications such as predictive maintenance and in-cabin monitoring.",
+  "tldr": "BrainChip's Akida is an ultra-low-power neuromorphic processor for edge AI featuring event-based processing and on-chip learning capabilities released in January 2022.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/akida-brainchip/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:30:39+00:00",
+  "lastCheckedAt": "2026-09-10T20:30:32+00:00",
+  "tags": [
+    "neuromorphic hardware",
+    "edge AI",
+    "event-based processing"
+  ],
+  "useCases": [
+    "industrial automation",
+    "automotive",
+    "healthcare",
+    "consumer electronics",
+    "predictive maintenance",
+    "in-cabin monitoring"
+  ],
+  "evidence": [
+    "BrainChip's Akida is an ultra-low-power neuromorphic processor inspired by the brain's neural architecture.",
+    "The AKD1000 version was released in January 2022 and can be purchased online directly from BrainChip."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:30:39+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/akida-brainchip-d83caf2b.json"
+  },
+  "sourcePublishedAt": "2023-12-26",
+  "organisation": "BrainChip"
+}

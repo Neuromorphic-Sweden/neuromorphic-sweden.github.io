@@ -1,0 +1,33 @@
+{
+  "candidateId": "80f8f58149ad02368865",
+  "title": "Tonic: Neuromorphic Data Tools",
+  "recordType": "resource",
+  "summary": "Tonic is an open-source Python package for downloading and manipulating neuromorphic datasets, specifically event-based vision and audio data. Compatible with PyTorch Vision/Audio, it offers efficient dataset management, transformations, caching, batching, and slicing capabilities. The tool includes documentation tutorials on loading events, augmenting images, and reading materials on neuromorphic cameras and spiking neural networks. It supports various file parsers and encourages community contributions via guidelines and communication channels.",
+  "tldr": "Tonic is an open-source Python library for processing event-based vision and audio datasets compatible with PyTorch.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/data-tools/tonic/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:37+00:00",
+  "lastCheckedAt": "2026-09-10T20:31:31+00:00",
+  "tags": [
+    "software",
+    "datasets",
+    "tools"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Overview Tonic is a specialized Python package designed to facilitate the downloading and manipulation of neuromorphic datasets, particularly focusing on event-based vision and audio data.",
+    "It is fully compatible with PyTorch Vision/Audio and offers a range of event transformations",
+    "The documentation for Tonic includes tutorials on loading and augmenting images alongside events"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:37+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/tonic-neuromorphic-data-tools-80f8f581.json"
+  },
+  "sourcePublishedAt": "2023-04-26"
+}

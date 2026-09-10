@@ -1,0 +1,32 @@
+{
+  "candidateId": "f7dc021f03cc7cf74fcc",
+  "title": "Brian2 SNN Framework",
+  "recordType": "resource",
+  "summary": "Brian2 is an open-source Python library for simulating spiking neural networks (SNNs), maintained since 2012 by Romain Brette, Marcel Stimberg, and Dan Goodman. It emphasizes user-friendly syntax, flexibility, and low abstraction levels allowing direct definition of neuron models via equations. The framework supports community contributions, comprehensive documentation, and is used for both teaching and research in neuromorphic computing.",
+  "tldr": "Brian2 is a long-maintained open-source Python library enabling flexible simulation of spiking neural networks through equation-based model definitions.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/software/snn-frameworks/brian/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:31:02+00:00",
+  "lastCheckedAt": "2026-09-10T20:30:57+00:00",
+  "tags": [
+    "software",
+    "simulation"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Brian2 is an open-source Python library for the simulation of spiking neural networks (SNNs)",
+    "Maintained by Romain Brette, Marcel Stimberg, and Dan Goodman since 2012",
+    "Publicly available for 12 years as a pillar of the neuromorphic community"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:31:02+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/brian2-snn-framework-f7dc021f.json"
+  },
+  "sourcePublishedAt": "2025-07-30"
+}

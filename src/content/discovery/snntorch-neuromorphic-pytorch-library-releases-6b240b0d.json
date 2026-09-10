@@ -1,0 +1,32 @@
+{
+  "candidateId": "6b240b0dae010bec91f8",
+  "title": "snntorch: Neuromorphic PyTorch Library Releases",
+  "recordType": "software",
+  "summary": "The GitHub repository hosts the snnTorch library, a software framework for training spiking neural networks using PyTorch. The page documents releases from an initial alpha-1 iteration through version 0.8.1 (published on 2024-03-17). Key features include support for various neuron models like Leaky and Synaptic neurons, recurrent architectures such as Spiking LSTMs, and compatibility with PyTorch's compilation tools. The library provides modules for surrogate gradients, spike generation, backpropagation through time, and export to the Neuromorphic Intermediate Representation (NIR) for deployment on specific hardware backends.",
+  "tldr": "snntorch is a software library enabling training of spiking neural networks within PyTorch with support for diverse neuron models and NIR export capabilities.",
+  "sourceUrl": "https://github.com/jeshraghian/snntorch/releases",
+  "sourceName": "github.com",
+  "discoveredAt": "2026-09-10T20:27:50+00:00",
+  "lastCheckedAt": "2026-09-10T20:27:43+00:00",
+  "tags": [
+    "software",
+    "spiking neural networks"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The page lists releases for snnTorch including version 0.8.1 with features like NIR compatibility and torch.compile support.",
+    "Version 0.7.0 introduced the snntorch.export module to interface modules with the Neuromorphic Intermediate Representation (NIR).",
+    "Earlier versions added recurrent neuron models, Spiking LSTM neurons, and various surrogate gradient functions."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:27:50+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/snntorch-neuromorphic-pytorch-library-releases-6b240b0d.json"
+  },
+  "sourcePublishedAt": "2024-03-17"
+}

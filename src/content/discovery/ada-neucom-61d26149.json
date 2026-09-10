@@ -1,0 +1,41 @@
+{
+  "candidateId": "61d2614974018378d30c",
+  "title": "ADA - Neucom",
+  "recordType": "resource",
+  "summary": "Neucom's ADA is a reconfigurable neuromorphic processor on a 22nm CMOS process designed to preprocess sparse data from dynamic vision sensors natively. It utilizes interval-coded neural computation via the STICK framework, avoiding frame conversion and reducing preprocessing bottlenecks that consume over 75% of runtime in conventional systems. Benchmarks indicate processing speeds up to 200 million events per second with 5 microsecond latency against standard ARM Cortex-M4 processors. The architecture supports EVT3.0 decoding, denoising, feature extraction for CNNs and SNNs, and hardware attention mechanisms. Software support includes the open-source Axon SDK for Python or C development. As of November 2025, a virtual prototype exists; tapeout is scheduled between Q2-Q3 2026.",
+  "tldr": "Neucom's ADA processor natively handles sparse event streams from dynamic vision sensors using interval-coded computation to reduce latency and power consumption in robotics and autonomous systems.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/ada-neucom/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:29:43+00:00",
+  "lastCheckedAt": "2026-09-10T20:29:34+00:00",
+  "tags": [
+    "neuromorphic processor",
+    "dynamic vision sensors",
+    "asynchronous dataflow architecture"
+  ],
+  "useCases": [
+    "robotics and autonomous vehicles",
+    "AR/VR systems",
+    "industrial monitoring",
+    "space applications"
+  ],
+  "evidence": [
+    "ADA (Asynchronous Dataflow Architecture) is a reconfigurable neuromorphic processor designed to preprocess event streams from dynamic vision sensors.",
+    "The chip targets a specific problem in event-based vision: conventional CPUs and GPUs struggle to efficiently handle the sparse, asynchronous data from dynamic vision sensors (DVS), with preprocessing operations consuming over 75% of runtime and power in typical embedded systems.",
+    "According to benchmarks in the whitepaper, ADA processes 200 million events per second with 5 microsecond latency, compared to 135,000 events per second with 7.4 microsecond latency on an ARM Cortex-M4 running at 200MHz.",
+    "The processor is fabricated on a 22nm CMOS process and designed as IP for integration into larger SoCs via standard digital interfaces.",
+    "As of November 2025, ADA is available as a virtual prototype and FPGA implementation for partner evaluation. Tapeout is scheduled for Q2-Q3 2026."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:29:43+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/ada-neucom-61d26149.json"
+  },
+  "sourcePublishedAt": "2023-01-02",
+  "organisation": "Neucom"
+}

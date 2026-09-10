@@ -1,0 +1,32 @@
+{
+  "candidateId": "4215227242c449a015ab",
+  "title": "DYNAP-SE2 - Institute of Neuroinformatics",
+  "recordType": "resource",
+  "summary": "The DYNAP-SE2 is a configurable mixed-signal neuromorphic processor chip manufactured using 180nm CMOS technology. It features 1024 leaky integrate-and-fire spiking neurons, 65k plastic synapses, and specialized dendrites on a 98mm² silicon area. The architecture supports real-time emulation of neural dynamics for event-based sensory processing via asynchronous routing. Published in January 2024 (IOP Neuromorph. Comput. Eng.), the chip enables prototyping of recurrent networks like winner-take-all attractors and coupled oscillators. Development boards allow testing, while stack configurations support robotic deployment.",
+  "tldr": "The DYNAP-SE2 is a configurable mixed-signal neuromorphic processor with 1024 neurons designed for ultra-low power edge processing of event-based data.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/hardware/dynap-se2-institute-of-neuroinformatics/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:30:17+00:00",
+  "lastCheckedAt": "2026-09-10T20:30:10+00:00",
+  "tags": [
+    "neuromorphic",
+    "hardware"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The DYNAP-SE2 is a configurable, mixed-signal neuromorphic chip featuring 1024 neurons, 65k plastic synapses...",
+    "...manufactured using 180nm CMOS technology. It occupies a 98mm² silicon area and contains 1024 leaky integrate-and-fire spiking neuron circuits...",
+    "The rich neural/synaptic dynamics and event-driven operation of the DYNAP-SE2 allow exploration of spiking neural networks for ultra-low power edge processing applications..."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:30:17+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/dynap-se2-institute-of-neuroinformatics-42152272.json"
+  },
+  "sourcePublishedAt": "2025-05-15"
+}

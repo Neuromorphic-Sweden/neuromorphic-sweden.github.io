@@ -1,0 +1,43 @@
+{
+  "candidateId": "eb090e0866c6d5bd9d18",
+  "title": "The road to commercial success for neuromorphic technologies - Nature Communications",
+  "recordType": "resource",
+  "summary": "This perspective article outlines the path toward widespread commercial adoption of Neuromorphic (NM) processors by addressing historical barriers in programming models and hardware reliability. It highlights that gradient-based training now enables general-purpose applications on spiking neural networks, while digital CMOS implementations improve robustness over analog designs. The text identifies key markets for NM technology: low-power edge inference (TinyML), IoT devices, wearables, and real-time sensory processing like audio keyword spotting. Benchmark data indicates significant energy efficiency gains compared to GPUs and CPUs across various tasks. Standardization of interfaces, software toolchains, and benchmarks is recommended to facilitate industry uptake alongside established architectures.",
+  "tldr": "This Nature Communications perspective details the commercial roadmap for neuromorphic processors by emphasizing recent advances in gradient-based training, digital CMOS reliability, and energy-efficient edge applications like TinyML.",
+  "sourceUrl": "https://www.nature.com/articles/s41467-025-57352-1",
+  "sourceName": "nature.com",
+  "discoveredAt": "2026-09-10T20:26:28+00:00",
+  "lastCheckedAt": "2026-09-10T20:26:19+00:00",
+  "tags": [
+    "neuromorphic",
+    "spiking neural networks",
+    "edge computing",
+    "energy efficiency",
+    "commercialization"
+  ],
+  "useCases": [
+    "IoT devices",
+    "wearables",
+    "audio keyword spotting",
+    "vision processing",
+    "TinyML inference"
+  ],
+  "evidence": [
+    "Gradient-based training of deep spiking neural networks is now an off-the-shelf technique for building general-purpose Neuromorphic applications, with open-source tools underwritten by theoretical results.",
+    "Ultra-low-power Neuromorphic technology will find a home in battery-powered systems, local compute for internet-of-things devices, and consumer wearables.",
+    "For performing SNN inference, NM processors show advantages over other computational architectures... 280–21000 × vs GPU on an SNN simulation task; 3–50 × vs an edge ANN accelerator on the same task",
+    "The new breed of simpler, inference-only NM processors, based on standard spiking neuron modules and fabricated in standard digital CMOS, completely solve these questions of reliability and robustness.",
+    "Recent work has shown success in porting network architectures between seven software toolchains and four hardware platforms"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:26:28+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/the-road-to-commercial-success-for-neuromorphic-technologies-nature-comm-eb090e08.json"
+  },
+  "sourcePublishedAt": "2025-04-15"
+}

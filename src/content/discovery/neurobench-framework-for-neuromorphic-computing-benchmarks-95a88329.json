@@ -1,0 +1,32 @@
+{
+  "candidateId": "95a88329f6778027a706",
+  "title": "NeuroBench framework for neuromorphic computing benchmarks",
+  "recordType": "resource",
+  "summary": "The NeuroBench framework provides a standardized benchmark suite for evaluating neuromorphic algorithms and systems. Published on 2025-02-11 in Nature Communications, it addresses the lack of common metrics by introducing an open-source harness with two tracks: algorithm (hardware-independent) and system (deployed). The v1.0 release includes four benchmarks covering few-shot continual learning, event camera object detection, motor cortical decoding, and chaotic forecasting. Metrics assess correctness, memory footprint, sparsity, and synaptic operations to enable fair comparison across diverse architectures like SNNs and ANNs.",
+  "tldr": "NeuroBench is a community-driven benchmark framework for neuromorphic computing that standardizes metrics and tasks via an open-source harness released in February 2025.",
+  "sourceUrl": "https://www.nature.com/articles/s41467-025-56739-4",
+  "sourceName": "nature.com",
+  "discoveredAt": "2026-09-10T20:26:37+00:00",
+  "lastCheckedAt": "2026-09-10T20:26:30+00:00",
+  "tags": [
+    "benchmark",
+    "framework"
+  ],
+  "useCases": [],
+  "evidence": [
+    "NeuroBench introduces a common set of tools and systematic methodology for inclusive benchmark measurement.",
+    "The framework consists of an algorithm track for hardware-independent evaluation and a system track for fully deployed solutions.",
+    "In the first iteration, we assume a digital, time-stepped execution of the algorithm and define complexity metrics including Footprint and Connection Sparsity."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:26:37+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neurobench-framework-for-neuromorphic-computing-benchmarks-95a88329.json"
+  },
+  "sourcePublishedAt": "2025-02-11"
+}
