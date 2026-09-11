@@ -1,0 +1,33 @@
+{
+  "candidateId": "b516a15c1bb1ef1c58d4",
+  "title": "NIR: Neuromorphic Intermediate Representation reference implementation",
+  "recordType": "software",
+  "summary": "The NIR project provides a computational intermediate representation enabling interoperability across neuromorphic frameworks and hardware. Supported by nine simulators and five platforms as of July 2023, it allows model portability between tools like Lava-DL, Nengo, and SpiNNaker2 via save/load operations. An extension named NIRData facilitates data exchange for spiking neural networks. The software was conceived at the Telluride Neuromorphic Workshop in September 2023 and published as a Nature Communications article in September 2024.",
+  "tldr": "NIR is an open-source intermediate representation enabling model portability across multiple neuromorphic simulators and hardware platforms, with support for spiking neural network data exchange via NIRData.",
+  "sourceUrl": "https://github.com/neuromorphs/NIR",
+  "sourceName": "github.com",
+  "discoveredAt": "2026-09-10T20:27:41+00:00",
+  "lastCheckedAt": "2026-09-10T20:27:35+00:00",
+  "tags": [
+    "software",
+    "interoperability"
+  ],
+  "useCases": [],
+  "evidence": [
+    "NIR is a set of computational primitives, shared across different neuromorphic frameworks and technology stacks.",
+    "NIR is currently supported by 9 simulators and 5 hardware platforms",
+    "Using NIR is typically a part of your favorite framework's workflow"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:27:41+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
+    "sourcePath": "src/content/discovery/nir-neuromorphic-intermediate-representation-reference-implementation-b516a15c.json"
+  },
+  "sourcePublishedAt": "2023-07-01"
+}

@@ -1,0 +1,37 @@
+{
+  "candidateId": "cf0f100fd108b1ea56f5",
+  "title": "Open Neuromorphic Community Resources",
+  "recordType": "resource",
+  "summary": "The Open Neuromorphic (ONM) website serves as a global hub for brain-inspired AI and hardware collaboration. It hosts educational materials including benchmarks of Spiking Neural Network libraries to assist researchers in selecting tools. The site features curated lists on digital neuromorphic hardware designs, visual attention mechanisms for robotics, and open-source project reviews via the ONR Program. With over 3,200 members, it supports education, research, and community initiatives without specifying a Technology Readiness Level or specific event dates.",
+  "tldr": "Open Neuromorphic provides educational resources, benchmarks, and curated hardware lists to support global brain-inspired AI collaboration.",
+  "sourceUrl": "https://open-neuromorphic.org/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-10T20:28:46+00:00",
+  "lastCheckedAt": "2026-09-10T20:28:41+00:00",
+  "tags": [
+    "community",
+    "education",
+    "benchmarks"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Advancing Neuromorphic Computing, Together. Open Neuromorphic is a global community fostering education, research, and open-source collaboration in brain-inspired AI and hardware.",
+    "Dive into our comprehensive benchmarks of Spiking Neural Network libraries.",
+    "Essential reading for choosing the right tools for your research",
+    "A curated list of influential papers and theses on digital neuromorphic hardware designs."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:28:46+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
+    "sourcePath": "src/content/discovery/open-neuromorphic-community-resources-cf0f100f.json"
+  },
+  "sourcePublishedAt": "2026-07-09",
+  "organisation": "Open Neuromorphic",
+  "country": "Global"
+}

@@ -1,0 +1,44 @@
+{
+  "candidateId": "cb2a035ac5017b2f8aa3",
+  "title": "EBRAINS Neuromorphic Computing Infrastructure",
+  "recordType": "resource",
+  "summary": "The EBRAINS platform provides remote access to two large-scale neuromorphic computing systems: BrainScaleS in Heidelberg and SpiNNaker in Manchester. These hardware resources emulate spiking neural networks using analogue or mixed-signal techniques, offering accelerated simulation speeds up to ten thousand times real-time for studying plasticity and learning. Users can define neuronal network models via the PyNN API through web interfaces or Python clients. The infrastructure supports computational neuroscience and machine learning research by enabling high-speed, low-energy simulations of simplified brain models. Additionally, a printed circuit board demonstrator named 'Lu.i' offers configurable analog neuron implementations for educational purposes.",
+  "tldr": "EBRAINS provides free remote access to BrainScaleS and SpiNNaker neuromorphic systems for simulating spiking neural networks with accelerated time scales.",
+  "sourceUrl": "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing",
+  "sourceName": "ebrains.eu",
+  "discoveredAt": "2026-09-10T20:18:50+00:00",
+  "lastCheckedAt": "2026-09-10T20:18:27+00:00",
+  "tags": [
+    "neuromorphic computing",
+    "spiking neural networks",
+    "BrainScaleS",
+    "SpiNNaker",
+    "PyNN API"
+  ],
+  "useCases": [
+    "simulation of spiking neural networks",
+    "study of synaptic plasticity and learning",
+    "neurorobotics simulation environments"
+  ],
+  "evidence": [
+    "Remote access to fast, powerful, programmable, brain-inspired computing devices (free of charge for evaluation and basic research)",
+    "Access to two complementary, large-scale, custom-hardware neuromorphic computing systems: BrainScaleS (located in Heidelberg) and SpiNNaker (located in Manchester)",
+    "Enables high-speed, low-energy simulations or emulations of simplified spiking neural networks with synaptic plasticity",
+    "BrainScaleS system is based on physical (analogue or mixed signal) emulations... running up to ten thousand times faster than real time"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:18:50+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
+    "sourcePath": "src/content/discovery/ebrains-neuromorphic-computing-infrastructure-cb2a035a.json"
+  },
+  "sourcePublishedAt": "2026-08-18",
+  "organisation": "EBRAINS",
+  "location": "Heidelberg, Germany; Manchester (implied)",
+  "country": "Germany/UK/EU"
+}

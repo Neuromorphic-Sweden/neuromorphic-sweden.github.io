@@ -1,0 +1,39 @@
+{
+  "candidateId": "f508a96742db6ff1e9eb",
+  "title": "International Conference on Neuromorphic Computing and Engineering (ICNCE) 2026",
+  "recordType": "event",
+  "summary": "The International Conference on Neuromorphic Computing and Engineering is scheduled for June 28 to July 2, 2026 in Aachen, Germany. The event focuses on interdisciplinary research linking neuroscience, microelectronics, computer science, and AI. Honorary Chair Rainer Waser represents RWTH Aachen University and Forschungszentrum Jülich GmbH. Co-Chairs include Regina Dittmann (Electronic Materials), Bastian Leibe (Computer Vision), Abigail Morrison (Computation in Neural Circuits), Emre Neftci (Neuromorphic Software Ecosystems), and John Paul Strachan (Neuromorphic Compute Nodes). All co-chairs are affiliated with Forschungszentrum Jülich GmbH, RWTH Aachen University, or AMO GmbH. The conference aims to foster collaboration across these specific neuromorphic engineering domains.",
+  "tldr": "ICNCE 2026 is a planned interdisciplinary event in Germany focusing on neuroscience and microelectronics integration for AI applications from June 28 to July 2, 2026.",
+  "sourceUrl": "https://icnce-2026.de/",
+  "sourceName": "icnce-2026.de",
+  "discoveredAt": "2026-09-10T20:26:15+00:00",
+  "lastCheckedAt": "2026-09-10T20:26:00+00:00",
+  "tags": [
+    "neuromorphic computing",
+    "neuroscience",
+    "microelectronics",
+    "AI"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Interdisciplinary event including Neuroscience, Microelectronics and Computer Science/AI Eurogress Aachen, Germany, June 28- July 02, 2026 Honorary Chair: Rainer Waser – RWTH Aachen University & Forschungszentrum Jülich GmbH",
+    "ICNCE 2026 Co-Chairs: Regina Dittmann – Electronic Materials, Forschungszentrum Jülich GmbH & RWTH Aachen University Bastian Leibe – Computer Vision, RWTH Aachen University & AI Center Max Lemme – Electronic Devices, RWTH Aachen University & AMO GmbH Abigail Morrison – Computation in Neural Circuits, Forschungszentrum "
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-10T20:26:15+00:00",
+    "promptVersion": "neuromorphic-discovery-v1"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/2",
+    "sourcePath": "src/content/discovery/international-conference-on-neuromorphic-computing-and-engineering-icnce-f508a967.json"
+  },
+  "sourcePublishedAt": "2026-07-02",
+  "organisation": "Eurogress Aachen",
+  "location": "Aachen, Germany",
+  "eventStart": "2026-06-28T00:00:00Z",
+  "eventEnd": "2026-07-02T23:59:59Z",
+  "country": "Germany"
+}
