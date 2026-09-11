@@ -11,10 +11,14 @@ interface Props {
 	recordTypes: DiscoveryRecordType[];
 	limit?: number;
 	tint?: boolean;
+	appendStatus?: boolean;
 }
 
-const { title, description, recordTypes, limit = 6, tint = false } = Astro.props;
+const { title, description, recordTypes, limit = 6, tint = false, appendStatus = true } = Astro.props;
 const reviewSite = process.env.REVIEW_SITE === 'true';
+const statusText = reviewSite
+	? 'Cards labelled “Review record” are proposals awaiting editorial review; other entries are already published.'
+	: 'Every entry links to its original source and has passed editorial review before publication.';
 const reviewCandidateIds = new Set(reviewQueue.candidateIds);
 const entries = sortDiscoveries(
 	await getCollection(
@@ -32,7 +36,7 @@ const entries = sortDiscoveries(
 					<p class="eyebrow">AI-assisted discovery</p>
 					<h2>{title}</h2>
 				</div>
-				<p>{description} {reviewSite ? 'Cards labelled “Review record” are proposals awaiting editorial review; other entries are already published.' : 'Every entry links to its original source and has passed editorial review before publication.'}</p>
+				<p>{description}{appendStatus && ` ${statusText}`}</p>
 			</div>
 			<div class="discovery-grid">
 				{entries.map((entry) => <DiscoveryCard entry={entry} review={reviewSite && reviewCandidateIds.has(entry.data.candidateId)} />)}
