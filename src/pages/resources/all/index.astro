@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import DiscoveryCard from '../../../components/DiscoveryCard.astro';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import reviewQueue from '../../../data/discovery-review-queue.json';
+import { sortDiscoveries } from '../../../lib/discovery';
+
+const resourceTypes = new Set(['resource', 'hardware', 'software']);
+const reviewSite = process.env.REVIEW_SITE === 'true';
+const reviewCandidateIds = new Set(reviewQueue.candidateIds);
+const entries = sortDiscoveries(
+	await getCollection(
+		'discoveries',
+		({ data }) =>
+			!data.internal &&
+			resourceTypes.has(data.recordType),
+	),
+);
+---
+
+<SiteLayout
+	title="All resources and tools"
+	description="Published AI-assisted resources and tools, ordered by the date of the original source or the date the information was identified."
+>
+	<section class="page-hero">
+		<div class="container">
+			<a class="back-link" href="/resources/"><span aria-hidden="true">←</span> Back to Resources</a>
+			<p class="eyebrow">AI-assisted discovery</p>
+			<h1>All resources and tools.</h1>
+			<p class="lead">
+				Published records are listed newest first. Dates represent the original source's
+				publication date when available; otherwise, they show when the information was
+				identified by Neuromorphic Sweden.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<p class="archive-count">{entries.length} {reviewSite ? 'records in this build' : `published ${entries.length === 1 ? 'record' : 'records'}`}</p>
+			{entries.length > 0 ? (
+				<div class="archive-grid">
+					{entries.map((entry) => <DiscoveryCard entry={entry} review={reviewSite && reviewCandidateIds.has(entry.data.candidateId)} />)}
+				</div>
+			) : (
+				<div class="empty-state">
+					<h2>No published resources yet.</h2>
+					<p>Reviewed resources will appear here after their proposal is merged.</p>
+				</div>
+			)}
+		</div>
+	</section>
+</SiteLayout>
+
+<style>
+	.back-link {
+		display: inline-block;
+		margin-bottom: 2rem;
+		font-weight: 750;
+		text-decoration: none;
+	}
+
+	.archive-count {
+		margin-bottom: 1.5rem;
+		color: var(--blue-700);
+		font-size: 0.76rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.archive-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.empty-state {
+		border: 1px solid var(--line);
+		border-radius: 1rem;
+		padding: clamp(1.5rem, 4vw, 3rem);
+	}
+
+	.empty-state h2 {
+		font-size: clamp(1.6rem, 3vw, 2.2rem);
+	}
+
+	@media (max-width: 64rem) {
+		.archive-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 42rem) {
+		.archive-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

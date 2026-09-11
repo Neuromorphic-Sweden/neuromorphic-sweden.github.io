@@ -12,9 +12,20 @@ interface Props {
 	limit?: number;
 	tint?: boolean;
 	appendStatus?: boolean;
+	viewAllHref?: string;
+	viewAllLabel?: string;
 }
 
-const { title, description, recordTypes, limit = 6, tint = false, appendStatus = true } = Astro.props;
+const {
+	title,
+	description,
+	recordTypes,
+	limit = 6,
+	tint = false,
+	appendStatus = true,
+	viewAllHref,
+	viewAllLabel = 'View all',
+} = Astro.props;
 const reviewSite = process.env.REVIEW_SITE === 'true';
 const statusText = reviewSite
 	? 'Cards labelled “Review record” are proposals awaiting editorial review; other entries are already published.'
@@ -41,6 +52,11 @@ const entries = sortDiscoveries(
 			<div class="discovery-grid">
 				{entries.map((entry) => <DiscoveryCard entry={entry} review={reviewSite && reviewCandidateIds.has(entry.data.candidateId)} />)}
 			</div>
+			{viewAllHref && (
+				<div class="discovery-actions">
+					<a class="button secondary" href={viewAllHref}>{viewAllLabel} <span aria-hidden="true">→</span></a>
+				</div>
+			)}
 		</div>
 	</section>
 )}
@@ -50,6 +66,10 @@ const entries = sortDiscoveries(
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 1rem;
+	}
+
+	.discovery-actions {
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 64rem) {

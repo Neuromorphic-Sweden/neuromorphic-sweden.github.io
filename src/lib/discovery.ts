@@ -16,7 +16,9 @@ export const githubRepositoryUrl =
 	'https://github.com/neuromorphic-sweden/neuromorphic-sweden.github.io';
 
 export const discoveryDate = (entry: DiscoveryEntry) =>
-	entry.data.eventStart ?? entry.data.sourcePublishedAt ?? entry.data.discoveredAt;
+	entry.data.recordType === 'event' && entry.data.eventStart
+		? entry.data.eventStart
+		: entry.data.sourcePublishedAt ?? entry.data.discoveredAt;
 
 export const sortDiscoveries = (entries: DiscoveryEntry[]) =>
 	entries.sort((a, b) => discoveryDate(b).valueOf() - discoveryDate(a).valueOf());

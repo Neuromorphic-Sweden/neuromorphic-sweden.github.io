@@ -10,6 +10,7 @@ Public website for the neutral Swedish neuromorphic research and innovation ecos
 - `/ecosystem/` — national ecosystem overview
 - `/activities/` — project and workshop history
 - `/resources/` — reports and project records
+- `/resources/all/` — all published AI-assisted resources and tools, newest first
 - `/about/` — purpose, principles and contact information
 - `/preview/` — unlisted editorial review dashboard for crawler proposal branches
 
