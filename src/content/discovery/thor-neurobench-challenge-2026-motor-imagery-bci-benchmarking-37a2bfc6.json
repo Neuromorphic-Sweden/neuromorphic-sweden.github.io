@@ -1,0 +1,35 @@
+{
+  "candidateId": "37a2bfc69d2f45b11434",
+  "title": "THOR-NeuroBench Challenge 2026: Motor Imagery BCI Benchmarking",
+  "recordType": "resource",
+  "summary": "The THOR Neuromorphic Commons hosts the inaugural THOR-NeuroBench Challenge (March–July 2026) to benchmark neuromorphic models for classifying motor imagery from EEG signals. Participants must convert continuous OpenBMI dataset data into discrete spike trains compatible with event-driven architectures, evaluating performance via Synaptic Operations rather than standard MAC counts. The challenge targets applications in wearable decoders for wheelchairs and prosthetics. A $1,000 prize pool is sponsored by the Edge AI Foundation.",
+  "tldr": "The THOR-NeuroBench Challenge 2026 benchmarks neuromorphic models on converting OpenBMI EEG data into spike trains to classify motor imagery using SynOps metrics for wearable BCI applications.",
+  "sourceUrl": "https://www.neuromorphiccommons.com/events/thor_neurob_comp_2026/challenge.html",
+  "sourceName": "neuromorphiccommons.com",
+  "discoveredAt": "2026-09-13T18:24:06+00:00",
+  "lastCheckedAt": "2026-09-13T18:23:59+00:00",
+  "tags": [
+    "benchmarking"
+  ],
+  "useCases": [
+    "brain-computer-interface",
+    "motor-imagery",
+    "wearable-decoders"
+  ],
+  "evidence": [
+    "The THOR Neuromorphic Commons hosts the inaugural THOR-NeuroBench Challenge (March–July 2026) to benchmark neuromorphic models for classifying motor imagery from EEG signals.",
+    "Participants must convert continuous OpenBMI dataset data into discrete spike trains compatible with event-driven architectures, evaluating performance via Synaptic Operations rather than standard MAC counts."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:24:06+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/thor-neurobench-challenge-2026-motor-imagery-bci-benchmarking-37a2bfc6.json"
+  },
+  "sourcePublishedAt": "2025-01-01",
+  "organisation": "THOR Neuromorphic Commons"
+}

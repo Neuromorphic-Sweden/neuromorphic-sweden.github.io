@@ -1,0 +1,35 @@
+{
+  "candidateId": "ee31d7e9e4e0654d14c0",
+  "title": "International Neuromorphic Computing Conference 2027",
+  "recordType": "event",
+  "summary": "NeuroSYNC announces the International Neuromorphic Computing Conference (INCC) for May 11–13, 2027 in London. Organized by NeuroSYNC with co-organizers NeuMat and NeuroWare, the event targets researchers and industry leaders to advance brain-inspired computing topics including photonics and unconventional systems.",
+  "tldr": "NeuroSYNC launches INCC 2027 as a multidisciplinary gathering for neuromorphic computing in London from May 11–13, 2027.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/event-details/international-neuromorphic-computing-conference-11-13-may-2027",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:22:09+00:00",
+  "lastCheckedAt": "2026-09-13T18:22:02+00:00",
+  "tags": [
+    "conference"
+  ],
+  "useCases": [],
+  "evidence": [
+    "NeuroSYNC is delighted to announce the launch of the International Neuromorphic Computing Conference (INCC) 2027... Taking place from 11–13 May 2027 at Mercure London Earls Court, London, UK",
+    "Led by NeuroSYNC – UK Multidisciplinary Centre for Neuromorphic Systems and Computing, and co-organised by NeuMat ... and NeuroWare"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:22:09+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/international-neuromorphic-computing-conference-2027-ee31d7e9.json"
+  },
+  "sourcePublishedAt": "2025-01-01",
+  "organisation": "NeuroSYNC",
+  "location": "London, UK",
+  "eventStart": "2027-05-11T00:00:00Z",
+  "eventEnd": "2027-05-13T23:59:59Z",
+  "country": "United Kingdom"
+}

@@ -1,0 +1,33 @@
+{
+  "candidateId": "073ee8c67805f229970c",
+  "title": "Low Power Reconfigurable Neuromorphic Architecture by Sparsely Connected Spiking Neural Networks for Edge Applications",
+  "recordType": "resource",
+  "summary": "This 2026-08-02 article proposes a sparse spike-aware FPGA architecture using LIF neurons and pruning to reduce overhead in spiking neural networks. Evaluated on the Iris dataset, it achieved 93.3% classification accuracy with 587 logic cells and 3.5 W power consumption. The work addresses hardware efficiency for edge computing applications.",
+  "tldr": "A 2026 FPGA architecture paper demonstrates low-power spiking neural networks achieving high accuracy on the Iris dataset via pruning-aware event-driven computation.",
+  "sourceUrl": "https://doi.org/10.3390/jlpea16030028",
+  "sourceName": "Journal of Low Power Electronics and Applications",
+  "discoveredAt": "2026-09-13T18:28:00+00:00",
+  "lastCheckedAt": "2026-09-13T18:27:54+00:00",
+  "tags": [
+    "product",
+    "research"
+  ],
+  "useCases": [
+    "edge computing"
+  ],
+  "evidence": [
+    "In this work, we propose a sparse spike-aware and weight pruning FPGA architecture based on LIF neurons that minimizes spike activity and synaptic operations through pruning-aware event-driven computation.",
+    "Experimental results demonstrated that the proposed architecture achieved an overall classification accuracy of 93.3% while maintaining low hardware resource utilization and reduced power consumption."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:28:00+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/low-power-reconfigurable-neuromorphic-architecture-by-sparsely-connected-073ee8c6.json"
+  },
+  "sourcePublishedAt": "2026-08-02"
+}

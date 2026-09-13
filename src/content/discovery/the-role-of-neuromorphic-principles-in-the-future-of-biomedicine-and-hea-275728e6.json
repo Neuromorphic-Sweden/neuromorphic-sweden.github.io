@@ -1,0 +1,31 @@
+{
+  "candidateId": "275728e6f1c004ffe121",
+  "title": "The role of neuromorphic principles in the future of biomedicine and healthcare",
+  "recordType": "resource",
+  "summary": "This article reports on a workshop held in October 2024 regarding neuromorphic engineering applications in biomedical fields. Participants identified key challenges including neuromodulation, clinical biomarkers, datasets, biointerfaces, infrastructure, benchmarks, standards, and commercialization. The text emphasizes the need for transdisciplinary communication between engineers, neuroscientists, material scientists, and clinicians to advance research. Publicly available recordings and slides from the workshop are referenced on an external website.",
+  "tldr": "A 2024 workshop identified challenges in applying neuromorphic engineering to biomedicine, highlighting needs for better standards, datasets, and cross-disciplinary collaboration.",
+  "sourceUrl": "https://doi.org/10.1088/1741-2552/ae8d5b",
+  "sourceName": "Journal of Neural Engineering",
+  "discoveredAt": "2026-09-13T18:28:09+00:00",
+  "lastCheckedAt": "2026-09-13T18:28:03+00:00",
+  "tags": [
+    "workshop",
+    "biomedical"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Participants at the Neuromorphic Principles in Biomedicine and Healthcare Workshop (October 2024)... convened to discuss the state of the field...",
+    "The need for transdisciplinary communication and education between engineers, neuroscientists, material scientists, and clinicians emerged as a central gap."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:28:09+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/the-role-of-neuromorphic-principles-in-the-future-of-biomedicine-and-hea-275728e6.json"
+  },
+  "sourcePublishedAt": "2026-07-20"
+}

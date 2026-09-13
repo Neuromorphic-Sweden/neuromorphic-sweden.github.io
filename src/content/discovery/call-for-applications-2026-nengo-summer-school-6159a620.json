@@ -1,0 +1,36 @@
+{
+  "candidateId": "6159a6204b5627768207",
+  "title": "Call For Applications 2026 Nengo Summer School",
+  "recordType": "event",
+  "summary": "The Centre for Theoretical Neuroscience at the University of Waterloo announces its 11th annual summer school on large-scale brain modelling and neuromorphic computing. Scheduled from May 31 to June 12, 2026, in Ontario, Canada, this two-week program offers participants access to neuromorphic hardware such as BrainDrop and SpiNNaker via the Nengo simulation package. The curriculum covers building cognitive models using spiking neurons, interfacing with robotic systems, and implementing vector symbolic architectures. Applications are accepted until December 22, 2026.",
+  "tldr": "The University of Waterloo announces its 11th annual summer school on brain modelling and neuromorphic computing scheduled for May-June 2026 in Ontario, Canada.",
+  "sourceUrl": "https://forum.neuromorphs.net/d/33-call-for-applications-2026-nengo-summer-school",
+  "sourceName": "neuromorphs.net",
+  "discoveredAt": "2026-09-13T18:21:25+00:00",
+  "lastCheckedAt": "2026-09-13T18:21:17+00:00",
+  "tags": [
+    "education"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The Centre for Theoretical Neuroscience at the University of Waterloo is excited to announce our 11th annual Nengo summer school on large-scale brain modelling and neuromorphic computing.",
+    "Summer school participants will be given on-site access to neuromorphic hardware",
+    "Participants are encouraged to bring their own ideas for projects, which may focus on testing hypotheses... or providing a proof-of-concept of various neural mechanisms."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:21:25+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/call-for-applications-2026-nengo-summer-school-6159a620.json"
+  },
+  "sourcePublishedAt": "2026-07-27",
+  "organisation": "Centre for Theoretical Neuroscience at the University of Waterloo",
+  "location": "University of Waterloo, Ontario, Canada",
+  "eventStart": "2026-05-31T00:00:00Z",
+  "eventEnd": "2026-06-12T00:00:00Z",
+  "country": "Canada"
+}

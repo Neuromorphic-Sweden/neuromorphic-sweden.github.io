@@ -1,0 +1,38 @@
+{
+  "candidateId": "a9330eaefd6d6971347c",
+  "title": "Event-driven Vision School - EVS2026",
+  "recordType": "event",
+  "summary": "The Event-driven Vision School (EVS) is an educational event focused on computer vision using event cameras. Registrations were extended beyond October 26th to November 3rd for the upcoming session in July 2026. The program aims to teach state-of-the-art methods for processing event-driven camera data and developing practical applications.",
+  "tldr": "Registration deadline extended for EVS2026, an educational school on computer vision with event cameras scheduled for July 2026.",
+  "sourceUrl": "https://forum.neuromorphs.net/d/35-event-driven-vision-school-evs2026",
+  "sourceName": "neuromorphs.net",
+  "discoveredAt": "2026-09-13T18:21:16+00:00",
+  "lastCheckedAt": "2026-09-13T18:21:09+00:00",
+  "tags": [
+    "education"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The registration deadline to the Event-driven Vision School (EVS) has been extended beyond 26th October.",
+    "If interested, apply filling the form before Monday 3rd November."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:21:16+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/event-driven-vision-school-evs2026-a9330eae.json"
+  },
+  "sourcePublishedAt": "2026-07-27",
+  "organisation": "Neuromorphs Forum",
+  "eventStart": "2026-07-27T00:00:00Z",
+  "trl": {
+    "basis": "source-claimed",
+    "scope": "education",
+    "evidence": "[null]",
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "candidateId": "1ae254669827f4e4a275",
+  "title": "Publications list for the UK Neuromorphic Centre",
+  "recordType": "organisation",
+  "summary": "This listing documents research outputs from 2025 and 2026 associated with a multidisciplinary centre. The page enumerates academic papers covering photonic neuromorphic processing, event-based sensing using infrared fibre-optics, optoelectronic RRAM programming, reservoir computing with VCSEL arrays, and optical dot-product multipliers. Authors include researchers such as Antonio Hurtado, Egor Manuylovich, and Natalia G. Berloff. The content serves as a discovery coordinate for publications rather than reporting specific project milestones or commercial deployments.",
+  "tldr": "A publication list from the UK Neuromorphic Centre featuring 2025-2026 research on photonic neuromorphic systems and event-based sensing.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/publications-1",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:21:48+00:00",
+  "lastCheckedAt": "2026-09-13T18:21:40+00:00",
+  "tags": [
+    "publication",
+    "research"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The page lists publications from 2025 and 2026 including 'Neuromorphic Infrared Fibre-Optic Event-Based Sensing' and 'Photonic neuromorphic processing with coupled spiking silicon microrings'.",
+    "Authors listed include Antonio Hurtado, Egor Manuylovich, and Natalia G. Berloff.",
+    "The page functions as a discovery coordinate for academic papers rather than reporting commercial deployments."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:21:48+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/publications-list-for-the-uk-neuromorphic-centre-1ae25466.json"
+  },
+  "sourcePublishedAt": "2026-09-10",
+  "organisation": "UK Multidisciplinary Centre for Neuromorphic Systems and Computing",
+  "location": "United Kingdom",
+  "country": "GBR"
+}

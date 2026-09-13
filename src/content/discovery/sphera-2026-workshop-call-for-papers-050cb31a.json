@@ -1,0 +1,36 @@
+{
+  "candidateId": "050cb31a79fabb2115d2",
+  "title": "SPHERA 2026 Workshop Call for Papers",
+  "recordType": "event",
+  "summary": "The ACM Symposium on Eye Tracking Research & Applications (ETRA) announces a call for papers for the SPHERA 2026 workshop. Scheduled in conjunction with ETRA 2026, this event focuses on sensors, processing, and hardware for eye tracking within wearable smart glasses and XR headsets. Key topics include novel sensor modalities like event cameras, low-power edge AI implementations using TinyML, FPGA or MCU architectures, and reproducible benchmarking standards. The workshop aims to address bottlenecks in real-world deployment by fostering research on energy-efficient pipelines and hardware-software co-design for embedded systems.",
+  "tldr": "ETRA 2026 announces a Call for Papers for the SPHERA 2026 workshop focusing on low-power eye-tracking sensors, edge AI, and hardware architectures for wearable devices.",
+  "sourceUrl": "https://forum.neuromorphs.net/d/48-etra-2026-cfp-for-sphera-2026-workshop",
+  "sourceName": "neuromorphs.net",
+  "discoveredAt": "2026-09-13T18:20:53+00:00",
+  "lastCheckedAt": "2026-09-13T18:20:45+00:00",
+  "tags": [
+    "business"
+  ],
+  "useCases": [
+    "wearable smart glasses"
+  ],
+  "evidence": [
+    "Call for Papers for SPHERA 2026... to be held in conjunction with the ACM Symposium on Eye Tracking Research & Applications (ETRA 2026)",
+    "Workshop topics: As wearable smart glasses, XR headsets, and assistive technologies rapidly mature...",
+    "- Novel sensor modalities: capacitive sensors, optical flow sensors, electro-oculography sensors, event cameras",
+    "- Hardware architectures and co-design: FPGA, MCU, or custom accelerators; active and adaptive sensing",
+    "- Edge AI and TinyML: quantized and pruned networks for on-device gaze estimation"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:20:53+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/sphera-2026-workshop-call-for-papers-050cb31a.json"
+  },
+  "sourcePublishedAt": "2026-07-27",
+  "organisation": "ACM Symposium on Eye Tracking Research & Applications"
+}

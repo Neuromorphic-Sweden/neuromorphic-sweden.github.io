@@ -1,0 +1,34 @@
+{
+  "candidateId": "c6dd57f4f627ad7d4e55",
+  "title": "NeuroSYNC partners with STFC Hartree Centre to accelerate UK neuromorphic innovation.",
+  "recordType": "organisation",
+  "summary": "On 2026-07-03, NeuroSYNC announced a strategic partnership between Aston University and the STFC Hartree Centre. Led by AIPT at Aston University, this collaboration established the Aston–Hartree Neuromorphic Centre of Competence to advance neuromorphic computing across healthcare, energy, manufacturing, and defence sectors.",
+  "tldr": "NeuroSYNC leads a new UK partnership between Aston University and STFC Hartree Centre focused on developing next-generation neuromorphic systems and shared infrastructure for industrial adoption.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/post/neurosync-led-by-aipt-partners-with-stfc-hartree-centre-to-accelerate-neuromorphic-innovation",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:22:17+00:00",
+  "lastCheckedAt": "2026-09-13T18:22:09+00:00",
+  "tags": [
+    "partnership"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The partnership establishes the Aston–Hartree Neuromorphic Centre of Competence.",
+    "NeuroSYNC will play a central role in the collaboration through its leadership at the Aston Institute of Photonic Technologies (AIPT).",
+    "The collaboration will initially focus on joint research and innovation projects, stakeholder engagement, funding initiatives and knowledge exchange across sectors including healthcare, energy, advanced manufacturing and defence."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:22:17+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neurosync-partners-with-stfc-hartree-centre-to-accelerate-uk-neuromorphi-c6dd57f4.json"
+  },
+  "sourcePublishedAt": "2026-07-03",
+  "organisation": "NeuroSYNC",
+  "location": "UK",
+  "country": "United Kingdom"
+}

@@ -1,0 +1,38 @@
+{
+  "candidateId": "121b15fdc2e40c876e68",
+  "title": "NeuroSYNC — UK Multidisciplinary Centre for Neuromorphic Systems and Computing",
+  "recordType": "organisation",
+  "summary": "The Aston–Hartree Neuromorphic Centre of Competence was launched on 2025-10-21 with £5.6 million EPSRC funding to advance neuromorphic computing in the UK. NeuroSYNC submitted evidence regarding low-energy AI solutions to Parliament's Science, Innovation and Technology Committee. A new strategic partnership between Aston University and STFC Hartree Centre aims to accelerate technology translation and industrial adoption. Applications for Associated Members are open as of 2026-05-14. The International Neuromorphic Computing Conference (INCC) is scheduled for May 2027 in London.",
+  "tldr": "NeuroSYNC launched a new UK neuromorphic centre with £5.6m funding and submitted parliamentary evidence on low-energy computing strategies.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/news",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:21:58+00:00",
+  "lastCheckedAt": "2026-09-13T18:21:49+00:00",
+  "tags": [
+    "partnership",
+    "funding",
+    "launch"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The partnership establishes the Aston–Hartree Neuromorphic Centre of Competence, bringing together academia, industry and the public sector",
+    "NeuroSYNC has submitted written evidence to the UK Parliament's Science, Innovation and Technology Committee as part of its inquiry into Low-Energy Computing (Reference: LEC0016)",
+    "The International Neuromorphic Computing Conference (INCC) 2027 will unite researchers... across neuroscience, materials, hardware, algorithms",
+    "Professor Sergei Turitsyn, Director of NeuroSYNC, recently gave evidence to the UK Parliament's Science, Innovation and Technology Committee",
+    "applications are now open for Associated Members and Institutional Partners . As the Centre continues to expand its research community"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:21:58+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neurosync-uk-multidisciplinary-centre-for-neuromorphic-systems-and-compu-121b15fd.json"
+  },
+  "sourcePublishedAt": "2026-05-14",
+  "organisation": "UK Multidisciplinary Centre for Neuromorphic Systems and Computing",
+  "location": "United Kingdom",
+  "country": "GBR"
+}

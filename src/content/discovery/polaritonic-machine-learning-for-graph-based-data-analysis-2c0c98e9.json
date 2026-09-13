@@ -1,0 +1,31 @@
+{
+  "candidateId": "2c0c98e9759fc708651e",
+  "title": "Polaritonic machine learning for graph-based data analysis",
+  "recordType": "resource",
+  "summary": "This article proposes a polaritonic machine learning approach using lattices of condensates to embed relational information from point cloud datasets. The method integrates photonic processing with convolutional neural networks, achieving over 90% accuracy in Betti number classification and clique detection tasks compared to 35% for bare CNNs. Published on Physical review. E by researchers at the University of Exeter and University of Sheffield.",
+  "tldr": "A study demonstrates polaritonic systems improving graph-based data analysis accuracy through physics-informed feature engineering integrated with digital machine learning pipelines.",
+  "sourceUrl": "https://doi.org/10.1103/fgy1-n4vp",
+  "sourceName": "Physical review. E",
+  "discoveredAt": "2026-09-13T18:27:54+00:00",
+  "lastCheckedAt": "2026-09-13T18:27:47+00:00",
+  "tags": [
+    "research",
+    "resource"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Photonic and polaritonic systems offer a fast and efficient platform for accelerating machine learning (ML) through physics-based computing.",
+    "Our extensive benchmarking shows that photonic machine learning achieves over 90% accuracy for Betti number classification and clique detection tasks, a substantial improvement over the 35% accuracy of bare CNNs."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:27:54+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/polaritonic-machine-learning-for-graph-based-data-analysis-2c0c98e9.json"
+  },
+  "sourcePublishedAt": "2026-08-05"
+}

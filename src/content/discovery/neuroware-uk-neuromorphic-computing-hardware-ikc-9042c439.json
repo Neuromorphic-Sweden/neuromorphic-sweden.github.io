@@ -1,0 +1,33 @@
+{
+  "candidateId": "9042c439a06e186cee43",
+  "title": "NeuroWare — UK Neuromorphic Computing Hardware IKC",
+  "recordType": "organisation",
+  "summary": "NeuroWare is a UCL-led Innovation & Knowledge Centre (IKC) in the UK that connects industry partners and researchers to accelerate neuromorphic hardware development. The page describes NeuroWare as an entity contributing policy submissions on data centre sustainability, citing academic experts including Professor Tony Kenyon from UCL and Professor Steve Furber from the University of Manchester.",
+  "tldr": "NeuroWare is a UCL-led UK innovation hub for neuromorphic computing that engages industry partners to advance hardware development and secure AI ecosystems.",
+  "sourceUrl": "https://neuroware-ikc.com/projects-publications/risks-and-opportunities-to-the-sustainability-of-data-centres-in-the-uk/",
+  "sourceName": "neuroware-ikc.com",
+  "discoveredAt": "2026-09-13T18:23:46+00:00",
+  "lastCheckedAt": "2026-09-13T18:23:39+00:00",
+  "tags": [
+    "business"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Neuroware is an Innovation & Knowledge Centre (IKC) led by UCL, with a consortium of leading UK institutions.",
+    "Our consortium of experts makes us uniquely placed to contribute to this Call for Information."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:23:46+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neuroware-uk-neuromorphic-computing-hardware-ikc-9042c439.json"
+  },
+  "sourcePublishedAt": "2026-06-16",
+  "organisation": "NeuroWare",
+  "location": "United Kingdom",
+  "country": "UK"
+}

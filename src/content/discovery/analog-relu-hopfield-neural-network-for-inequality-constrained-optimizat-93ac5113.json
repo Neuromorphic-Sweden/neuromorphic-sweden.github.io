@@ -1,0 +1,39 @@
+{
+  "candidateId": "93ac5113226850b92318",
+  "title": "Analog ReLU Hopfield Neural Network for Inequality-Constrained Optimization",
+  "recordType": "resource",
+  "summary": "This 2026 study demonstrates an analog circuit implementation of a ReLU Hopfield Neural Network designed to solve inequality-constrained optimization problems. The researchers constructed the system using printed circuit boards with operational amplifiers, diodes, and capacitors to simulate gradient descent dynamics physically. Experiments validated that the hardware converged on optimal solutions for quadratic minimization tasks within 1.1% relative error of theoretical values. While the work confirms feasibility at a prototype level via breadboard testing, it notes scalability limitations due to connection complexity (O(n²)) and component tolerances.",
+  "tldr": "A 2026 study validates an analog ReLU Hopfield Neural Network circuit solving inequality-constrained optimization problems with <1% error on a printed circuit board prototype.",
+  "sourceUrl": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1885313/full",
+  "sourceName": "frontiersin.org",
+  "discoveredAt": "2026-09-13T18:27:04+00:00",
+  "lastCheckedAt": "2026-09-13T18:26:55+00:00",
+  "tags": [
+    "product",
+    "research"
+  ],
+  "useCases": [
+    "optimization"
+  ],
+  "evidence": [
+    "In this paper, we applied a circuit implemented ReLU Hopfield Neural Network to a mathematical problem with an inequality constraint.",
+    "We constructed an analog circuit of the ReLU Hopfield Neural Network featuring a feedback module: an inequality-constraint circuit."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:27:04+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/analog-relu-hopfield-neural-network-for-inequality-constrained-optimizat-93ac5113.json"
+  },
+  "sourcePublishedAt": "2026-09-07",
+  "trl": {
+    "basis": "source-claimed",
+    "scope": "circuit prototype",
+    "evidence": "In this paper, we applied a circuit implemented ReLU Hopfield Neural Network to a mathematical problem with an inequality constraint.",
+    "confidence": "high"
+  }
+}

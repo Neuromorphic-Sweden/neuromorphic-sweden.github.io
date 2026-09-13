@@ -1,0 +1,39 @@
+{
+  "candidateId": "64cff272ea6ecc5d3635",
+  "title": "EBRAINS Tutorials & E-Library: Neuromorphic Infrastructure Resources",
+  "recordType": "resource",
+  "summary": "The EBRAINS e-library offers intermediate and beginner tutorials on MEG data analysis using Brainstorm software, covering event markers, channel registration, continuous recordings, anatomy display, and brain atlas exploration via Siibra-explorer. It features a JAX-based library for simulating spiking neural networks compatible with analog neuromorphic hardware like BrainScaleS-2. Resources include courses on Technology Readiness Levels within the Human Brain Project context and lectures introducing SpiNNaker 2 as a platform for real-time bio-inspired AI. The collection supports research infrastructure integration, data sharing, and innovation models bridging academia and industry.",
+  "tldr": "EBRAINS provides tutorials and resources covering MEG analysis tools, spiking neural network simulation libraries compatible with neuromorphic hardware, brain atlas viewers, and courses on technology readiness levels for the Human Brain Project ecosystem.",
+  "sourceUrl": "https://ebrains.eu/participate/education-training/tutorials-e-library",
+  "sourceName": "ebrains.eu",
+  "discoveredAt": "2026-09-13T18:25:22+00:00",
+  "lastCheckedAt": "2026-09-13T18:25:13+00:00",
+  "tags": [
+    "software",
+    "tutorial",
+    "infrastructure",
+    "education"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The tutorial provides a comprehensive overview of event markers within MEG recordings... focusing on their identification, manipulation, and management in Brainstorm software.",
+    "jaxsnn is a novel library based on JAX. It facilitates the simulation and machine learning inspired training of spiking neural networks with a focus on event-driven computation...",
+    "This approach enables efficient training and compatibility with time-continuous neuromorphic backends such as BrainScaleS-2, thus shrinking the gap between traditional neuromorphic architectures and modern machine learning frameworks.",
+    "SpiNNaker 2 results: A Platform for Real-Time Bio-Inspired AI and Cognition This lecture introduces SpiNNaker 2...",
+    "Technology Readiness Level Assessment Course... Part 1 covers the origins and applications of TRLs... including guidance on the TRL assessment process and its connection to the Innovation Radar."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:25:22+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/ebrains-tutorials-e-library-neuromorphic-infrastructure-resources-64cff272.json"
+  },
+  "sourcePublishedAt": "2026-03-25",
+  "organisation": "EBRAINS AISBL",
+  "location": "Brussels, Belgium; Düsseldorf, Germany; Jülich, Germany",
+  "country": "Belgium;Germany"
+}

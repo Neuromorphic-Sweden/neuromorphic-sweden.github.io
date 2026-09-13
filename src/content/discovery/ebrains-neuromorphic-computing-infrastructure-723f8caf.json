@@ -1,0 +1,36 @@
+{
+  "candidateId": "723f8cafba23f92abdb8",
+  "title": "EBRAINS Neuromorphic Computing Infrastructure",
+  "recordType": "resource",
+  "summary": "The EBRAINS initiative provides researchers with access to Europe's most powerful neuromorphic computing systems, specifically BrainScaleS and SpiNNaker. These hardware platforms are designed for brain-inspired algorithms and energy-efficient AI applications in neuroscience. Additionally, the infrastructure connects users to high-performance supercomputing centers across France, Italy, Switzerland, Germany, and other European nations for tasks like whole-brain simulations.",
+  "tldr": "EBRAINS offers remote access to Europe's leading neuromorphic systems (BrainScaleS, SpiNNaker) alongside HPC resources for neuroscience research.",
+  "sourceUrl": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+  "sourceName": "ebrains.eu",
+  "discoveredAt": "2026-09-13T18:24:31+00:00",
+  "lastCheckedAt": "2026-09-13T18:24:24+00:00",
+  "tags": [
+    "infrastructure"
+  ],
+  "useCases": [
+    "neuroscience simulation",
+    "brain-inspired algorithms"
+  ],
+  "evidence": [
+    "EBRAINS hosts Europe's most powerful large-scale neuromorphic computing systems, BrainScaleS and SpiNNaker.",
+    "These platforms open the door to innovative brain-inspired algorithms and energy-efficient AI for neuroscience."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:24:31+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/ebrains-neuromorphic-computing-infrastructure-723f8caf.json"
+  },
+  "sourcePublishedAt": "2026-03-27",
+  "organisation": "EBRAINS",
+  "location": "Europe",
+  "country": "EU"
+}

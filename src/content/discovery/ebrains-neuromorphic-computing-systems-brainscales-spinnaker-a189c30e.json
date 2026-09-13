@@ -1,0 +1,39 @@
+{
+  "candidateId": "a189c30e4451a9e0ebe1",
+  "title": "EBRAINS Neuromorphic Computing Systems (BrainScaleS & SpiNNaker)",
+  "recordType": "resource",
+  "summary": "The EBRAINS platform provides remote access to two large-scale neuromorphic computing systems: BrainScaleS in Heidelberg and SpiNNaker in Manchester. These hardware resources emulate spiking neural networks using analogue or mixed-signal techniques, offering accelerated simulation speeds up to ten thousand times real-time for studying plasticity and learning. Users can define models via the PyNN API through web interfaces or Python clients. The platform supports computational neuroscience and machine learning research by enabling high-speed, low-energy simulations of simplified brain models. Additionally, a printed circuit board demonstrator named 'Lu.i' offers configurable analog neuron implementations for educational purposes.",
+  "tldr": "EBRAINS provides remote access to BrainScaleS and SpiNNaker neuromorphic systems for accelerated spiking neural network simulation via the PyNN API.",
+  "sourceUrl": "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing",
+  "sourceName": "ebrains.eu",
+  "discoveredAt": "2026-09-13T18:24:17+00:00",
+  "lastCheckedAt": "2026-09-13T18:24:08+00:00",
+  "tags": [
+    "infrastructure"
+  ],
+  "useCases": [
+    "spiking neural network simulation",
+    "plasticity investigation",
+    "educational demonstration"
+  ],
+  "evidence": [
+    "Remote access to fast, powerful, programmable, brain-inspired computing devices (free of charge for evaluation and basic research)",
+    "Access to two complementary, large-scale, custom-hardware neuromorphic computing systems: BrainScaleS (located in Heidelberg) and SpiNNaker (located in Manchester)",
+    "Enables high-speed, low-energy simulations or emulations of simplified spiking neural networks with synaptic plasticity",
+    "BrainScaleS system is based on physical (analogue or mixed signal) emulations... running up to ten thousand times faster than real time"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:24:17+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/ebrains-neuromorphic-computing-systems-brainscales-spinnaker-a189c30e.json"
+  },
+  "sourcePublishedAt": "2025-12-01",
+  "organisation": "EBRAINS",
+  "location": "Heidelberg, Germany; Manchester, UK",
+  "country": "Germany/UK"
+}

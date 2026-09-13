@@ -1,0 +1,35 @@
+{
+  "candidateId": "a8a54567df9834c7f1f9",
+  "title": "NeuroSYNC submits parliamentary evidence on low-energy computing priorities",
+  "recordType": "organisation",
+  "summary": "On 2026-05-14, the UK Multidisciplinary Centre for Neuromorphic Systems and Computing (NeuroSYNC) submitted written evidence to the UK Parliament's Science, Innovation and Technology Committee regarding Low-Energy Computing. The submission outlines how neuromorphic computing addresses AI energy demands while strengthening UK leadership in next-generation technologies. Based on stakeholder surveys and roadmapping workshops, NeuroSYNC identified three priorities: developing shared national testbed infrastructure for neuromorphic hardware; investing in open software tools and benchmarking standards; and supporting long-term application-driven collaboration between academia, industry, and government.",
+  "tldr": "NeuroSYNC submitted parliamentary evidence outlining key priorities to advance the UK's neuromorphic computing ecosystem via shared infrastructure, open tools, and cross-sector collaboration.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/post/on-14-may-2026-neurosync-submits-written-evidence-to-uk-parliamentary-inquiry-on-low-energy-compu",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:22:25+00:00",
+  "lastCheckedAt": "2026-09-13T18:22:17+00:00",
+  "tags": [
+    "business"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The UK Multidisciplinary Centre for Neuromorphic Systems and Computing (NeuroSYNC) has submitted written evidence to the UK Parliament's Science, Innovation and Technology Committee as part of its inquiry into Low-Energy Computing",
+    "Developing shared national testbed infrastructure for neuromorphic hardware.",
+    "Investing in open software tools and benchmarking standards to support wider adoption.",
+    "Supporting long-term, application-driven collaboration between academia, industry and government."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:22:25+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neurosync-submits-parliamentary-evidence-on-low-energy-computing-priorit-a8a54567.json"
+  },
+  "sourcePublishedAt": "2026-07-02",
+  "organisation": "UK Multidisciplinary Centre for Neuromorphic Systems and Computing (NeuroSYNC)",
+  "location": "United Kingdom",
+  "country": "GBR"
+}

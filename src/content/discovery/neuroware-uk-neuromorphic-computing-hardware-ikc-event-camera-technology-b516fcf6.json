@@ -1,0 +1,35 @@
+{
+  "candidateId": "b516fcf6d4359d1e2611",
+  "title": "NeuroWare — UK Neuromorphic Computing Hardware IKC: Event Camera Technology Case Study",
+  "recordType": "organisation",
+  "summary": "This case study describes event cameras as neuromorphic sensors that record visual scene changes rather than fixed frames. Developed by NeuroWare and partners including UCL Policy Impact Unit, the technology targets real-time perception in healthcare, robotics, transport, defence, and environmental monitoring. The document was produced to support Evidence Week discussions held 2026-07-06 through 2026-07-10.",
+  "tldr": "NeuroWare's case study outlines event camera technology for real-time perception applications in sectors like healthcare and robotics, prepared for a July 2026 parliamentary evidence session.",
+  "sourceUrl": "https://neuroware-ikc.com/projects-publications/event-camera-technology/",
+  "sourceName": "neuroware-ikc.com",
+  "discoveredAt": "2026-09-13T18:23:31+00:00",
+  "lastCheckedAt": "2026-09-13T18:23:24+00:00",
+  "tags": [
+    "product"
+  ],
+  "useCases": [
+    "healthcare"
+  ],
+  "evidence": [
+    "event cameras represent a fundamental departure from conventional imaging technologies.",
+    "These neuromorphic sensors record only changes in a visual scene."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:23:31+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "sourcePath": "src/content/discovery/neuroware-uk-neuromorphic-computing-hardware-ikc-event-camera-technology-b516fcf6.json"
+  },
+  "sourcePublishedAt": "2026-07-24",
+  "organisation": "NeuroWare",
+  "location": "United Kingdom",
+  "country": "UK"
+}
