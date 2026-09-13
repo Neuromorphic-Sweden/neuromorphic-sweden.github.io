@@ -29,7 +29,7 @@ const {
 const reviewSite = process.env.REVIEW_SITE === 'true';
 const statusText = reviewSite
 	? 'Cards labelled “Review record” are proposals awaiting editorial review; other entries are already published.'
-	: 'Every entry links to its original source and has passed editorial review before publication.';
+	: 'Every entry links to its original source and was selected for relevance before publication; AI-composed summaries may contain errors.';
 const reviewCandidateIds = new Set(reviewQueue.candidateIds);
 const entries = sortDiscoveries(
 	await getCollection(
