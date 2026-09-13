@@ -29,6 +29,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/sphera-2026-workshop-call-for-papers-050cb31a.json"
   },
   "sourcePublishedAt": "2026-07-27",

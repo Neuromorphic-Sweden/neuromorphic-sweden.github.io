@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/frontiers-from-synapses-to-silicon-theoretical-foundations-and-neuromorp-25519298.json"
   },
   "sourcePublishedAt": "2022-06-27"

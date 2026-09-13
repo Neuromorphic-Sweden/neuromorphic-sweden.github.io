@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/announcing-the-2026-open-neuromorphic-executive-committee-891219aa.json"
   },
   "sourcePublishedAt": "2026-02-22",

@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/call-for-contributions-to-the-ebrains-10-year-roadmap-2026-2036-3dc90ef7.json"
   },
   "sourcePublishedAt": "2026-05-29",

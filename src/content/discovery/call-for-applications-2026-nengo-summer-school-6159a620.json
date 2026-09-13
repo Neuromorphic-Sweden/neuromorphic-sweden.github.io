@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/call-for-applications-2026-nengo-summer-school-6159a620.json"
   },
   "sourcePublishedAt": "2026-07-27",

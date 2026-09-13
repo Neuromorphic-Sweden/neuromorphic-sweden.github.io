@@ -30,6 +30,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/ebrains-tutorials-e-library-neuromorphic-infrastructure-resources-64cff272.json"
   },
   "sourcePublishedAt": "2026-03-25",

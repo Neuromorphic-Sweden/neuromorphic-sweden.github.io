@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neuroware-uk-neuromorphic-computing-hardware-ikc-event-camera-technology-b516fcf6.json"
   },
   "sourcePublishedAt": "2026-07-24",

@@ -32,6 +32,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/vector-symbolic-algebras-vsa-workshop-neural-computation-robotics-applic-090ea421.json"
   },
   "sourcePublishedAt": "2026-07-09",

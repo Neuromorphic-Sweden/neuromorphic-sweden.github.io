@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/symmetry-based-derivation-of-neuronal-membrane-dynamics-a-lie-group-appr-6fce00f6.json"
   },
   "sourcePublishedAt": "2026-09-03"

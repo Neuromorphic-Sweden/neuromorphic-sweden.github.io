@@ -29,6 +29,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neurosync-uk-multidisciplinary-centre-for-neuromorphic-systems-and-compu-121b15fd.json"
   },
   "sourcePublishedAt": "2026-05-14",

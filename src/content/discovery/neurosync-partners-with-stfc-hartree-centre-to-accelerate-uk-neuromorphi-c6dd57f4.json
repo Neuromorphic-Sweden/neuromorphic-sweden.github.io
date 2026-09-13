@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neurosync-partners-with-stfc-hartree-centre-to-accelerate-uk-neuromorphi-c6dd57f4.json"
   },
   "sourcePublishedAt": "2026-07-03",

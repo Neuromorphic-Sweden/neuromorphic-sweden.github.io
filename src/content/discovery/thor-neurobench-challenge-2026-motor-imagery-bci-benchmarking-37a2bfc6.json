@@ -28,6 +28,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/thor-neurobench-challenge-2026-motor-imagery-bci-benchmarking-37a2bfc6.json"
   },
   "sourcePublishedAt": "2025-01-01",

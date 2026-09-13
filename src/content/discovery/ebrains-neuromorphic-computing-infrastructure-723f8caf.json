@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/ebrains-neuromorphic-computing-infrastructure-723f8caf.json"
   },
   "sourcePublishedAt": "2026-03-27",

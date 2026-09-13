@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/open-neuromorphic-strategic-vision-series-workflow-challenges-and-soluti-0a2e533c.json"
   },
   "sourcePublishedAt": "2025-08-17",

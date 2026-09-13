@@ -30,6 +30,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/ebrains-neuromorphic-computing-systems-brainscales-spinnaker-a189c30e.json"
   },
   "sourcePublishedAt": "2025-12-01",

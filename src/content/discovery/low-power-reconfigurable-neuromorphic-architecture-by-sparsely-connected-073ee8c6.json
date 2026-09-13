@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/low-power-reconfigurable-neuromorphic-architecture-by-sparsely-connected-073ee8c6.json"
   },
   "sourcePublishedAt": "2026-08-02"

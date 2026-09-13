@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/topological-acoustic-synapse-for-high-dimensional-neuromorphic-computing-fec9a243.json"
   },
   "sourcePublishedAt": "2026-06-12"

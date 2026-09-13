@@ -29,6 +29,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/open-neuromorphic-strategic-roadmap-announcement-onr-2-0-z2s-curriculum--ac295856.json"
   },
   "sourcePublishedAt": "2026-08-29",

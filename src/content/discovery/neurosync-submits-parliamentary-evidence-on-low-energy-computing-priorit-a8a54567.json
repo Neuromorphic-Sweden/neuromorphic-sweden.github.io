@@ -26,6 +26,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neurosync-submits-parliamentary-evidence-on-low-energy-computing-priorit-a8a54567.json"
   },
   "sourcePublishedAt": "2026-07-02",

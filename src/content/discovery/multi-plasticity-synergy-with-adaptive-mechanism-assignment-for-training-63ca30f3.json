@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/multi-plasticity-synergy-with-adaptive-mechanism-assignment-for-training-63ca30f3.json"
   },
   "sourcePublishedAt": "2026-09-09"

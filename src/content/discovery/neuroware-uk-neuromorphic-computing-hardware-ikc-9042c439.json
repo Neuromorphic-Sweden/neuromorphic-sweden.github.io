@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neuroware-uk-neuromorphic-computing-hardware-ikc-9042c439.json"
   },
   "sourcePublishedAt": "2026-06-16",

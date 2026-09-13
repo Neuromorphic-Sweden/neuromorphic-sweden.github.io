@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/international-neuromorphic-computing-conference-2027-ee31d7e9.json"
   },
   "sourcePublishedAt": "2025-01-01",

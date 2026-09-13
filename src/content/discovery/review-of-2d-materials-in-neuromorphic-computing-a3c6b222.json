@@ -28,6 +28,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/review-of-2d-materials-in-neuromorphic-computing-a3c6b222.json"
   },
   "sourcePublishedAt": "2026-06-24"

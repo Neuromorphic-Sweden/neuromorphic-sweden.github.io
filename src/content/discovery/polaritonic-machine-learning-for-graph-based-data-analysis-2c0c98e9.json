@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/polaritonic-machine-learning-for-graph-based-data-analysis-2c0c98e9.json"
   },
   "sourcePublishedAt": "2026-08-05"

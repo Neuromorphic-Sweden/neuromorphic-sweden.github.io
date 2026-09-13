@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neuroware-catalyst-fund-uk-neuromorphic-computing-hardware-ikc-56829f97.json"
   },
   "sourcePublishedAt": "2026-09-07",

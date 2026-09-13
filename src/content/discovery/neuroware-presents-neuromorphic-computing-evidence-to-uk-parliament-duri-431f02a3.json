@@ -27,6 +27,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neuroware-presents-neuromorphic-computing-evidence-to-uk-parliament-duri-431f02a3.json"
   },
   "sourcePublishedAt": "2026-07-16",

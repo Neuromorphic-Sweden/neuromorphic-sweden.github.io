@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/workshop-on-theory-of-neuromorphic-computing-0cde0c78.json"
   },
   "sourcePublishedAt": "2026-07-27",

@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/student-talks-initiative-8ae5ddc9.json"
   },
   "sourcePublishedAt": "2025-06-17",

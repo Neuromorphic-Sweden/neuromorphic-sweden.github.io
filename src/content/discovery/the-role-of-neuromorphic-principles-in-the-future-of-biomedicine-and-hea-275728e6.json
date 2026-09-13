@@ -25,6 +25,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/the-role-of-neuromorphic-principles-in-the-future-of-biomedicine-and-hea-275728e6.json"
   },
   "sourcePublishedAt": "2026-07-20"

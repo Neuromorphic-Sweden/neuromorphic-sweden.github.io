@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/announcing-open-neuromorphic-research-community-peer-review-for-open-sci-9847102a.json"
   },
   "sourcePublishedAt": "2025-10-20",

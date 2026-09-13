@@ -24,6 +24,7 @@
   },
   "review": {
     "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
     "sourcePath": "src/content/discovery/neuroware-innovation-and-knowledge-centre-ikc-42b96a85.json"
   },
   "sourcePublishedAt": "2026-07-07",
