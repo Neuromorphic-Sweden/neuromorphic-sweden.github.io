@@ -1,0 +1,35 @@
+{
+  "candidateId": "0a2e533c041d379d5480",
+  "title": "Open Neuromorphic strategic vision series: workflow challenges and solutions",
+  "recordType": "event",
+  "summary": "This blog post highlights the infrastructure gap in neuromorphic computing compared to conventional machine learning. It contrasts rapid ML workflows with fragmented neuromorphic development involving incompatible toolchains like Lava, PyNN, and Nengo on hardware such as Loihi and SpiNNaker. Key barriers include a lack of standardized temporal benchmarks beyond Tonic datasets, deployment complexity without seamless APIs, and insufficient analysis tools. The text advocates for community-driven standards like the Neuromorphic Intermediate Representation (NIR) to enable hardware-agnostic development and reproducible research.",
+  "tldr": "Open Neuromorphic identifies severe infrastructure fragmentation hindering neuromorphic progress compared to mature ML ecosystems and proposes unified tooling solutions.",
+  "sourceUrl": "https://open-neuromorphic.org/blog/workflow-vision-neuromorphic/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-13T18:15:50+00:00",
+  "lastCheckedAt": "2026-09-13T18:15:41+00:00",
+  "tags": [
+    "infrastructure"
+  ],
+  "useCases": [],
+  "evidence": [
+    "In conventional machine learning, your journey would look similar to this: - Day 1: Prototype in PyTorch... In neuromorphic computing, your journey looks more like this: - Day 10: Still struggling with vendor-specific toolchains",
+    "Neuromorphic Computing: The Fragmented Landscape - Frameworks: Intel’s Lava, BrainScaleS PyNN, custom implementations ... Hardware: Loihi, SpiNNaker, BrainScaleS—each with unique interfaces",
+    "Lack of datasets and benchmarks ML researchers enjoy rich, standardized datasets... Neuromorphic computing relies on a single primary dataset source (Tonic) with limited standardization.",
+    "Most tools are already open-source—including frameworks developed by private companies. But we need more than that: the integrations and standards governing the interplay between libraries and platforms need to be open",
+    "The next post will reveal what that entails exactly."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:15:50+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/open-neuromorphic-strategic-vision-series-workflow-challenges-and-soluti-0a2e533c.json"
+  },
+  "sourcePublishedAt": "2025-08-17",
+  "organisation": "Open Neuromorphic"
+}

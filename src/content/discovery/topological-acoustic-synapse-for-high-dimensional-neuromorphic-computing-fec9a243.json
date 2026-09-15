@@ -1,0 +1,32 @@
+{
+  "candidateId": "fec9a243ebb5eb30e54f",
+  "title": "Topological acoustic synapse for high-dimensional neuromorphic computing",
+  "recordType": "resource",
+  "summary": "This Science Advances article introduces the topological acoustic synapse (TAS), an acoustic-wave device designed to overcome bandwidth and energy bottlenecks in current neuromorphic hardware. Developed by researchers at the University of Arizona, TAS maps information into multivariate state spaces using nonlinear interactions to emulate synaptic plasticity and hybrid analog-digital control. The study claims that a single TAS unit can operate multiple independent computing channels in parallel. In classification tasks, this architecture reportedly converges 20% faster than electrical devices while utilizing at least an order of magnitude less power and significantly fewer parameters.",
+  "tldr": "Science Advances article introduces the topological acoustic synapse (TAS), a scalable neuromorphic device that uses acoustic waves to achieve high-dimensional parallel computing with reduced power consumption compared to state-of-the-art electrical alternatives.",
+  "sourceUrl": "https://doi.org/10.1126/sciadv.aec6633",
+  "sourceName": "Science Advances",
+  "discoveredAt": "2026-09-13T18:28:43+00:00",
+  "lastCheckedAt": "2026-09-13T18:28:35+00:00",
+  "tags": [
+    "product",
+    "research"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Here, we introduce the topological acoustic synapse (TAS), an acoustic-wave neuromorphic device that circumvents these limits by mapping information in multivariate state spaces.",
+    "In classification tasks, a TAS handles multiple inputs simultaneously and generates various outputs, converging 20% faster while using 60% fewer parameters and at least an order of magnitude less power than state-of-the-art electrical devices."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:28:43+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/topological-acoustic-synapse-for-high-dimensional-neuromorphic-computing-fec9a243.json"
+  },
+  "sourcePublishedAt": "2026-06-12"
+}

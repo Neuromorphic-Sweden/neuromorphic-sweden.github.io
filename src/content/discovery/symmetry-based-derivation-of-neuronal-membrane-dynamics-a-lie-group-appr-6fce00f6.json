@@ -1,0 +1,34 @@
+{
+  "candidateId": "6fce00f606cbc9c092e9",
+  "title": "Symmetry-based derivation of neuronal membrane dynamics: a Lie group approach to action potential generation",
+  "recordType": "resource",
+  "summary": "This theoretical paper derives nonlinear neuronal membrane dynamics from fundamental physical symmetries using Lie group theory. It identifies three experimentally verified symmetries—rotational invariance, scale invariance, and time-translation—which uniquely determine the semidirect product group structure G = SO(2) ⋉ℝ². The authors propose a deterministic algorithm for neuromorphic circuit synthesis where Lie algebra generators map to specific hardware components: nonlinear resistors for conductance scaling, saturating current sources for magnetization effects, and LC resonators for temporal oscillations. Kirchhoff's laws are mathematically framed as Casimir constraints inherent to the group structure rather than arbitrary design choices. The work claims that this symmetry-based framework predicts functional forms previously found only through empirical fitting, offering a principled foundation for reproducible neuromorphic circuit design without relying on phenomenological approximations.",
+  "tldr": "A theoretical paper proposes deriving neuromorphic circuit topologies from physical symmetries using Lie group theory to predict neuronal dynamics deterministically.",
+  "sourceUrl": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1896585/full",
+  "sourceName": "frontiersin.org",
+  "discoveredAt": "2026-09-13T18:27:17+00:00",
+  "lastCheckedAt": "2026-09-13T18:27:06+00:00",
+  "tags": [
+    "theory",
+    "mathematical-modeling"
+  ],
+  "useCases": [],
+  "evidence": [
+    "We derive the nonlinear dynamics of neuronal membrane potential from fundamental physical symmetries using Lie group theory.",
+    "The structure constants (γ1 = 1.58 V/s, γ2 = 0.025 V−1, γ3 = 0.003) derive from independent measurements in cable theory, Hodgkin–Huxley voltage gating, and Faraday induction.",
+    "We present a deterministic algorithm for neuromorphic circuit synthesis wherein Lie algebra structure maps to circuit topology, with components as physical realizations of group exponentials.",
+    "The framework determines concrete physical predictions: the power-law exponent ξ≈ e/2 ≈ 1.359, obtained from Lyapunov trajectory separation analysis, characterizes depolarization growth rate and emerges naturally from the algebraic structure."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:27:17+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/symmetry-based-derivation-of-neuronal-membrane-dynamics-a-lie-group-appr-6fce00f6.json"
+  },
+  "sourcePublishedAt": "2026-09-03"
+}

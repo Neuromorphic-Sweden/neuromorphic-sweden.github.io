@@ -1,0 +1,37 @@
+{
+  "candidateId": "a93e408433491af9b7cb",
+  "title": "International Neuromorphic Computing Conference (INCC) 2027",
+  "recordType": "event",
+  "summary": "The International Neuromorphic Computing Conference (INCC) is scheduled for London from 11–13 May 2027. Organized by NeuroSYNC, with co-organization by NeuMat and NeuroWare, the event aims to unite researchers and industry leaders across neuroscience, hardware, algorithms, and applications. Supported by Aston University and the Aston Institute of Photonic Technologies (AIPT), the conference will feature technical sessions on neuromorphic computing, unconventional hardware, bio-electronic interfaces, AI algorithms, and policy.",
+  "tldr": "INCC 2027 in London brings together global experts for interdisciplinary collaboration on brain-inspired computing technologies from May 11–13, 2027.",
+  "sourceUrl": "https://www.uk-neuromorphic-centre.net/post/international-neuromorphic-computing-conference-incc-to-take-place-in-london-11-13-may-2027",
+  "sourceName": "uk-neuromorphic-centre.net",
+  "discoveredAt": "2026-09-13T18:22:33+00:00",
+  "lastCheckedAt": "2026-09-13T18:22:25+00:00",
+  "tags": [
+    "conference"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The International Neuromorphic Computing Conference (INCC) 2027 has officially been announced as the first conference dedicated to bringing together the full neuromorphic computing ecosystem.",
+    "Taking place from 11–13 May 2027 at Mercure London Earls Court, London, UK",
+    "Led by NeuroSYNC – UK Multidisciplinary Centre for Neuromorphic Systems and Computing"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:22:33+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/international-neuromorphic-computing-conference-incc-2027-a93e4084.json"
+  },
+  "sourcePublishedAt": "2026-07-02",
+  "organisation": "NeuroSYNC",
+  "location": "London, UK",
+  "eventStart": "2027-05-11T00:00:00Z",
+  "eventEnd": "2027-05-13T23:59:59Z",
+  "country": "United Kingdom"
+}

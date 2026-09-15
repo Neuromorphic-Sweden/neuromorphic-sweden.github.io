@@ -1,0 +1,32 @@
+{
+  "candidateId": "8ae5ddc9f2c2cdfb4bd3",
+  "title": "Student Talks Initiative",
+  "recordType": "resource",
+  "summary": "The Open Neuromorphic (ONM) Student Talks initiative provides a virtual forum for students and early-career researchers to present work on spiking neural networks (SNNs), covering algorithmic and hardware topics. Sessions occur roughly every three weeks, lasting about one hour and fifteen minutes, with recordings often hosted on ONM's YouTube channel. The program emphasizes education, community visibility, and the dissemination of open science methodologies rather than commercial deployment or specific product releases.",
+  "tldr": "Open Neuromorphic hosts a virtual student talk series focused on spiking neural network research for educational purposes.",
+  "sourceUrl": "https://open-neuromorphic.org/neuromorphic-computing/initiatives/student-talks-initiative/",
+  "sourceName": "open-neuromorphic.org",
+  "discoveredAt": "2026-09-13T18:15:00+00:00",
+  "lastCheckedAt": "2026-09-13T18:14:38+00:00",
+  "tags": [
+    "education"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The 'Student Talks' initiative provides a regular forum for academic discussions and presentations on neuromorphic computing.",
+    "These talks are a core part of ONM's mission... offering a platform for students and early-career researchers to share their work with a global audience."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:15:00+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/student-talks-initiative-8ae5ddc9.json"
+  },
+  "sourcePublishedAt": "2025-06-17",
+  "organisation": "Open Neuromorphic"
+}

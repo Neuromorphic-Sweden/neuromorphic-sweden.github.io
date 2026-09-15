@@ -1,0 +1,32 @@
+{
+  "candidateId": "e718a0246cfe87b9403b",
+  "title": "Frontiers in Neuroscience | Neuromorphic Engineering Section",
+  "recordType": "resource",
+  "summary": "This page serves as a discovery coordinate for the 'Neuromorphic Engineering' section of Frontiers in Neuroscience. It lists publication dates ranging from February 2026 to September 2026, featuring original research on spiking neural networks and mini-reviews within neuromorphic engineering.",
+  "tldr": "A listing page displaying a chronological archive of published articles related to neuromorphic engineering within Frontiers in Neuroscience between early and late 2026.",
+  "sourceUrl": "https://www.frontiersin.org/journals/neuroscience/sections/neuromorphic-engineering/articles",
+  "sourceName": "frontiersin.org",
+  "discoveredAt": "2026-09-13T18:26:32+00:00",
+  "lastCheckedAt": "2026-09-13T18:26:26+00:00",
+  "tags": [
+    "resource",
+    "research"
+  ],
+  "useCases": [],
+  "evidence": [
+    "Original Research Published on 09 Sep 2026 Multi-plasticity synergy with adaptive mechanism assignment for training spiking neural networks in Neuromorphic Engineering",
+    "Mini Review Published on 11 Aug 2026"
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:26:32+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/frontiers-in-neuroscience-neuromorphic-engineering-section-e718a024.json"
+  },
+  "sourcePublishedAt": "2026-09-09"
+}

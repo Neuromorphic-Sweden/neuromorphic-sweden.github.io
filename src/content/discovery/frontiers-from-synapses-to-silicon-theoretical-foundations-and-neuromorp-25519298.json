@@ -1,0 +1,32 @@
+{
+  "candidateId": "25519298c9048eefe295",
+  "title": "Frontiers | From Synapses to Silicon: Theoretical Foundations and Neuromorphic Implementations of Biological Learning",
+  "recordType": "resource",
+  "summary": "This Frontiers in Neuroscience Research Topic explores the translation of biological learning mechanisms into neuromorphic engineering. It covers theoretical frameworks like predictive coding, analog VLSI implementations, emerging non-volatile devices (memristors), and on-chip architectures for spike-based computation. The resource explicitly excludes purely biological or device-physics studies lacking a clear computing component.",
+  "tldr": "A Frontiers Research Topic soliciting papers on translating synaptic plasticity theories into scalable neuromorphic hardware and algorithms, with an acceptance deadline of 2027-02-12.",
+  "sourceUrl": "https://www.frontiersin.org/research-topics/83913/from-synapses-to-silicon-theoretical-foundations-and-neuromorphic-implementations-of-biological-learning",
+  "sourceName": "frontiersin.org",
+  "discoveredAt": "2026-09-13T18:27:28+00:00",
+  "lastCheckedAt": "2026-09-13T18:27:21+00:00",
+  "tags": [
+    "resource",
+    "research-topic"
+  ],
+  "useCases": [],
+  "evidence": [
+    "This Research Topic solicits original research articles... that advance our mechanistic and implementational understanding of learning in neural systems.",
+    "Analog VLSI implementations... have demonstrated that key aspects of biological learning can be realized in silicon with orders-of-magnitude improvements in energy efficiency relative to conventional digital hardware."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:27:28+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/frontiers-from-synapses-to-silicon-theoretical-foundations-and-neuromorp-25519298.json"
+  },
+  "sourcePublishedAt": "2022-06-27"
+}

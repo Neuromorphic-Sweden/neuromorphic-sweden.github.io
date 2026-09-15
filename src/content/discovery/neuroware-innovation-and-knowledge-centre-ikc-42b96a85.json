@@ -1,0 +1,34 @@
+{
+  "candidateId": "42b96a855cb9af126cad",
+  "title": "NeuroWare Innovation and Knowledge Centre (IKC)",
+  "recordType": "organisation",
+  "summary": "The NeuroWare IKC is a UK-wide initiative led by UCL in partnership with institutions like the University of Manchester. It aims to accelerate neuromorphic hardware development for low-power AI, edge devices, and sustainable computing through collaboration between researchers, industry, investors, and policymakers.",
+  "tldr": "NeuroWare IKC advances UK neuromorphic systems via a consortium led by UCL focusing on energy-efficient hardware adoption.",
+  "sourceUrl": "https://neuroware-ikc.com/projects-publications/submission-to-the-low-energy-computing-inquiry/",
+  "sourceName": "neuroware-ikc.com",
+  "discoveredAt": "2026-09-13T18:23:38+00:00",
+  "lastCheckedAt": "2026-09-13T18:23:32+00:00",
+  "tags": [
+    "business"
+  ],
+  "useCases": [],
+  "evidence": [
+    "The NeuroWare Innovation and Knowledge Centre (IKC) is a UK-wide initiative led by UCL in partnership with a consortium of leading UK institutions.",
+    "NeuroWare accelerates the development, commercialisation and adoption of neuromorphic hardware."
+  ],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:23:38+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/neuroware-innovation-and-knowledge-centre-ikc-42b96a85.json"
+  },
+  "sourcePublishedAt": "2026-07-07",
+  "organisation": "UCL",
+  "location": "United Kingdom",
+  "country": "UK"
+}

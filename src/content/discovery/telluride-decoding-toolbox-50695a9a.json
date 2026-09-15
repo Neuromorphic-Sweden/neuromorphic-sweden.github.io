@@ -1,0 +1,42 @@
+{
+  "candidateId": "50695a9a7e167ec891af",
+  "title": "Telluride Decoding Toolbox",
+  "recordType": "software",
+  "summary": "The Telluride Decoding Toolbox is a software suite providing MATLAB and Python tools to decode neural signals (EEG/MEG) into original stimuli like auditory inputs. Developed by researchers from the Institute for Neuromorphic Engineering, it addresses decoding ensembles of signals rather than individual spikes. The toolbox includes sample data for validation and testing algorithms under an Apache 2 license.",
+  "tldr": "The Telluride Decoding Toolbox offers MATLAB/Python tools to decode EEG and MEG neural responses into original auditory or visual stimuli using machine learning strategies.",
+  "sourceUrl": "https://ine-web.org/software/decoding/",
+  "sourceName": "ine-web.org",
+  "discoveredAt": "2026-09-13T18:21:37+00:00",
+  "lastCheckedAt": "2026-09-13T18:21:30+00:00",
+  "tags": [
+    "software"
+  ],
+  "useCases": [
+    "neural decoding",
+    "EEG analysis",
+    "MEG analysis",
+    "auditory stimulus prediction"
+  ],
+  "evidence": [],
+  "ai": {
+    "assisted": true,
+    "model": "qwen3.5:9b",
+    "generatedAt": "2026-09-13T18:21:37+00:00",
+    "promptVersion": "neuromorphic-discovery-v2-business"
+  },
+  "review": {
+    "branch": "crawler/review",
+    "pullRequestUrl": "https://github.com/Neuromorphic-Sweden/neuromorphic-sweden.github.io/pull/3",
+    "sourcePath": "src/content/discovery/telluride-decoding-toolbox-50695a9a.json"
+  },
+  "sourcePublishedAt": "2014-01-01",
+  "organisation": "Institute for Neuromorphic Engineering",
+  "location": "Telluride, Colorado; USA",
+  "country": "USA",
+  "trl": {
+    "basis": "source-claimed",
+    "scope": "decoding toolbox software",
+    "evidence": "",
+    "confidence": "low"
+  }
+}
