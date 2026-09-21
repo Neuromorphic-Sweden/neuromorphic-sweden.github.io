@@ -4,14 +4,19 @@ import DiscoveryCard from '../../components/DiscoveryCard.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import reviewQueue from '../../data/discovery-review-queue.json';
 import { githubRepositoryUrl, sortDiscoveries } from '../../lib/discovery';
+import { getLocalReviewQueue, localReviewEnabled } from '../../lib/local-review';
+import LocalReviewActions from '../../components/LocalReviewActions.astro';
 
 const candidateIds = new Set(reviewQueue.candidateIds);
-const entries = sortDiscoveries(
+const localQueue = await getLocalReviewQueue();
+const entries = localReviewEnabled ? localQueue.entries : sortDiscoveries(
 	await getCollection(
 		'discoveries',
 		({ data }) => !data.internal && candidateIds.has(data.candidateId),
 	),
 );
+const pending = localQueue.entries.filter((entry) => entry.reviewStatus === 'candidate');
+const kept = localQueue.entries.filter((entry) => entry.reviewStatus === 'approved');
 ---
 
 <SiteLayout
@@ -26,19 +31,26 @@ const entries = sortDiscoveries(
 				<p class="eyebrow">Editorial review</p>
 				<h1>Review the evidence before publishing.</h1>
 				<p class="lead">
-					This unlisted workspace renders crawler-prepared records in the website's real layout.
+					{localReviewEnabled ? 'Review local drafts in the website’s real layout. Keep selects an article for the next upload; Discard records your decision in the local crawler database. Nothing is committed or published by these buttons.' : <>This unlisted workspace renders crawler-prepared records in the website's real layout.
 					The material is publicly readable but is not part of the main navigation and must not be
-					considered published until its pull request has been approved and merged.
+					considered published until its pull request has been approved and merged.</>}
 				</p>
 			</div>
 			<aside class="review-notice" aria-labelledby="github-review-title">
 				<p class="eyebrow">GitHub publication</p>
 				<h2 id="github-review-title">Merging is publishing.</h2>
 				<ol>
+					{localReviewEnabled ? <>
+						<li>Open a draft and compare it with the original source.</li>
+						<li>Click <strong>Keep for upload</strong> or <strong>Discard</strong>.</li>
+						<li>Run <code>crawler_service.py publish-review</code> from the local crawler folder. Only kept records are uploaded.</li>
+						<li>On GitHub, open the pull request’s <strong>Conversation</strong> tab and merge into <code>main</code> when ready.</li>
+					</> : <>
 					<li>Open a proposed record and compare it with the original source.</li>
 					<li>Use <strong>Edit</strong> to correct the record in its GitHub branch.</li>
 					<li>Use <strong>Delete</strong> to remove an unsuitable file or reject its pull request.</li>
 					<li>Use <strong>Publish</strong> to open the pull request, approve it and merge it into <code>main</code>.</li>
+					</>}
 				</ol>
 				<p>Only people with suitable repository access can edit, approve or merge.</p>
 				<a class="button secondary" href={`${githubRepositoryUrl}/pulls`}>Open pull requests <span aria-hidden="true">↗</span></a>
@@ -49,11 +61,21 @@ const entries = sortDiscoveries(
 	<section class="section">
 		<div class="container">
 			<div class="section-heading">
-				<div><p class="eyebrow">Material in this build</p><h2>{entries.length} record{entries.length === 1 ? '' : 's'} to inspect.</h2></div>
-				<p>Titles lead to full review pages with provenance, AI metadata, supporting evidence and GitHub actions.</p>
+				<div><p class="eyebrow">{localReviewEnabled ? 'Local selection' : 'Material in this build'}</p><h2>{localReviewEnabled ? `${pending.length} pending · ${kept.length} kept for upload.` : `${entries.length} records to inspect.`}</h2></div>
+				<p>Titles lead to full review pages with summaries, provenance, AI metadata and supporting evidence.</p>
 			</div>
 
-			{entries.length > 0 ? (
+			{localReviewEnabled ? <>
+				{localQueue.error && <p class="empty-state" role="alert">{localQueue.error}</p>}
+				<h3>Pending decisions</h3>
+				{pending.length === 0 && !localQueue.error && <p>No pending drafts. Run the crawler again to discover new material.</p>}
+				<div class="review-grid">
+					{pending.map((entry) => <div><DiscoveryCard entry={entry} review /><LocalReviewActions candidateId={entry.data.candidateId} token={localQueue.token} status="candidate" /></div>)}
+				</div>
+				{kept.length > 0 && <section class="kept-section"><h3>Kept for the next upload</h3><div class="review-grid">
+					{kept.map((entry) => <div><DiscoveryCard entry={entry} review /><LocalReviewActions candidateId={entry.data.candidateId} token={localQueue.token} status="approved" /></div>)}
+				</div></section>}
+			</> : entries.length > 0 ? (
 				<div class="review-grid">
 					{entries.map((entry) => <DiscoveryCard entry={entry} review />)}
 				</div>
@@ -68,6 +90,8 @@ const entries = sortDiscoveries(
 </SiteLayout>
 
 <style>
+	.kept-section { margin-top: 4rem; }
+	.review-grid > div { display: flex; flex-direction: column; }
 	.review-hero {
 		border-bottom: 1px solid var(--line);
 		background:

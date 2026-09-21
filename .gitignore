@@ -20,6 +20,9 @@ pnpm-debug.log*
 # local discovery service (code, database, raw crawls and logs)
 .local-discovery/
 
+# local visual concepts awaiting approval
+design-candidates/
+
 # macOS-specific files
 .DS_Store
 

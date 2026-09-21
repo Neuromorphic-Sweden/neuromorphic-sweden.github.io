@@ -1,0 +1,64 @@
+---
+interface Props {
+	candidateId: string;
+	token: string;
+	status: 'candidate' | 'approved';
+	nextHref?: string;
+}
+const { candidateId, token, status, nextHref = '/preview/' } = Astro.props;
+---
+
+<div class="local-actions" data-local-review data-id={candidateId} data-token={token} data-next={nextHref}>
+	<p class="selection-status">{status === 'approved' ? 'Kept for the next GitHub upload.' : 'Awaiting your selection.'}</p>
+	<div class="decision-buttons">
+		{status === 'candidate' ? (
+			<button type="button" class="button" data-decision="keep">Keep for upload</button>
+		) : (
+			<button type="button" class="button secondary" data-decision="reset">Return to pending</button>
+		)}
+		<button type="button" class="button secondary" data-decision="discard">Discard</button>
+	</div>
+	<label class="permanent-option"><input type="checkbox" data-permanent /> Never suggest this URL again when discarded</label>
+	<p class="decision-message" role="status" aria-live="polite"></p>
+</div>
+
+<script>
+	for (const panel of document.querySelectorAll<HTMLElement>('[data-local-review]')) {
+		panel.addEventListener('click', async (event) => {
+			const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-decision]');
+			if (!button || button.disabled) return;
+			const buttons = panel.querySelectorAll<HTMLButtonElement>('button');
+			const message = panel.querySelector<HTMLElement>('.decision-message')!;
+			let decision = button.dataset.decision;
+			if (decision === 'discard' && panel.querySelector<HTMLInputElement>('[data-permanent]')?.checked) {
+				decision = 'discard-url';
+			}
+			buttons.forEach((item) => { item.disabled = true; });
+			message.textContent = 'Saving your decision…';
+			try {
+				const response = await fetch('/__local-review/decision', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json', 'X-Review-Token': panel.dataset.token! },
+					body: JSON.stringify({ candidateId: panel.dataset.id, decision }),
+				});
+				const result = await response.json();
+				if (!response.ok) throw new Error(result.error ?? 'Decision could not be saved.');
+				window.location.assign(panel.dataset.next!);
+			} catch (error) {
+				message.textContent = error instanceof Error ? error.message : 'Decision could not be saved.';
+				buttons.forEach((item) => { item.disabled = false; });
+			}
+		});
+	}
+</script>
+
+<style>
+	.local-actions { margin-top: 1.25rem; }
+	.selection-status { font-size: 0.9rem; font-weight: 700; }
+	.decision-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+	button { font: inherit; cursor: pointer; }
+	button:disabled { opacity: 0.6; cursor: wait; }
+	.permanent-option { display: flex; align-items: start; gap: 0.5rem; margin-top: 1rem; font-size: 0.82rem; }
+	input { margin-top: 0.2rem; }
+	.decision-message { margin: 0.5rem 0 0; font-size: 0.85rem; }
+</style>

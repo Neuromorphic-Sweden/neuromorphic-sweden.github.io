@@ -1,0 +1,62 @@
+---
+interface Props {
+	href?: string;
+	inverse?: boolean;
+}
+
+const { href, inverse = false } = Astro.props;
+const Wrapper = href ? 'a' : 'div';
+---
+
+<Wrapper class:list={['wordmark', { inverse }]} href={href} aria-label={href ? 'Neuromorphic Sweden home' : undefined}>
+	<img class="mark" src="/images/cortex-core-logo-concept.png" alt="" width="180" height="171" />
+	<span><strong>Neuromorphic</strong><small>Sweden</small></span>
+</Wrapper>
+
+<style>
+	.wordmark {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
+		color: var(--ink);
+		text-decoration: none;
+	}
+
+	.wordmark:hover {
+		color: var(--ink);
+	}
+
+	.wordmark.inverse {
+		color: var(--sand);
+	}
+
+	.mark {
+		width: 3rem;
+		height: auto;
+		flex: none;
+	}
+
+	span {
+		display: grid;
+		line-height: 1;
+	}
+
+	strong {
+		font-size: 0.94rem;
+		font-weight: 720;
+		letter-spacing: -0.015em;
+	}
+
+	small {
+		margin-top: 0.14rem;
+		color: currentColor;
+		font-size: 0.9rem;
+		font-weight: 420;
+		letter-spacing: 0;
+	}
+
+	.inverse small {
+		color: var(--sand);
+	}
+</style>
+

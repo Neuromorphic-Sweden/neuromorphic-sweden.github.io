@@ -49,7 +49,7 @@ const entries = sortDiscoveries(
 				</div>
 				<p>{description}{appendStatus && ` ${statusText}`}</p>
 			</div>
-			<div class="discovery-grid">
+			<div class="discovery-grid" style={`--discovery-columns: ${Math.min(entries.length, 3)}`}>
 				{entries.map((entry) => <DiscoveryCard entry={entry} review={reviewSite && reviewCandidateIds.has(entry.data.candidateId)} />)}
 			</div>
 			{viewAllHref && (
@@ -64,7 +64,7 @@ const entries = sortDiscoveries(
 <style>
 	.discovery-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(var(--discovery-columns), minmax(0, 1fr));
 		gap: 1rem;
 	}
 

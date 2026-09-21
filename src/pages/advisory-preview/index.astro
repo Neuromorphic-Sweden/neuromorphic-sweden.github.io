@@ -1,0 +1,196 @@
+---
+import AdvisoryPreviewLayout from '../../layouts/AdvisoryPreviewLayout.astro';
+import { focusAreas, siteBase, reportUrl } from '../../data/site';
+
+const registrationUrl =
+	'https://docs.google.com/forms/d/e/1FAIpQLSdBfci4M4Rpris6VVJUIw5L1XpzxADHqco56JA_CT_85jLYiw/viewform?usp=dialog';
+
+const principles = [
+	['Event-driven', 'Respond to meaningful changes instead of processing every sample.'],
+	['Near-sensor', 'Process information close to where it is produced.'],
+	['In and near memory', 'Reduce costly data movement between memory and processors.'],
+	['Adaptive by design', 'Use material, circuit and system dynamics as part of computation.'],
+];
+---
+
+<AdvisoryPreviewLayout
+	title="Near-Sensor Intelligence for Scalable Real-World Interaction"
+	description="Neuromorphic technologies enable energy-efficient, adaptive and resilient sensing and computation at the interface between AI and the physical world."
+>
+	<section class="hero" aria-labelledby="hero-title">
+		<img class="hero-art" src="/images/cortex-core-nanostructured-wafer-v1.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async" />
+		<div class="hero-wash" aria-hidden="true"></div>
+
+		<div class="container hero-inner">
+			<div class="hero-copy">
+				<p class="hero-kicker">Sweden’s national neuromorphic ecosystem</p>
+				<h1 id="hero-title"><span>Near-sensor intelligence</span> for scalable real-world interaction.</h1>
+				<p class="hero-lead">Neuromorphic technologies enable energy-efficient, adaptive and resilient sensing and computation at the interface between AI and the physical world.</p>
+				<p class="ecosystem-intro">Neuromorphic Sweden is a neutral national network connecting universities, research institutes, industry, startups and public actors working to advance neuromorphic technology in Sweden.</p>
+				<div class="button-row hero-actions">
+					<a class="button amber-button" href={`${siteBase}/ecosystem/`}>Explore the ecosystem <span aria-hidden="true">→</span></a>
+					<a class="button ghost-button" href={registrationUrl}>Join the network <span aria-hidden="true">↗</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container hero-rail" aria-label="Areas connected by Neuromorphic Sweden">
+			<span>Sensing</span><span>Computing</span><span>Adaptation</span><span>Infrastructure</span>
+		</div>
+	</section>
+
+	<section class="section perspective" aria-labelledby="perspective-title">
+		<div class="container">
+			<div class="section-heading editorial-heading">
+				<div><p class="eyebrow">Why neuromorphic?</p><h2 id="perspective-title">Computing closer to the world and sensors.</h2></div>
+				<p>Neuromorphic technology takes inspiration from nervous systems to process information when and where it matters. It complements conventional digital AI with new ways to sense, compute and adapt under tight constraints.</p>
+			</div>
+
+			<div class="principle-grid">
+				{principles.map((principle, index) => (
+					<article class="principle-card">
+						<p class="card-index">0{index + 1}</p>
+						<h3>{principle[0]}</h3>
+						<p>{principle[1]}</p>
+					</article>
+				))}
+			</div>
+			<div class="text-link-row"><a href={`${siteBase}/technology/`}>Understand the technology <span aria-hidden="true">→</span></a></div>
+		</div>
+	</section>
+
+	<section class="section focus-section" aria-labelledby="focus-title">
+		<div class="focus-matrix" aria-hidden="true"></div>
+		<div class="container">
+			<div class="section-heading focus-heading">
+				<div><p class="eyebrow">Strategic focus</p><h2 id="focus-title">Five areas for shared progress.</h2></div>
+				<p>Open workshops held through the former NEUTEC project consolidated opportunities where Swedish capabilities can contribute across research and application.</p>
+			</div>
+			<div class="focus-grid">
+				{focusAreas.map((area, index) => (
+					<article class="focus-card">
+						<div class="focus-number">0{index + 1}</div>
+						<div><h3>{area.title}</h3><p>{area.description}</p></div>
+						<span class="card-node" aria-hidden="true"></span>
+					</article>
+				))}
+			</div>
+			<div class="button-row"><a class="button focus-button" href={`${siteBase}/focus-areas/`}>Explore the focus areas <span aria-hidden="true">→</span></a></div>
+		</div>
+	</section>
+
+	<section class="section foundation" aria-labelledby="foundation-title">
+		<div class="container foundation-grid">
+			<div class="foundation-heading">
+				<p class="eyebrow">A shared foundation</p>
+				<h2 id="foundation-title">Mapped nationally.<br />Shaped openly.</h2>
+			</div>
+			<div class="foundation-copy">
+				<p class="lead">Two completed Vinnova-funded feasibility studies mapped capabilities, engaged the ecosystem and developed a shared strategic direction.</p>
+				<p>The 2025 NIPS study combined national mapping and interviews with an open workshop in Stockholm to identify opportunities and shared needs. Building on that foundation, NEUTEC brought around one hundred participants into three further open workshops.</p>
+				<dl class="foundation-facts">
+					<div><dt>02</dt><dd>national studies</dd></div>
+					<div><dt>04</dt><dd>open workshops</dd></div>
+					<div><dt>2035</dt><dd>shared vision horizon</dd></div>
+				</dl>
+				<div class="button-row">
+					<a class="button amber-button" href={reportUrl}>Read the national report <span aria-hidden="true">↗</span></a>
+					<a class="button outline-button" href={`${siteBase}/activities/`}>Project history</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</AdvisoryPreviewLayout>
+
+<style>
+	.hero { position: relative; isolation: isolate; overflow: hidden; min-height: min(50rem, calc(100svh - 5.4rem)); border-bottom: 1px solid rgb(225 196 90 / 28%); background: var(--graphite); color: var(--sand); }
+	.hero-art, .hero-wash { position: absolute; inset: 0; width: 100%; height: 100%; }
+	.hero-art {
+		z-index: -3;
+		object-fit: contain;
+		object-position: right center;
+		opacity: .46;
+		filter: blur(1.4px) saturate(.82) brightness(.82);
+		transform: translateX(5%) scale(.84);
+		transform-origin: right center;
+		-webkit-mask-image: linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+		mask-image: linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+	}
+	.hero-wash { z-index: -2; background: linear-gradient(90deg, rgb(22 23 26 / 99%) 0%, rgb(25 26 29 / 97%) 34%, rgb(25 26 29 / 76%) 58%, rgb(20 21 24 / 32%) 82%), linear-gradient(0deg, rgb(21 22 24 / 78%), transparent 46%); }
+	.hero-inner { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 0.95fr); gap: clamp(2rem, 7vw, 8rem); align-items: center; min-height: min(45rem, calc(100svh - 10.4rem)); padding-block: clamp(4.5rem, 9vw, 8rem); }
+	.hero-copy { max-width: 47rem; }
+	.hero-kicker { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.6rem; color: var(--amber); font-size: .72rem; font-weight: 720; letter-spacing: .2em; text-transform: uppercase; }
+	.hero-kicker::before { width: 2.6rem; height: 1px; background: currentColor; content: ''; }
+	.hero h1 { max-width: 50rem; margin-bottom: 1.6rem; color: var(--sand); font-size: clamp(3rem, 6.4vw, 6.6rem); font-weight: 580; letter-spacing: -.052em; line-height: .98; text-wrap: balance; }
+	.hero h1 span { display: block; color: var(--amber); }
+	.hero-lead { max-width: 43rem; margin-bottom: 1rem; color: var(--sand); font-size: clamp(1.1rem, 1.7vw, 1.35rem); line-height: 1.55; }
+	.ecosystem-intro { max-width: 41rem; color: rgb(239 232 216 / 70%); }
+	.hero-actions { margin-top: 2.1rem; }
+	.amber-button { border-color: var(--amber); background: var(--amber); color: var(--graphite); }
+	.amber-button:hover { border-color: #ecd273; background: #ecd273; color: var(--graphite); }
+	.ghost-button { border-color: rgb(239 232 216 / 48%); background: rgb(34 35 38 / 30%); color: var(--sand); backdrop-filter: blur(10px); }
+	.ghost-button:hover { border-color: var(--sand); background: rgb(239 232 216 / 8%); color: var(--sand); }
+	.hero-rail { display: flex; flex-wrap: wrap; gap: 1rem clamp(1.5rem, 5vw, 5rem); border-top: 1px solid rgb(225 196 90 / 22%); padding-block: 1.35rem; }
+	.hero-rail span { color: rgb(239 232 216 / 58%); font-size: .65rem; font-weight: 720; letter-spacing: .2em; text-transform: uppercase; }
+
+	.editorial-heading { grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr); align-items: start; }
+	.editorial-heading h2 { max-width: 42rem; }
+	.principle-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); border-top-color: var(--graphite); }
+	.principle-card { position: relative; min-height: 16rem; border-right: 1px solid var(--line); padding: clamp(1.5rem, 2.8vw, 2.25rem); }
+	.principle-card:last-child { border-right: 0; }
+	.card-index { margin: 0 0 2.2rem; color: var(--amber-deep); font-size: .7rem; font-weight: 780; letter-spacing: .18em; }
+	.principle-card h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); }
+	.principle-card p:last-child { font-size: .94rem; }
+	.text-link-row { display: flex; justify-content: flex-end; margin-top: 2rem; }
+	.text-link-row a { color: var(--graphite); font-size: .82rem; font-weight: 750; text-decoration-color: var(--amber-deep); }
+
+	.focus-section { position: relative; isolation: isolate; overflow: hidden; background: var(--graphite); color: var(--sand); }
+	.focus-matrix { position: absolute; z-index: -1; top: 3rem; right: -3rem; width: 25rem; height: 25rem; opacity: .16; background-image: radial-gradient(circle, var(--violet) 0 2px, transparent 2.5px); background-size: 1.25rem 1.25rem; mask-image: linear-gradient(135deg, transparent 12%, #000 75%); }
+	.focus-heading h2, .focus-card h3 { color: var(--sand); }
+	.focus-heading .eyebrow { color: var(--amber); }
+	.focus-heading > p, .focus-card p { color: rgb(239 232 216 / 66%); }
+	.focus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid rgb(225 196 90 / 22%); background: rgb(225 196 90 / 22%); }
+	.focus-card { position: relative; display: grid; grid-template-columns: 3.5rem 1fr; gap: 1.2rem; min-height: 13rem; background: rgb(41 42 46 / 96%); padding: clamp(1.4rem, 3vw, 2.2rem); transition: background 180ms ease; }
+	.focus-card:hover { background: var(--graphite-soft); }
+	.focus-card:last-child { grid-column: 1 / -1; }
+	.focus-number { color: var(--amber); font-size: .72rem; font-weight: 780; letter-spacing: .16em; }
+	.focus-card h3 { max-width: 31rem; margin-bottom: .7rem; font-size: clamp(1.25rem, 2vw, 1.6rem); }
+	.focus-card p { max-width: 37rem; margin: 0; }
+	.card-node { position: absolute; right: 1.2rem; bottom: 1.2rem; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgb(57 184 200 / 9%); }
+	.focus-button { border-color: var(--amber); background: transparent; color: var(--amber); }
+	.focus-button:hover { background: var(--amber); color: var(--graphite); }
+
+	.foundation { background: var(--sand-soft); }
+	.foundation-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(20rem, 1.15fr); gap: clamp(3rem, 9vw, 9rem); }
+	.foundation-heading { position: relative; }
+	.foundation-heading h2 { position: relative; z-index: 1; }
+	.foundation-copy .lead { color: var(--graphite); }
+	.foundation-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 2.5rem 0 0; border-block: 1px solid var(--line); background: var(--line); }
+	.foundation-facts div { background: var(--sand-soft); padding: 1.3rem 1rem 1.3rem 0; }
+	.foundation-facts dt { color: var(--amber-deep); font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 620; letter-spacing: -.04em; }
+	.foundation-facts dd { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+	.outline-button { border-color: var(--graphite); background: transparent; color: var(--graphite); }
+	.outline-button:hover { background: var(--graphite); color: var(--sand); }
+
+	@media (max-width: 68rem) {
+		.hero-inner { grid-template-columns: minmax(0, 1.25fr) minmax(12rem, .75fr); }
+		.principle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.principle-card:nth-child(2) { border-right: 0; }
+		.principle-card:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+	}
+
+	@media (max-width: 52rem) {
+		.hero { min-height: auto; }
+		.hero-art { object-fit: cover; object-position: 68% center; opacity: .26; filter: blur(2px) saturate(.72) brightness(.72); transform: translateX(6%) scale(.94); -webkit-mask-image: none; mask-image: none; }
+		.hero-wash { background: linear-gradient(90deg, rgb(24 25 28 / 98%), rgb(24 25 28 / 88%)); }
+		.hero-inner, .foundation-grid, .focus-grid { grid-template-columns: 1fr; }
+		.focus-card:last-child { grid-column: auto; }
+	}
+
+	@media (max-width: 38rem) {
+		.hero h1 { font-size: clamp(2.8rem, 14vw, 4.3rem); }
+		.principle-grid, .foundation-facts { grid-template-columns: 1fr; }
+		.principle-card { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+	}
+</style>
+

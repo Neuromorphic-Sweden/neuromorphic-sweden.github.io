@@ -1,0 +1,61 @@
+---
+interface Props {
+	class?: string;
+	title?: string;
+}
+
+const { class: className, title } = Astro.props;
+---
+
+<svg
+	class={className}
+	viewBox="0 0 64 64"
+	role={title ? 'img' : undefined}
+	aria-hidden={title ? undefined : 'true'}
+	aria-label={title}
+>
+	<g class="sparse" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M31 55c4-7 5-14 2-21-3-7-9-11-17-13" />
+		<path d="M32 39c-5-2-10-1-16 3" />
+		<path d="M29 30c-4-6-4-12-2-20" />
+		<path d="M25 27c-5-4-10-5-16-4" />
+		<path d="M33 35c3-9 8-16 15-22" />
+		<path d="M34 42c-4 3-7 7-8 12" />
+	</g>
+	<g class="nodes" fill="currentColor">
+		<circle cx="16" cy="21" r="3.2" />
+		<circle cx="16" cy="42" r="3.2" />
+		<circle cx="27" cy="10" r="3.2" />
+		<circle cx="48" cy="13" r="3.2" />
+		<circle cx="26" cy="54" r="3.2" />
+		<circle cx="9" cy="23" r="3.2" />
+	</g>
+	<path class="arc" d="M39 8c13 4 20 13 20 25S52 54 40 58" fill="none" stroke="var(--mark-violet, currentColor)" stroke-linecap="round" />
+	<g class="matrix" fill="currentColor">
+		<rect x="39" y="22" width="4" height="4" rx=".5" />
+		<rect x="46" y="22" width="4" height="4" rx=".5" />
+		<rect x="53" y="22" width="4" height="4" rx=".5" />
+		<rect x="39" y="29" width="4" height="4" rx=".5" />
+		<rect x="46" y="29" width="4" height="4" rx=".5" />
+		<rect x="53" y="29" width="4" height="4" rx=".5" />
+		<rect x="39" y="36" width="4" height="4" rx=".5" />
+		<rect x="46" y="36" width="4" height="4" rx=".5" />
+		<rect x="53" y="36" width="4" height="4" rx=".5" />
+		<rect x="39" y="43" width="4" height="4" rx=".5" />
+		<rect x="46" y="43" width="4" height="4" rx=".5" />
+		<rect x="53" y="43" width="4" height="4" rx=".5" />
+	</g>
+</svg>
+
+<style>
+	svg {
+		display: block;
+		overflow: visible;
+		color: var(--mark-color, currentColor);
+	}
+
+	.sparse,
+	.arc {
+		stroke-width: 2.3;
+	}
+</style>

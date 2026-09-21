@@ -1,6 +1,6 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import AdaptiveSpikeMatrixField from '../../components/AdaptiveSpikeMatrixField.astro';
+import SignalToStructureField from '../../components/SignalToStructureField.astro';
 ---
 
 <SiteLayout
@@ -26,23 +26,26 @@ import AdaptiveSpikeMatrixField from '../../components/AdaptiveSpikeMatrixField.
 	</section>
 
 	<section class="section">
-		<div class="container intro-grid">
-			<div class="prose">
-				<p class="eyebrow">A complementary paradigm</p>
-				<h2>Not simply a smaller version of conventional AI.</h2>
+		<div class="container">
+			<div class="technology-intro">
+				<div>
+					<p class="eyebrow">From signal to structure</p>
+					<h2>Finding what matters in a noisy world.</h2>
+				</div>
+				<div class="prose">
+					<p>
+						Real-world sensors produce dense, continuous and often noisy signals. Neuromorphic
+						systems can exploit their temporal and spatial structure to encode informative change,
+						update local state and support low-latency inference near the sensor.
+					</p>
 				<p>
 					Digital computing remains essential. Neuromorphic approaches complement it by addressing
 					applications where data movement, response time, continuous sensing, connectivity or power
 					become limiting factors.
 				</p>
-				<p>
-					Rather than treating every input equally and moving all data through a centralized
-					processor, a neuromorphic system may respond only to events, process signals near the
-					sensor, store and compute in the same physical structure, or use material and circuit
-					dynamics directly.
-				</p>
+				</div>
 			</div>
-			<AdaptiveSpikeMatrixField />
+			<SignalToStructureField />
 		</div>
 	</section>
 
@@ -100,7 +103,7 @@ import AdaptiveSpikeMatrixField from '../../components/AdaptiveSpikeMatrixField.
 				<li><span>L2</span><div><h3>Circuits and architectures</h3><p>Mixed-signal circuits, in-memory processing, event-based sensors and heterogeneous integration.</p></div></li>
 				<li><span>L3</span><div><h3>Algorithms and software</h3><p>Spiking networks, event-driven learning, optimization, simulation, interoperability and benchmarking.</p></div></li>
 				<li><span>L4</span><div><h3>Systems and applications</h3><p>Sensor fusion, autonomous systems, telecom, monitoring, healthcare and industrial deployment.</p></div></li>
-				<li><span>+ </span><div><h3>Cross-cutting foundations</h3><p>Neuroscience, co-design, ethics, regulation, security, humanities and social sciences.</p></div></li>
+				<li><span>+ </span><div><h3>Cross-cutting foundations</h3><p>Neuroscience, AI-driven codesign, ethics, regulation, security, humanities and social sciences.</p></div></li>
 			</ol>
 		</div>
 	</section>
@@ -120,13 +123,16 @@ import AdaptiveSpikeMatrixField from '../../components/AdaptiveSpikeMatrixField.
 </SiteLayout>
 
 <style>
-	.intro-grid,
+	.technology-intro,
 	.caution-grid {
 		display: grid;
 		grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
 		gap: clamp(3rem, 8vw, 8rem);
-		align-items: center;
+		align-items: start;
 	}
+
+	.technology-intro h2 { max-width: 40rem; }
+	.technology-intro .prose p:first-child { color: var(--graphite, #222326); font-size: clamp(1.05rem, 1.7vw, 1.25rem); line-height: 1.62; }
 
 	.stack-list {
 		margin: 0;
@@ -162,7 +168,7 @@ import AdaptiveSpikeMatrixField from '../../components/AdaptiveSpikeMatrixField.
 	}
 
 	@media (max-width: 52rem) {
-		.intro-grid,
+		.technology-intro,
 		.caution-grid {
 			grid-template-columns: 1fr;
 		}

@@ -3,6 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import reviewQueue from '../../data/discovery-review-queue.json';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import LocalReviewActions from '../../components/LocalReviewActions.astro';
+import { getLocalReviewQueue, localReviewEnabled } from '../../lib/local-review';
 import {
 	discoveryTypeLabels,
 	formatDiscoveryDate,
@@ -11,6 +13,7 @@ import {
 } from '../../lib/discovery';
 
 export async function getStaticPaths() {
+	if (localReviewEnabled) return [];
 	if (process.env.REVIEW_SITE !== 'true') return [];
 	const candidateIds = new Set(reviewQueue.candidateIds);
 	const entries = await getCollection(
@@ -24,7 +27,14 @@ interface Props {
 	entry: CollectionEntry<'discoveries'>;
 }
 
-const { entry } = Astro.props;
+const queue = localReviewEnabled ? await getLocalReviewQueue() : undefined;
+const localEntry = queue?.entries.find((item) => item.id === Astro.params.id);
+const entry = localReviewEnabled ? localEntry : Astro.props.entry;
+if (!entry) return Astro.redirect('/preview/');
+const localToken = queue?.token ?? '';
+const localStatus = localEntry?.reviewStatus ?? 'candidate';
+const next = queue?.entries.find((item) => item.id !== entry.id && item.reviewStatus === 'candidate');
+const nextHref = next ? `/preview/${next.id}/` : '/preview/';
 const { data } = entry;
 const reviewUrl = githubReviewUrl(entry);
 const editUrl = githubEditUrl(entry);
@@ -91,6 +101,12 @@ const trlRange = data.trl
 			<aside class="review-sidebar">
 				<section class="action-panel" aria-labelledby="review-actions-title">
 					<p class="eyebrow">Editorial decision</p>
+					{localReviewEnabled ? <>
+						<h2>Select locally before uploading.</h2>
+						<p>Keep selects this source for upload, not immediate publication. AI-composed text may contain errors; refer to the original source.</p>
+						<LocalReviewActions candidateId={data.candidateId} token={localToken} status={localStatus} nextHref={nextHref} />
+						<p>After selection, run <code>crawler_service.py publish-review</code>. On GitHub, merge the resulting pull request into <code>main</code> to publish.</p>
+					</> : <>
 					<h2 id="review-actions-title">Complete the action on GitHub.</h2>
 					<p>The buttons open the proposal branch or pull request. GitHub verifies that you have permission to make the change.</p>
 					<div class="action-buttons">
@@ -106,6 +122,7 @@ const trlRange = data.trl
 							<li><strong>Edit:</strong> correct the generated JSON on the proposal branch, commit the change, then return here after the preview rebuilds.</li>
 						</ul>
 					</details>
+					</>}
 				</section>
 
 				<section class="provenance-panel">

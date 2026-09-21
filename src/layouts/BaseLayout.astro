@@ -6,9 +6,18 @@ interface Props {
 	description: string;
 	noindex?: boolean;
 	bodyClass?: string;
+	faviconHref?: string;
+	themeColor?: string;
 }
 
-const { title, description, noindex = false, bodyClass } = Astro.props;
+const {
+	title,
+	description,
+	noindex = false,
+	bodyClass,
+	faviconHref = '/favicon.svg',
+	themeColor = '#071827',
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 ---
 
@@ -21,8 +30,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
 		<meta name="generator" content={Astro.generator} />
 		{noindex && <meta name="robots" content="noindex, nofollow" />}
 		<link rel="canonical" href={canonical} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="theme-color" content="#071827" />
+		<link rel="icon" type={faviconHref.endsWith('.png') ? 'image/png' : 'image/svg+xml'} href={faviconHref} />
+		<meta name="theme-color" content={themeColor} />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Neuromorphic Sweden" />
 		<meta property="og:title" content={title} />

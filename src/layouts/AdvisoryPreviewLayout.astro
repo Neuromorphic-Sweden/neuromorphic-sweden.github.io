@@ -1,0 +1,159 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AdvisoryPreviewHeader from '../components/AdvisoryPreviewHeader.astro';
+import AdvisoryPreviewFooter from '../components/AdvisoryPreviewFooter.astro';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout
+	title={`${title} — Neuromorphic Sweden design preview`}
+	description={description}
+	noindex
+	bodyClass="advisory-preview"
+	faviconHref="/favicon.png"
+	themeColor="#222326"
+>
+	<div class="advisory-banner" role="status">
+		<div class="container">
+			<div>
+				<strong>Advisory design preview</strong>
+				<span>Unpublished proposal for review and discussion.</span>
+			</div>
+			<a href="/">Return to the current homepage <span aria-hidden="true">→</span></a>
+		</div>
+	</div>
+	<AdvisoryPreviewHeader />
+	<main id="main-content">
+		<slot />
+	</main>
+	<AdvisoryPreviewFooter />
+</BaseLayout>
+
+<style is:global>
+	body.advisory-preview {
+		--graphite: #222326;
+		--graphite-raised: #292a2e;
+		--graphite-soft: #35363b;
+		--amber: #e1c45a;
+		--amber-deep: #755f18;
+		--sand: #efe8d8;
+		--sand-soft: #f7f2e8;
+		--violet: #6f6aa8;
+		--cyan: #39b8c8;
+		--navy-950: var(--graphite);
+		--navy-900: var(--graphite-raised);
+		--navy-800: var(--graphite-soft);
+		--blue-700: #5e5a83;
+		--blue-500: var(--violet);
+		--blue-200: #c9c3d8;
+		--blue-100: #e2dcca;
+		--blue-50: #f4eee2;
+		--white: #fffdf7;
+		--orange-600: var(--amber-deep);
+		--orange-500: var(--amber);
+		--orange-100: #f2e7b9;
+		--ink: var(--graphite);
+		--muted: #66656a;
+		--line: #d3cbb9;
+		--page: var(--sand);
+		--font-display: var(--font-sans);
+		--shadow-soft: 0 24px 70px rgb(34 35 38 / 10%);
+		background: var(--page);
+	}
+
+	body.advisory-preview::selection {
+		background: var(--amber);
+		color: var(--graphite);
+	}
+
+	body.advisory-preview h1,
+	body.advisory-preview h2 {
+		font-weight: 620;
+		letter-spacing: -.035em;
+	}
+
+	body.advisory-preview .eyebrow {
+		color: var(--amber-deep);
+	}
+
+	body.advisory-preview .eyebrow::before {
+		width: 1.7rem;
+		height: 1px;
+		border-radius: 0;
+		background: currentColor;
+	}
+
+	body.advisory-preview .button {
+		gap: .55rem;
+		font-weight: 720;
+	}
+
+	body.advisory-preview .button:hover {
+		transform: translateY(-1px);
+	}
+
+	body.advisory-preview .section.dark {
+		background: var(--graphite);
+	}
+
+	body.advisory-preview .section.dark p,
+	body.advisory-preview .section.dark li {
+		color: rgb(239 232 216 / 72%);
+	}
+
+	body.advisory-preview .card {
+		background: rgb(255 253 247 / 68%);
+	}
+
+	.advisory-banner {
+		border-bottom: 1px solid rgb(34 35 38 / 20%);
+		background: var(--amber);
+		color: var(--graphite);
+	}
+
+	.advisory-banner .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem 2rem;
+		min-height: 3.25rem;
+		padding-block: .55rem;
+	}
+
+	.advisory-banner div div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .15rem .8rem;
+		align-items: baseline;
+	}
+
+	.advisory-banner strong,
+	.advisory-banner a {
+		color: var(--graphite);
+		font-size: .78rem;
+		font-weight: 780;
+	}
+
+	.advisory-banner span {
+		font-size: .76rem;
+	}
+
+	.advisory-banner a {
+		white-space: nowrap;
+		text-decoration-color: rgb(34 35 38 / 45%);
+	}
+
+	@media (max-width: 42rem) {
+		.advisory-banner .container {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: .35rem;
+		}
+	}
+</style>

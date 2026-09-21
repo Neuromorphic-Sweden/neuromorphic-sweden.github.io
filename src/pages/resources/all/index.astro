@@ -5,32 +5,30 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import reviewQueue from '../../../data/discovery-review-queue.json';
 import { sortDiscoveries } from '../../../lib/discovery';
 
-const resourceTypes = new Set(['resource', 'hardware', 'software']);
 const reviewSite = process.env.REVIEW_SITE === 'true';
 const reviewCandidateIds = new Set(reviewQueue.candidateIds);
 const entries = sortDiscoveries(
 	await getCollection(
 		'discoveries',
-		({ data }) =>
-			!data.internal &&
-			resourceTypes.has(data.recordType),
+		({ data }) => !data.internal,
 	),
 );
 ---
 
 <SiteLayout
-	title="All resources and tools"
-	description="Published AI-assisted resources and tools, ordered by the date of the original source or the date the information was identified."
+	title="All discovered content"
+	description="Published AI-assisted records, ordered by the date of the original source, event or identification."
 >
 	<section class="page-hero">
 		<div class="container">
 			<a class="back-link" href="/resources/"><span aria-hidden="true">←</span> Back to Resources</a>
 			<p class="eyebrow">AI-assisted discovery</p>
-			<h1>All resources and tools.</h1>
+			<h1>All discovered content.</h1>
 			<p class="lead">
-				Published records are listed newest first. Dates represent the original source's
-				publication date when available; otherwise, they show when the information was
-				identified by Neuromorphic Sweden.
+				Published records are listed newest first. Dates represent an event date or the
+				original source's publication date when available; otherwise, they show when the
+				information was identified by Neuromorphic Sweden. Event schedules and registration
+				details should be confirmed with the original organiser.
 			</p>
 		</div>
 	</section>
@@ -44,8 +42,8 @@ const entries = sortDiscoveries(
 				</div>
 			) : (
 				<div class="empty-state">
-					<h2>No published resources yet.</h2>
-					<p>Reviewed resources will appear here after their proposal is merged.</p>
+					<h2>No published records yet.</h2>
+					<p>Selected records will appear here after publication.</p>
 				</div>
 			)}
 		</div>
