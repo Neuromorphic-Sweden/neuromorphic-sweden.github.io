@@ -6,29 +6,32 @@ import AdvisoryPreviewFooter from '../components/AdvisoryPreviewFooter.astro';
 interface Props {
 	title: string;
 	description: string;
+	preview?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, preview = true } = Astro.props;
 ---
 
 <BaseLayout
-	title={`${title} — Neuromorphic Sweden design preview`}
+	title={preview ? `${title} — Neuromorphic Sweden design preview` : title}
 	description={description}
-	noindex
+	noindex={preview}
 	bodyClass="advisory-preview"
 	faviconHref="/favicon.png"
-	themeColor="#222326"
+	themeColor="#081f3d"
 >
-	<div class="advisory-banner" role="status">
-		<div class="container">
-			<div>
-				<strong>Advisory design preview</strong>
-				<span>Unpublished proposal for review and discussion.</span>
+	{preview && (
+		<div class="advisory-banner" role="status">
+			<div class="container">
+				<div>
+					<strong>Advisory design preview</strong>
+					<span>Unpublished proposal for review and discussion.</span>
+				</div>
+				<a href="/">Return to the current homepage <span aria-hidden="true">→</span></a>
 			</div>
-			<a href="/">Return to the current homepage <span aria-hidden="true">→</span></a>
 		</div>
-	</div>
-	<AdvisoryPreviewHeader />
+	)}
+	<AdvisoryPreviewHeader preview={preview} />
 	<main id="main-content">
 		<slot />
 	</main>
@@ -37,33 +40,45 @@ const { title, description } = Astro.props;
 
 <style is:global>
 	body.advisory-preview {
-		--graphite: #222326;
-		--graphite-raised: #292a2e;
-		--graphite-soft: #35363b;
-		--amber: #e1c45a;
-		--amber-deep: #755f18;
-		--sand: #efe8d8;
-		--sand-soft: #f7f2e8;
-		--violet: #6f6aa8;
-		--cyan: #39b8c8;
+		/* Swedish semiconductor-inspired palette, balanced with a botanical green. */
+		--deep-blue: #081f3d;
+		--deep-blue-raised: #0f2e52;
+		--blue: #2e6f9e;
+		--blue-soft: #82a8c3;
+		--gold: #c9a22e;
+		--yellow: #f0d35a;
+		--orange: #b9521d;
+		--green: #568a5b;
+		--green-soft: #82ad79;
+		--cream: #f2ecdc;
+		--cream-soft: #f8f4e9;
+		--graphite: var(--deep-blue);
+		--graphite-raised: var(--deep-blue-raised);
+		--graphite-soft: #18406c;
+		--amber: var(--yellow);
+		--amber-deep: var(--orange);
+		--sand: var(--cream);
+		--sand-soft: var(--cream-soft);
+		--violet: var(--green);
+		--cyan: var(--blue);
 		--navy-950: var(--graphite);
 		--navy-900: var(--graphite-raised);
 		--navy-800: var(--graphite-soft);
-		--blue-700: #5e5a83;
-		--blue-500: var(--violet);
-		--blue-200: #c9c3d8;
-		--blue-100: #e2dcca;
-		--blue-50: #f4eee2;
+		--blue-700: #245b85;
+		--blue-500: var(--blue);
+		--blue-200: #b8cedd;
+		--blue-100: #dce8ec;
+		--blue-50: #eef3f3;
 		--white: #fffdf7;
 		--orange-600: var(--amber-deep);
-		--orange-500: var(--amber);
-		--orange-100: #f2e7b9;
+		--orange-500: #d86f2f;
+		--orange-100: #f2d8bf;
 		--ink: var(--graphite);
-		--muted: #66656a;
-		--line: #d3cbb9;
+		--muted: #606771;
+		--line: #cec5ae;
 		--page: var(--sand);
 		--font-display: var(--font-sans);
-		--shadow-soft: 0 24px 70px rgb(34 35 38 / 10%);
+		--shadow-soft: 0 24px 70px rgb(8 31 61 / 11%);
 		background: var(--page);
 	}
 
@@ -104,7 +119,7 @@ const { title, description } = Astro.props;
 
 	body.advisory-preview .section.dark p,
 	body.advisory-preview .section.dark li {
-		color: rgb(239 232 216 / 72%);
+		color: rgb(242 236 220 / 74%);
 	}
 
 	body.advisory-preview .card {
@@ -112,8 +127,8 @@ const { title, description } = Astro.props;
 	}
 
 	.advisory-banner {
-		border-bottom: 1px solid rgb(34 35 38 / 20%);
-		background: var(--amber);
+		border-bottom: 1px solid rgb(8 31 61 / 22%);
+		background: var(--gold);
 		color: var(--graphite);
 	}
 
@@ -146,7 +161,7 @@ const { title, description } = Astro.props;
 
 	.advisory-banner a {
 		white-space: nowrap;
-		text-decoration-color: rgb(34 35 38 / 45%);
+		text-decoration-color: rgb(8 31 61 / 48%);
 	}
 
 	@media (max-width: 42rem) {

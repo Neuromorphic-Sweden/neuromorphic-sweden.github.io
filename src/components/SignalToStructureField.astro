@@ -44,13 +44,13 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 			<svg viewBox="0 0 430 300" role="presentation" aria-hidden="true">
 				<defs>
 					<linearGradient id="sensor-trace" x1="0" x2="1">
-						<stop offset="0" stop-color="var(--sand)" stop-opacity=".25" />
-						<stop offset=".62" stop-color="var(--violet)" stop-opacity=".55" />
-						<stop offset="1" stop-color="var(--sand)" stop-opacity=".2" />
+						<stop offset="0" stop-color="var(--blue-soft)" stop-opacity=".28" />
+						<stop offset=".62" stop-color="var(--blue)" stop-opacity=".72" />
+						<stop offset="1" stop-color="var(--sand)" stop-opacity=".18" />
 					</linearGradient>
 					<linearGradient id="structure-trace" x1="0" x2="1">
-						<stop offset="0" stop-color="var(--amber)" />
-						<stop offset="1" stop-color="var(--cyan)" />
+						<stop offset="0" stop-color="var(--yellow)" />
+						<stop offset="1" stop-color="var(--orange)" />
 					</linearGradient>
 				</defs>
 				<g class="sensor-grid">
@@ -113,9 +113,9 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 			<svg viewBox="0 0 340 300" role="presentation" aria-hidden="true">
 				<defs>
 					<linearGradient id="state-spectrum" x1="0" x2="1">
-						<stop offset="0" stop-color="var(--amber)" />
-						<stop offset=".52" stop-color="var(--violet)" />
-						<stop offset="1" stop-color="var(--cyan)" />
+						<stop offset="0" stop-color="var(--yellow)" />
+						<stop offset=".52" stop-color="var(--green-soft)" />
+						<stop offset="1" stop-color="var(--blue)" />
 					</linearGradient>
 				</defs>
 				<g class="state-matrix">
@@ -149,22 +149,28 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 <style>
 	.signal-structure {
 		--cycle: 12s;
-		--graphite: #222326;
-		--amber: #e1c45a;
-		--sand: #efe8d8;
-		--violet: #6f6aa8;
-		--cyan: #39b8c8;
+		--graphite: #081f3d;
+		--graphite-raised: #0f2e52;
+		--blue: #2e6f9e;
+		--blue-soft: #82a8c3;
+		--gold: #c9a22e;
+		--yellow: #f0d35a;
+		--amber: var(--yellow);
+		--orange: #d86f2f;
+		--green: #568a5b;
+		--green-soft: #82ad79;
+		--sand: #f2ecdc;
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
 		margin: clamp(2.5rem, 6vw, 5rem) 0 0;
-		border: 1px solid rgb(225 196 90 / 28%);
+		border: 1px solid rgb(240 211 90 / 30%);
 		border-radius: .35rem;
 		background:
-			radial-gradient(circle at 83% 34%, rgb(57 184 200 / 8%), transparent 28rem),
-			radial-gradient(circle at 58% 80%, rgb(111 106 168 / 12%), transparent 30rem),
-			var(--graphite);
-		box-shadow: 0 1.6rem 4rem rgb(34 35 38 / 13%);
+			radial-gradient(circle at 83% 34%, rgb(46 111 158 / 16%), transparent 28rem),
+			radial-gradient(circle at 58% 80%, rgb(86 138 91 / 13%), transparent 30rem),
+			linear-gradient(145deg, var(--graphite), var(--graphite-raised));
+		box-shadow: 0 1.6rem 4rem rgb(8 31 61 / 16%);
 		color: var(--sand);
 	}
 
@@ -172,7 +178,7 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 		position: absolute;
 		z-index: -1;
 		inset: 0;
-		background-image: radial-gradient(circle, rgb(239 232 216 / 8%) 0 1px, transparent 1.5px);
+		background-image: radial-gradient(circle, rgb(242 236 220 / 8%) 0 1px, transparent 1.5px);
 		background-size: 1.5rem 1.5rem;
 		mask-image: linear-gradient(125deg, transparent 8%, #000 65%, transparent 96%);
 		content: '';
@@ -183,7 +189,7 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 		justify-content: space-between;
 		align-items: flex-end;
 		gap: 2rem;
-		border-bottom: 1px solid rgb(239 232 216 / 13%);
+		border-bottom: 1px solid rgb(242 236 220 / 13%);
 		padding: clamp(1.4rem, 3vw, 2.2rem);
 	}
 
@@ -194,49 +200,49 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 
 	.plate-kicker { margin-bottom: .4rem; color: var(--amber); font-size: .65rem; font-weight: 760; letter-spacing: .2em; }
 	.plate-heading h3 { margin: 0; color: var(--sand); font-size: clamp(1.45rem, 3vw, 2.15rem); font-weight: 560; letter-spacing: -.025em; }
-	.plate-context { color: rgb(239 232 216 / 48%); font-size: .62rem; font-weight: 700; letter-spacing: .17em; text-align: right; }
+	.plate-context { color: rgb(242 236 220 / 50%); font-size: .62rem; font-weight: 700; letter-spacing: .17em; text-align: right; }
 
 	.stages { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(14rem, .8fr) minmax(17rem, 1fr); }
 	.stage { min-width: 0; padding: clamp(1.2rem, 2.4vw, 1.8rem); }
-	.stage + .stage { border-left: 1px solid rgb(239 232 216 / 12%); }
+	.stage + .stage { border-left: 1px solid rgb(242 236 220 / 12%); }
 	.stage-heading { display: flex; align-items: flex-start; gap: .85rem; min-height: 3.7rem; }
 	.stage-heading > span { color: var(--amber); font-size: .62rem; font-weight: 780; letter-spacing: .16em; }
 	.stage-heading p { color: var(--sand); font-size: .7rem; font-weight: 740; letter-spacing: .14em; }
-	.stage-heading small { display: block; margin-top: .28rem; color: rgb(239 232 216 / 45%); font-size: .55rem; letter-spacing: .11em; }
+	.stage-heading small { display: block; margin-top: .28rem; color: rgb(242 236 220 / 46%); font-size: .55rem; letter-spacing: .11em; }
 	.stage svg { display: block; width: 100%; height: auto; overflow: visible; }
 
-	.sensor-grid path { fill: none; stroke: rgb(239 232 216 / 8%); stroke-width: 1; vector-effect: non-scaling-stroke; }
+	.sensor-grid path { fill: none; stroke: rgb(130 168 195 / 13%); stroke-width: 1; vector-effect: non-scaling-stroke; }
 	.noise-traces path { fill: none; stroke: url(#sensor-trace); stroke-linecap: round; stroke-width: 1.1; vector-effect: non-scaling-stroke; animation: signal-breathe var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
 	.noise-traces path:nth-child(3n + 2) { animation-delay: -4s; }
 	.noise-traces path:nth-child(3n) { animation-delay: -5.5s; }
 	.correlation-line { fill: none; stroke: url(#structure-trace); stroke-dasharray: 100; stroke-dashoffset: 100; stroke-linecap: round; stroke-width: 1.4; opacity: 0; vector-effect: non-scaling-stroke; animation: reveal-structure var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
 	.salient-events g { opacity: 0; transform-box: fill-box; transform-origin: center; animation: event-emerge var(--cycle) ease-in-out infinite; animation-delay: calc(-2.5s + var(--event-order) * .08s); }
-	.event-halo { fill: var(--amber); opacity: .1; }
-	.event-core { fill: var(--amber); }
+	.event-halo { fill: var(--orange); opacity: .14; }
+	.event-core { fill: var(--yellow); }
 
-	.branch-field path { fill: none; stroke: rgb(239 232 216 / 17%); stroke-linecap: round; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
-	.branch-field .branch-out { stroke: rgb(225 196 90 / 42%); }
-	.branch-terminals circle { fill: rgb(239 232 216 / 28%); }
-	.local-state { fill: rgb(111 106 168 / 24%); stroke: var(--amber); stroke-width: 1.2; animation: local-state-cycle var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
+	.branch-field path { fill: none; stroke: rgb(130 168 195 / 27%); stroke-linecap: round; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+	.branch-field .branch-out { stroke: rgb(201 162 46 / 52%); }
+	.branch-terminals circle { fill: var(--blue-soft); opacity: .52; }
+	.local-state { fill: rgb(86 138 91 / 28%); stroke: var(--yellow); stroke-width: 1.2; animation: local-state-cycle var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
 	.encoded-packets circle { fill: var(--amber); opacity: 0; transform-box: fill-box; transform-origin: center; animation: event-travel var(--cycle) ease-in-out infinite; animation-delay: calc(-2.5s + var(--packet-delay)); }
-	.feedback-mark path { fill: none; stroke: var(--cyan); stroke-dasharray: 3 97; stroke-linecap: round; stroke-width: 1.5; opacity: 0; animation: feedback-path var(--cycle) linear infinite; animation-delay: -2.5s; }
-	.feedback-mark circle { fill: var(--cyan); opacity: 0; transform-box: fill-box; transform-origin: center; animation: feedback-pulse var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
+	.feedback-mark path { fill: none; stroke: var(--green-soft); stroke-dasharray: 3 97; stroke-linecap: round; stroke-width: 1.5; opacity: 0; animation: feedback-path var(--cycle) linear infinite; animation-delay: -2.5s; }
+	.feedback-mark circle { fill: var(--green-soft); opacity: 0; transform-box: fill-box; transform-origin: center; animation: feedback-pulse var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
 
-	.state-cell { fill: rgb(239 232 216 / 7%); stroke: rgb(239 232 216 / 9%); stroke-width: .7; }
+	.state-cell { fill: rgb(130 168 195 / 9%); stroke: rgb(242 236 220 / 10%); stroke-width: .7; }
 	.state-cell.active { fill: url(#state-spectrum); opacity: .12; animation: state-response var(--cycle) ease-in-out infinite; animation-delay: calc(-2.5s + var(--cell-delay)); }
 	.state-contour { fill: none; stroke: url(#state-spectrum); stroke-width: 1.2; opacity: .25; vector-effect: non-scaling-stroke; }
-	.state-readout path { fill: none; stroke: rgb(57 184 200 / 38%); stroke-width: 1; vector-effect: non-scaling-stroke; }
-	.state-readout circle { fill: var(--cyan); opacity: .25; animation: readout-cycle var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
-	.micro-note { fill: rgb(239 232 216 / 35%); font-family: var(--font-sans); font-size: 6.5px; font-weight: 720; letter-spacing: .16em; }
+	.state-readout path { fill: none; stroke: rgb(130 173 121 / 45%); stroke-width: 1; vector-effect: non-scaling-stroke; }
+	.state-readout circle { fill: var(--green-soft); opacity: .25; animation: readout-cycle var(--cycle) ease-in-out infinite; animation-delay: -2.5s; }
+	.micro-note { fill: rgb(242 236 220 / 38%); font-family: var(--font-sans); font-size: 6.5px; font-weight: 720; letter-spacing: .16em; }
 
 	figcaption {
-		border-top: 1px solid rgb(239 232 216 / 13%);
+		border-top: 1px solid rgb(242 236 220 / 13%);
 		padding: 1.2rem clamp(1.4rem, 3vw, 2.2rem) 1.35rem;
-		color: rgb(239 232 216 / 64%);
+		color: rgb(242 236 220 / 66%);
 		font-size: .82rem;
 		line-height: 1.65;
 	}
-	figcaption span { color: rgb(239 232 216 / 38%); }
+	figcaption span { color: rgb(242 236 220 / 40%); }
 
 	@keyframes signal-breathe {
 		0%, 100% { opacity: .55; transform: translateX(0); }
@@ -289,7 +295,7 @@ const matrixCells = Array.from({ length: 56 }, (_, index) => ({
 	@media (max-width: 58rem) {
 		.plate-heading { align-items: flex-start; }
 		.stages { grid-template-columns: 1fr; }
-		.stage + .stage { border-top: 1px solid rgb(239 232 216 / 12%); border-left: 0; }
+		.stage + .stage { border-top: 1px solid rgb(242 236 220 / 12%); border-left: 0; }
 		.stage svg { max-height: 22rem; }
 	}
 

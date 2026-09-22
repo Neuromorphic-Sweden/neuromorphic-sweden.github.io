@@ -2,10 +2,16 @@
 import AdvisoryPreviewWordmark from './AdvisoryPreviewWordmark.astro';
 import { navigation, siteBase } from '../data/site';
 
+interface Props {
+	preview?: boolean;
+}
+
+const { preview = true } = Astro.props;
 const pathname = Astro.url.pathname;
+const homeHref = preview ? `${siteBase}/advisory-preview/` : `${siteBase}/`;
 const previewNavigation = navigation.map((item, index) => ({
 	...item,
-	href: index === 0 ? `${siteBase}/advisory-preview/` : item.href,
+	href: index === 0 ? homeHref : item.href,
 }));
 
 const isCurrent = (href: string) => {
@@ -16,7 +22,7 @@ const isCurrent = (href: string) => {
 
 <header class="site-header">
 	<div class="container header-inner">
-		<AdvisoryPreviewWordmark href={`${siteBase}/advisory-preview/`} inverse />
+		<AdvisoryPreviewWordmark href={homeHref} inverse />
 		<nav aria-label="Main navigation">
 			<ul>
 				{previewNavigation.map((item) => (
@@ -35,8 +41,8 @@ const isCurrent = (href: string) => {
 	.site-header {
 		position: relative;
 		z-index: 20;
-		border-bottom: 1px solid rgb(225 196 90 / 24%);
-		background: rgb(34 35 38 / 97%);
+		border-bottom: 1px solid rgb(240 211 90 / 24%);
+		background: rgb(8 31 61 / 97%);
 	}
 
 	.header-inner {
@@ -58,7 +64,7 @@ const isCurrent = (href: string) => {
 
 	nav a {
 		position: relative;
-		color: rgb(239 232 216 / 68%);
+		color: rgb(242 236 220 / 72%);
 		font-size: 0.82rem;
 		font-weight: 700;
 		text-decoration: none;
@@ -103,4 +109,3 @@ const isCurrent = (href: string) => {
 		}
 	}
 </style>
-

@@ -2,6 +2,8 @@
 import BaseLayout from './BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import AdvisoryPreviewHeader from '../components/AdvisoryPreviewHeader.astro';
+import AdvisoryPreviewFooter from '../components/AdvisoryPreviewFooter.astro';
 
 interface Props {
 	title: string;
@@ -13,13 +15,18 @@ interface Props {
 const { title, description, noindex = false, bodyClass } = Astro.props;
 const reviewSite = process.env.REVIEW_SITE === 'true';
 const reviewPage = Astro.url.pathname === '/preview' || Astro.url.pathname.startsWith('/preview/');
+const resolvedBodyClass = reviewPage
+	? bodyClass
+	: [bodyClass, 'blue-gold-site'].filter(Boolean).join(' ');
 ---
 
 <BaseLayout
 	title={`${title} — Neuromorphic Sweden`}
 	description={description}
 	noindex={noindex || reviewPage || reviewSite}
-	bodyClass={bodyClass}
+	bodyClass={resolvedBodyClass}
+	faviconHref={reviewPage ? '/favicon.svg' : '/favicon.png'}
+	themeColor={reviewPage ? '#071827' : '#081f3d'}
 >
 	{reviewPage && (
 		<div class="review-build-banner" role="status">
@@ -30,11 +37,11 @@ const reviewPage = Astro.url.pathname === '/preview' || Astro.url.pathname.start
 			</div>
 		</div>
 	)}
-	<SiteHeader />
+	{reviewPage ? <SiteHeader /> : <AdvisoryPreviewHeader preview={false} />}
 	<main id="main-content">
 		<slot />
 	</main>
-	<SiteFooter />
+	{reviewPage ? <SiteFooter /> : <AdvisoryPreviewFooter />}
 </BaseLayout>
 
 <style>
@@ -59,5 +66,166 @@ const reviewPage = Astro.url.pathname === '/preview' || Astro.url.pathname.start
 	.review-build-banner a {
 		margin-left: auto;
 		font-weight: 750;
+	}
+</style>
+
+<style is:global>
+	body.blue-gold-site {
+		--deep-blue: #081f3d;
+		--deep-blue-raised: #0f2e52;
+		--blue: #2e6f9e;
+		--blue-soft: #82a8c3;
+		--gold: #c9a22e;
+		--yellow: #f0d35a;
+		--orange: #b9521d;
+		--green: #568a5b;
+		--green-soft: #82ad79;
+		--cream: #f2ecdc;
+		--cream-soft: #f8f4e9;
+		--graphite: var(--deep-blue);
+		--graphite-raised: var(--deep-blue-raised);
+		--graphite-soft: #18406c;
+		--amber: var(--yellow);
+		--amber-deep: var(--orange);
+		--sand: var(--cream);
+		--sand-soft: var(--cream-soft);
+		--violet: var(--green);
+		--cyan: var(--blue);
+		--navy-950: var(--deep-blue);
+		--navy-900: var(--deep-blue-raised);
+		--navy-800: #18406c;
+		--blue-700: #245b85;
+		--blue-500: var(--blue);
+		--blue-200: #b8cedd;
+		--blue-100: #dce8ec;
+		--blue-50: #e9f0f2;
+		--white: #fffdf7;
+		--orange-600: var(--orange);
+		--orange-500: #d86f2f;
+		--orange-100: #f2d8bf;
+		--ink: var(--deep-blue);
+		--muted: #5d6872;
+		--line: #cec5ae;
+		--page: var(--cream);
+		--font-display: var(--font-sans);
+		--shadow-soft: 0 24px 70px rgb(8 31 61 / 11%);
+		background: var(--page);
+	}
+
+	body.blue-gold-site h1,
+	body.blue-gold-site h2 {
+		font-weight: 620;
+		letter-spacing: -.035em;
+	}
+
+	body.blue-gold-site .page-hero {
+		border-bottom-color: rgb(240 211 90 / 28%);
+		background:
+			radial-gradient(circle at 88% 10%, rgb(46 111 158 / 38%), transparent 34rem),
+			linear-gradient(125deg, var(--deep-blue), #0b294b 62%, var(--deep-blue-raised));
+		color: var(--sand);
+	}
+
+	body.blue-gold-site .page-hero h1 {
+		color: var(--sand);
+	}
+
+	body.blue-gold-site .page-hero .lead {
+		color: rgb(242 236 220 / 78%);
+	}
+
+	body.blue-gold-site .page-hero .eyebrow,
+	body.blue-gold-site .section.dark .eyebrow {
+		color: var(--yellow);
+	}
+
+	body.blue-gold-site .eyebrow {
+		color: var(--orange);
+	}
+
+	body.blue-gold-site .eyebrow::before {
+		width: 1.7rem;
+		height: 1px;
+		border-radius: 0;
+		background: currentColor;
+	}
+
+	body.blue-gold-site .section.tint {
+		background: var(--blue-50);
+	}
+
+	body.blue-gold-site .section.dark {
+		border-block: 1px solid rgb(240 211 90 / 20%);
+		background:
+			radial-gradient(circle at 92% 8%, rgb(86 138 91 / 16%), transparent 28rem),
+			var(--deep-blue);
+	}
+
+	body.blue-gold-site .section.dark p,
+	body.blue-gold-site .section.dark li {
+		color: rgb(242 236 220 / 72%);
+	}
+
+	body.blue-gold-site .card,
+	body.blue-gold-site .project-card,
+	body.blue-gold-site .empty-state {
+		border-color: var(--line);
+		border-radius: .3rem;
+		background: rgb(255 253 247 / 78%);
+	}
+
+	body.blue-gold-site .card .number,
+	body.blue-gold-site .focus-index span,
+	body.blue-gold-site .stack-list span,
+	body.blue-gold-site .workshop-project {
+		color: var(--orange);
+	}
+
+	body.blue-gold-site .feature-list li::before {
+		background: var(--green);
+	}
+
+	body.blue-gold-site .button {
+		border-color: var(--yellow);
+		background: var(--yellow);
+		color: var(--deep-blue);
+	}
+
+	body.blue-gold-site .button:hover {
+		border-color: #f6df78;
+		background: #f6df78;
+		color: var(--deep-blue);
+	}
+
+	body.blue-gold-site .button.secondary {
+		border-color: var(--deep-blue);
+		background: transparent;
+		color: var(--deep-blue);
+	}
+
+	body.blue-gold-site .button.secondary:hover {
+		border-color: var(--deep-blue);
+		background: var(--deep-blue);
+		color: var(--sand);
+	}
+
+	body.blue-gold-site .section.dark .button.secondary {
+		border-color: rgb(242 236 220 / 52%);
+		color: var(--sand);
+	}
+
+	body.blue-gold-site .section.dark .button.secondary:hover {
+		border-color: var(--sand);
+		background: rgb(242 236 220 / 9%);
+	}
+
+	body.blue-gold-site .tag {
+		border-color: var(--blue-soft);
+		color: var(--blue-700);
+	}
+
+	body.blue-gold-site .notice {
+		border-left-color: var(--orange);
+		background: var(--orange-100);
 	}
 </style>

@@ -1,6 +1,5 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { contactEmail, reportUrl } from '../../data/site';
 ---
 
 <SiteLayout title="About" description="About Neuromorphic Sweden, its neutral national scope, principles and contact information.">
@@ -38,23 +37,9 @@ import { contactEmail, reportUrl } from '../../data/site';
 		</div>
 	</section>
 
-	<section class="section dark">
-		<div class="container contact-grid">
-			<div><p class="eyebrow">Inquiries</p><h2>Start a conversation.</h2></div>
-			<div>
-				<p class="lead">For questions about Neuromorphic Sweden, ecosystem participation or the former national studies:</p>
-				<a class="email" href={`mailto:${contactEmail}`}>{contactEmail}</a>
-				<p class="report-link"><a href={reportUrl}>Read the Neuromorphic Sweden report <span aria-hidden="true">↗</span></a></p>
-			</div>
-		</div>
-	</section>
 </SiteLayout>
 
 <style>
-	.about-grid, .contact-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); gap: clamp(3rem, 8vw, 8rem); }
-	.email { display: inline-block; margin-top: 1rem; color: var(--white); font-family: var(--font-sans); font-size: clamp(1.16rem, 2vw, 1.45rem); line-height: 1.55; text-decoration-color: var(--orange-500); }
-	.email:hover { color: var(--orange-100); }
-	.report-link { margin-top: 2rem; }
-	.report-link a { color: var(--blue-200); }
-	@media (max-width: 52rem) { .about-grid, .contact-grid { grid-template-columns: 1fr; } }
+	.about-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr); gap: clamp(3rem, 8vw, 8rem); }
+	@media (max-width: 52rem) { .about-grid { grid-template-columns: 1fr; } }
 </style>
