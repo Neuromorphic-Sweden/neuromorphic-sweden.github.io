@@ -1,0 +1,24 @@
+---
+const target =
+  'https://diva-portal.org/smash/get/diva2%3A2008442/FULLTEXT01.pdf';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Neuromorphic Sweden — NIPS report</title>
+  </head>
+
+  <body>
+    <p>
+      Redirecting to the
+      <a href={target}>Neuromorphic Innovation Platform Sweden (NIPS) report</a>…
+    </p>
+
+    <script define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </body>
+</html>
